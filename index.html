@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+
+</head>
+<!-- style -->
+<style type="text/css">
+  *{margin:0;padding:0;}
+  body {padding:20px; font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+  h1 {color:#000; letter-spacing:-2px;}
+  h2 {margin-top:20px;padding-left:10px;letter-spacing:-2px;position:relative;font-size:18px;}
+  h2:before{content:'';display:block;position:absolute;top:50%;left:0;width:5px;height:5px;background:#333;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+  .currentsite {display:block; position:absolute; right:40px; top:20px;}
+  .mwork table {width:100%; border-collapse:collapse; border:0px solid #666;margin-top:10px;}
+  .mwork caption {text-align:left; font-size:200%; color:#999;}
+  .mwork th {padding:6px; border:1px solid #fff; color:#fff; font-size:110%; background-color:#1F5DBE;}
+  .mwork td {height:16px; padding:4px; padding-left:10px; border:1px solid #666;}
+  .mwork a,
+  .mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+  .mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+  .mwork td:hover {background-color:#ddd !important;}
+  
+
+  .title td{background:#eee;}
+
+</style>
+<!-- //style -->
+<!-- html body -->
+<script>
+  $(function(){
+    let data =[
+      //공통 
+      ["공통", "title", "", ""],
+      ["", "로딩", "", "", "html/loading.html", "", "", ""],
+      ["", "alert", "", "", "html/alert.html", "", "", ""],
+      ["", "데이터 없음", "", "", "html/nodata.html", "", "", ""],
+      ["", "페이지 없음", "", "", "html/nopage.html", "", "", ""],
+      //메인 
+      ["메인", "title", "", ""],
+      ["", "메인", "", "", "html/main.html", "", "", ""],      
+      //시험정보 
+      ["시험정보", "title", "", ""],
+      ["", "정보처리기사 안내", "", "", "html/info-processing-engineer.html", "", "", ""],      
+      ["", "정보처리산업기사 안내", "", "", "html/info-processing-industry-engineer.html", "", "", ""],      
+      ["", "SQLD 안내", "", "", "html/sqld.html", "", "", ""],      
+      ["", "인력공단 전국지사 안내", "", "", "html/hrdk.html", "", "", ""],
+     //흥달영상 
+     ["흥달영상", "title", "", ""],
+      ["", "소주한잔 개발한줄", "", "", "html/dev-story.html", "", "", ""],      
+      ["", "흥달쌤 이야기", "", "", "html/teacher-story.html", "", "", ""],      
+      ["", "5분특강", "", "", "html/special-lecture.html", "", "", ""],      
+      ["", "공개강좌 후기", "", "", "html/open-lecture-review.html", "", "", ""],      
+      //수강/교재신청 
+      ["수강/교재신청", "title", "", ""],
+      ["", "정보처리기사", "", "", "html/lecture-apply-list.html#1", "", "", ""],
+      ["", "정보처리산업기사", "", "", "html/lecture-apply-list.html#2", "", "", ""],
+      ["", "SQLD", "", "", "html/lecture-apply-list.html#3", "", "", ""],
+      ["", "수강신청하기", "", "", "html/lecture-apply.html", "", "", ""],
+      ["", "", "결제", "", "html/payment-lecture.html", "",  "", ""],
+      ["", "", "구매완료", "", "html/payment-complete-lecture.html", "", "", ""],
+      ["", "교재구매", "", "", "html/purchase-textbook.html", "", "", ""],
+      ["", "", "결제", "", "html/payment-textbook.html", "", "", ""],
+      ["", "", "구매완료", "", "html/payment-complete-textbook.html", "", "", ""],
+      ["", "교재 정오표", "", "", "html/errata-sheet.html", "", "", ""],
+      ["", "", "상세", "", "html/errata-sheet-detail.html", "", "", ""],
+      //문제은행
+      ["문제은행", "title", "", ""],
+      ["", "문제은행", "", "", "html/question-bank.html", "", "", ""],
+      //학습지원센터
+      ["학습지원센터", "title", "", ""],
+      ["", "공지사항", "", "", "html/notice.html", "", "", ""],
+      ["", "", "상세", "", "html/notice-detail.html", "", "", ""],
+      ["", "이용안내(FAQ)", "", "", "html/faq.html", "", "", ""],
+      ["", "1:1 상담", "", "", "html/councel.html", "", "", ""],
+      ["", "", "상세", "", "html/councel-detail.html", "", "", ""],
+      ["", "", "등록", "", "html/councel-regist.html", "", "", ""],
+      ["", "필수프로그램 다운", "", "", "html/program-down.html", "", "", ""],
+      //로그인
+      ["로그인", "title", "", ""],
+      ["", "로그인1", "", "", "html/login1.html", "", "", ""],
+      ["", "로그인2", "", "", "html/login2.html", "", "", ""],
+      ["", "이메일&PIN번호 찾기", "", "", "html/login-info-find.html", "", "", ""],
+      ["", "PIN번호 발송", "", "", "html/send-pin.html", "", "", ""],
+      //마이페이지
+      ["마이페이지", "title", "", ""],
+      ["", "회원정보 수정", "", "", "html/mypage.html", "", "", ""],
+      ["", "주문/결제 내역", "", "", "html/my-history.html", "", "", ""],
+      ["", "회원탈퇴", "", "", "html/withdrawal.html", "", "", ""],
+      ["", "탈퇴완료", "", "", "html/withdrawal-complete.html", "", "", ""],
+      //내 강의실
+      ["내 강의실", "title", "", ""],
+      ["", "수강중인 강좌", "", "", "html/courses-list.html", "", "", ""],
+      ["", "대시보드", "", "", "html/lecture-dashboard.html", "", "", ""],
+      ["", "공지사항", "", "", "html/lecture-notice.html", "", "", ""],
+      ["", "", "상세", "", "html/lecture-notice-detail.html", "", "", ""],
+      ["", "질문답변", "", "", "html/lecture-qna.html", "", "", ""],
+      ["", "", "상세", "", "html/lecture-qna-detail.html", "", "", ""],
+      ["", "", "등록", "", "html/lecture-qna-regist.html", "", "", ""],
+      ["", "수강평", "", "", "html/lecture-review.html", "", "", ""],
+      ["", "증빙서류 발급신청", "수강확인증", "", "html/evidence-document.html", "", "", ""],
+      ["", "", "수료증", "", "html/evidence-document2.html", "", "", ""],
+      //시청
+      ["시청", "title", "", ""],
+      ["", "시청", "", "", "html/frame-player.html", "", "", ""],      
+    ]
+
+    for(var i = 0 ; i<= data.length -1 ; i++){
+      if(data[i][1] == 'title'){
+        $('tbody').append('<tr class="title">'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+          '<td></td>' +
+        '</tr>')
+      }else{
+        $('tbody').append('<tr>'+
+          '<td>'+data[i][0]+'</td>' +
+          '<td>'+data[i][1]+'</td>' +
+          '<td>'+data[i][2]+'</td>' +
+          '<td>'+data[i][3]+'</td>' +
+          '<td><a href="'+data[i][4]+'">'+data[i][4]+'</a></td>' +
+          '<td>'+data[i][5]+'</td>' +
+        '</tr>')
+      }
+    }
+  });
+
+
+</script>
+</head>
+<body>
+<!-- sheet -->
+<h1>Publishing Work Sheet &nbsp;&nbsp; 
+  <a href="coding(20250207).zip" style="padding:5px 15px;border:1px solid #ccc;color:#000;font-size: 12px;;text-decoration: none;">다운로드</a>
+</h1>
+
+<div class="mwork">
+  <table>
+    <colgroup>
+			<col style="width:140px" />
+			<col style="width:140px" />
+			<col style="width:160px" />
+			<col style="width:140px" />
+			<col style="width:300px" />
+			<col style="width:auto" />
+    </colgroup>
+
+    <thead>
+      <tr>
+				<th>Category</th>
+				<th>1Depth</th>
+				<th>2Depth</th>
+				<th>3Depth</th>
+				<th>FileName/Link</th>
+				<th>Memo</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- //sheet -->
+
+</body>
+</html>

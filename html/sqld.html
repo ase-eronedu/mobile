@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header"><h1 class="title-main">SQLD 안내</h1></header>
+      <div class="tab-type1 sticky">
+        <ul>
+            <li class="on"><a href="javascript:void(0);" data-tab-id="tab1">자격소개</a></li>
+            <li><a href="javascript:void(0);" data-tab-id="tab2">시험주요내용</a></li>
+            <li><a href="javascript:void(0);" data-tab-id="tab3">출제문항 및 배점</a></li>
+            <li><a href="javascript:void(0);" data-tab-id="tab4">응시자격 및 합격기준</a></li>
+        </ul>
+      </div>
+
+      <!-- 자격소개 -->
+      <div id="tab1" class="guide-paragraph-wrap">
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>01</em><b>관련 근거</b></h2>
+          <h3 class="tit-sb">자격기본법 제1조(목적)</h3>
+          <p>이 법은 자격에 관한 기본적인 사항을 정함으로써 자격제도의 관리·운영을 체계화하고 평생직업능력 개발을 촉진하여 국민의 사회경제적 지위를 높이고 능력중심사회의 구현에 이바지함을 목적으로 한다.</p>
+          <h3 class="tit-sb">자격기본법 제19조(민간자격의 공인)</h3>
+          <ol class="num-list">
+            <li>1) 주무부장관은 민간자격에 대한 신뢰를 확보하고 사회적 통용성을 높이기 위하여 심의회의 심의를 거쳐 법인이 관리하는 민간자격을 공인할 수 있다.</li>
+          </ol>
+          <h3 class="tit-sb">자격기본법 제30조(자격취득자에 대한 우대)</h3>
+          <ol class="num-list">
+            <li>1) 국가 및 지방자치단체는 국가자격 및 공인자격의 직무 분야에 관한 영업의 허가·인가·등록 또는 면허를 하거나 이익을 부여하는 경우에는 다른 법령에 어긋나지 아니하는 범위 안에서 그 직무 분야의 국가자격 또는 공인자격을 취득한 자를 우대할 수 있다.</li>
+            <li>2)사업주는 근로자의 채용·승진·전보, 그 밖에 인사상의 조치를 하는 경우 해당 분야의 국가자격 또는 공인자격을 취득한 자를 우대할 수 있다.</li>
+          </ol>
+        </div>
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>02</em><b>SQL의 정의</b></h2>
+          <p>
+            SQL(Structured Query Language)은 데이터베이스를 직접적으로 액세스할 수 있는 언어로, 데이터를 정의하고(Data Definition), 조작하며(Data Manipulation), 조작한 결과를 적용하거나 취소할 수 있고(Transaction Control), 접근권한을 제어하는(Data Control) 처리들로 구성된다.
+          </p>
+        </div>
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>03</em><b>SQL 개발자의 정의</b></h2>
+          <p>SQL 개발자(SQLD*, SQL Developer)란 데이터베이스와 데이터 모델링에 대한 지식을 바탕으로 응용 소프트웨어를 개발하면서 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성할 수 있는 개발자를 말한다.</p>
+        </div>
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>04</em><b>SQL 개발자 자격검정의 필요성</b></h2>
+          <p>
+            오늘날 기업 또는 조직의 정보화에 있어서 관계형 데이터베이스는 거의 대부분이라 해도 과언이 아닐 정도로 데이터 저장소의 대부분을 차지하고 있다. 소프트웨어를 작성하는데 사용되는 언어는 많은 종류가 있지만 데이터베이스는 결국 SQL에 의해서만 데이터에 접근이 가능하기 때문에 데이터베이스를 기반으로 하는 정보시스템은 SQL 사용이 필수적인 요소이다. 이 때문에 정보시스템을 개발하는 수많은 개발자들은 반드시 SQL을 익힐 수밖에 없고, 이러한 상황에 의해 SQL을 사용할 수 있는 개발자는 그 수를 헤아리기 어려울 정도로 많다. 그러나 이와 같은 SQL 사용 능력 보유자 수에도 불구하고 SQL의 수행 원리를 깊이 있게 이해하고 제대로 구사할 수 있는 전문적 지식을 갖춘 인재는 상대적으로 매우 빈약하다. 이것은 결과적으로 정보시스템의 성능과 품질을 저하시키고 나아가 사용자들의 외면을 초래하는 한 원인이 되기도 한다.
+            <br>이에 한국데이터산업진흥원은 전문인력의 실질적 수요자인 사업주를 대변하여 SQL 전문가 자격검정을 실시하고자 한다. 이를 통해 산업현장에 부응하는 민간자격을 부여하고, 자격취득자에게 직무 수행에 대한 자신감 고취와 함께 보다 나은 직무 수행 기회 제공 및 사회적 지위(취업, 승진, 보수 등)의 향상은 물론 기업의 국제 경쟁력 제고에도 기여할 것이다.            
+          </p>
+        </div>
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>05</em><b>SQL 개발자의 직무</b></h2>
+          <p>SQL 개발자는 데이터모델링에 기본 지식을 바탕으로 SQL 작성, 성능 최적화 등 데이터베이스 개체 설계 및 구현 등에 대한 전문지식 및 실무적 수행 능력을 그 필수로 한다.</p>
+          <!-- table -->
+          <div class="data-type1 scrollbar-x full">
+            <div class="pad">
+              <table>
+                  <colgroup>
+                      <col style="min-width:6.25rem" />
+                      <col style="min-width:37.5rem" />
+                  </colgroup>
+                  <thead>
+                      <tr>
+                        <th>직무</th>
+                        <th>세부내용</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th>데이터모델의 <br>이해 및 분석</th>
+                        <td class="auto-txt">
+                          데이터베이스 구성과 처리에 있어서 가장 핵심적인 요소가 바로 데이터모델이다. 데이터모델은 건물의 설계도와 같이 전체 데이터베이스가 구성되는 요소를 결정한다. 데이터구조의 근간이 되기 때문에 어플리케이션이 데이터를 이용할 때 효율적으로 제공이 될 것인지 아니면 비효율적으로 제공이 될 것인지에 대한 결정은 설계단계의 데이터모델에서 할 수 밖에 없다. 본 직무는 데이터모델과 SQL구문의 연관성을 위해 엔터티, 속성, 관계, 식별자, 정규화 등 데이터 모델의 기본 지식을 바탕으로 데이터 모델을 이해하고 분석하는 작업을 수행한다.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>SQL 이해 <br>및 활용</th>
+                        <td class="auto-txt">
+                          SQL (Structured Query Language)는 데이터베이스를 유일하게 액세스 할 수 있는 언어이다. 본 직무는 SQL 문법을 이해하는 단계부터 시작한다. 이를 바탕으로 데이터 정의의(DDL)을 통해 테이블의 구조를 생성/변경/삭제/재명명하고, 데이터 조작어(DML)을 통해 데이터를 입력/조회/수정/삭제한다. 집합과 집합의 관계를 다양한 JOIN 방법을 사용하여 표현하고, 주종 관계의 경우 서브쿼리를 사용하는 작업 등을 수행한다.
+                        </td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            </div>
+            <!-- //table -->          
+        </div>
+      </div>
+      
+      <!-- 시험주요내용 -->
+      <div id="tab2" class="guide-paragraph-wrap" style="display: none;">
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>01</em><b>과목 및 내용</b></h2>
+          <p>SQL 개발자 자격시험의 과목은 총 2과목으로 구성되어 있으며 데이터 모델링의 이해 과목을 바탕으로 SQL 기본 및 활용을 수행하는 능력을 검정한다.</p>
+          <!-- table -->
+          <div class="data-type1 scrollbar-x full">
+            <div class="pad">
+              <table>
+                  <colgroup>
+                      <col style="min-width:6.25rem" />
+                      <col style="width:auto" />
+                      <col style="width:auto" />
+                  </colgroup>
+                  <thead>
+                      <tr>
+                        <th>과목명</th>
+                        <th>주요항목</th>
+                        <th>세부항목</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th rowspan="10">데이터 <br>모델링의 이해</th>
+                        <td rowspan="5">데이터 <br>모델링의 이해</td>
+                        <td class="align-l">데이터모델의 이해</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">엔터티</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">속성</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">관계</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">식별자</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="5">데이터 <br>모델링의 이해</td>
+                        <td class="align-l">정규화</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">관계와 조인의 이해</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">모델이 표현하는 트랜잭션의 이해</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">Null 속성의 이해</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">본질식별자 vs 인조식별자</td>
+                      </tr>
+              
+                      <tr>
+                        <th rowspan="20">SQL 기본 <br>및 활용</th>
+                        <td rowspan="8">SQL 기본</td>
+                        <td class="align-l">관계형 데이터베이스 개요</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">SELECT 문</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">함수</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">WHERE 절</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">GROUP BY, HAVING 절</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">ORDER BY 절</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">조인</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">표준 조인</td>
+                      </tr>
+              
+                      <tr>
+                        <td rowspan="8">데이터 <br>모델링의 이해</td>
+                        <td class="align-l">서브쿼리</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">집합 연산자</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">그룹 함수</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">윈도우 함수</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">Top N 쿼리</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">계층형 질의와 셀프 조인</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">PIVOT 절과 UNPIVOT절</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">정규 표현식</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="4">데이터 <br>모델링의 이해</td>
+                        <td class="align-l">DML</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">TCL</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">DDL</td>
+                      </tr>
+                      <tr>
+                        <td class="align-l">DCL</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //table -->
+        </div>        
+      </div>
+
+      <!-- 출제문항 및 배점 -->
+      <div id="tab3" class="guide-paragraph-wrap" style="display: none;">
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>01</em><b>출제문항수</b></h2>
+          <p>SQL 개발자 자격시험의 과목은 총 2과목으로 구성되며 필기 50문항으로 구성되어 있다. 출제 문항 및 배점은 아래와 같다.</p>
+          <h3 class="tit-sb">SQL 개발자 자격시험(총 문항수: 50문항 - 객관식 50문항)</h3>
+          <!-- table -->
+          <div class="data-type1 scrollbar-x full">
+            <div class="pad">
+              <table>
+                <colgroup>
+                    <col style="min-width:10rem" />
+                    <col style="min-width:6.25rem" />
+                    <col style="min-width:6.25rem" />
+                    <col style="min-width:6.25rem" />
+                </colgroup>
+                <thead>
+                    <tr>
+                      <th rowspan="2">과목명</th>
+                      <th colspan="2">필기</th>
+                      <th rowspan="2">검정시험시간</th>
+                    </tr>
+                    <tr>
+                      <th class="st2">문항수</th>
+                      <th class="st2">배점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>데이터 모델링의 이해</th>
+                    <td>10</td>
+                    <td>20 (문항당 2점)</td>
+                    <td rowspan="3">90분(1시간 30분)</td>
+                  </tr>
+                  <tr>
+                    <th>SQL 기본 및 활용</th>
+                    <td>40</td>
+                    <td>80 (문항당 2점)</td>
+                  </tr>
+                  <tr>
+                    <th>계</th>
+                    <td>50</td>
+                    <td>100</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //table -->          
+          <h3 class="tit-sb">과목별 주요항목</h3>
+          <!-- table -->
+          <div class="data-type1">
+            <table>
+              <colgroup>
+                  <col style="min-width:10rem" />
+                  <col style="width:auto" />
+              </colgroup>
+              <thead>
+                  <tr>
+                    <th>과목명</th>
+                    <th>주요항목</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th rowspan="2">데이터 모델링의 이해</th>
+                  <td class="align-l">데이터 모델링의 이해</td>
+                </tr>
+                <tr>
+                  <td class="align-l">데이터 모델과 SQL</td>
+                </tr>
+                <tr>
+                  <th rowspan="3">SQL 기본 및 활용</th>
+                  <td class="align-l">SQL 기본</td>
+                </tr>
+                <tr>
+                  <td class="align-l">SQL 활용</td>
+                </tr>
+                <tr>
+                  <td class="align-l">관리 구문</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //table -->          
+        </div>
+      </div>
+
+      <!-- 응시자격 및 합격기준 -->
+      <div id="tab4" class="guide-paragraph-wrap" style="display: none;">
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>01</em><b>응시자격</b></h2>
+          <!-- table -->
+          <div class="data-type1">
+            <table>
+              <colgroup>
+                  <col style="width:auto" />
+              </colgroup>
+              <thead>
+                  <tr>
+                    <th>과목명</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>제한 없음</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //table -->          
+        </div>
+        <div class="guide-paragraph">
+          <h2 class="title-section"><em>02</em><b>합격기준</b></h2>
+          <!-- table -->
+          <div class="data-type1">
+            <table>
+              <colgroup>
+                  <col style="width:auto" />
+                  <col style="width:auto" />
+              </colgroup>
+              <thead>
+                  <tr>
+                    <th>합격기준</th>
+                    <th>과락기준</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>총점 60점 이상</td>
+                  <td>과목별 40% 미만 취득</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //table -->          
+        </div>
+        
+        
+        
+      </div>
+    
+    </main>
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+</body>
+</html>

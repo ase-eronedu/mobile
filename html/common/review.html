@@ -1,0 +1,167 @@
+<div class="review-answer" style="display: none;">
+  <strong class="tit">답변드립니다.</strong>
+  <div class="info"><span>흥달쌤</span><span>2024.03.22</span></div>
+  <div class="answer pre-line">안녕하세요^^
+    죄송합니다. 테스트 케이스 입력크기를 1000까지만 들어가야 하는데 100,000만까지 넣은 것 같습니다.
+    일단 코드에서 배열의 크기를 1001 로 하지 말고 100001로 해서 채점받아 보세요.
+      
+    <img src="../images/temp/temp-img-ex.jpg" alt="">
+  </div>
+  <div class="menus">
+    <div class="row">
+      <a href="www.naver.com" class="btn-type3 st4 pad2"><i class="ico-link"></i><span>www.naver.com</span></a>
+    </div>
+    <div class="row">
+      <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+      <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+    </div>
+  </div>
+</div>
+<div class="top-menu" style="display: none;"><button type="button" class="btn-reple" onclick="popOpen('#pop-review-write');">답글 달기</button></div>
+<div class="review-list-wrap">
+  <ul class="review-list">
+    <li>
+      <div class="review">
+        <div class="layer-wrap">
+          <button type="button" class="btn-menu"></button>
+          <div class="menu-layer">
+            <ul>
+              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="img"><img src="../images/common/default-user.svg" alt=""></div>
+          <div class="desc">
+            <div class="name-area">
+                <p class="name">홍길동</p>
+                <p class="date">2024년 4월 20일</p>
+            </div>
+          </div>
+        </div>
+        <div class="text">답변 감사드립니다~</div>
+      </div>
+    </li>
+    <li>
+      <div class="review">
+        <div class="layer-wrap">
+          <button type="button" class="btn-menu"></button>
+          <div class="menu-layer">
+            <ul>
+              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="img"><img src="../images/common/default-user.svg" alt=""></div>
+          <div class="desc">
+            <div class="name-area">
+                <p class="name">홍길동</p>
+                <p class="date">2024년 4월 20일</p>
+            </div>
+          </div>
+        </div>
+        <div class="text">아주 유익했습니다.</div>
+      </div>
+    </li>
+    <li>
+      <div class="review">
+        <div class="layer-wrap">
+          <button type="button" class="btn-menu"></button>
+          <div class="menu-layer">
+            <ul>
+              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="img"><img src="../images/common/default-user.svg" alt=""></div>
+          <div class="desc">
+            <div class="name-area">
+                <p class="name">홍길동</p>
+                <p class="date">2024년 4월 20일</p>
+            </div>
+          </div>
+        </div>
+        <div class="text">다른 사람에게 추천받아서 듣게 됬는데 
+          인강 안 받는 채질인데도 선생님 강의는 잘 들어오네요 ㅎㅎ 
+          좋은 강의 추천합니다</div>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- // review-list -->
+<div class="paging-wrap" style="display: none;">
+  <div class="paging">
+    <button type="button" disabled class="btn-first"></button>
+    <button type="button" disabled class="btn-prev"></button>
+    <button type="button">1</button>
+    <button type="button" class="on">2</button>
+    <button type="button">3</button>
+    <button type="button">4</button>
+    <button type="button" class="btn-next"></button>
+    <button type="button" class="btn-last"></button>
+  </div>
+</div>
+<div class="btn-wrap" style="display: none;">
+  <a href="javascript:void(0);" class="btn-type2 st2 full">목록</a>
+</div>             
+<!-- // review-list-wrap -->
+
+
+
+
+<!-- layer-popup -->
+<section class="layer-popup" id="pop-review-modify">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <button type="button" class="close" onclick="popClose('#pop-review-modify');"></button>
+      <header class="pop-header">
+        <h1 class="pop-tit">답글 수정</h1>
+      </header>
+      <div class="pop-body">
+        <div class="textarea st-pop">
+          <textarea placeholder="답글을 작성해 주세요."></textarea>
+          <span class="byte"><em>74자</em> / 1000자</span>
+        </div>            
+      </div>
+      <div class="pop-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn-type4 st2 w-size1" onclick="popClose('#pop-review-modify');">취소</button>
+          <button type="button" class="btn-type4 st1 w-auto" onclick="popClose('#pop-review-modify');">수정</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- // layer-popup -->
+
+<!-- layer-popup -->
+<section class="layer-popup" id="pop-review-write">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <button type="button" class="close" onclick="popClose('#pop-review-write');"></button>
+      <header class="pop-header">
+        <h1 class="pop-tit">답글 등록</h1>
+      </header>
+      <div class="pop-body">
+        <div class="textarea st-pop">
+          <textarea></textarea>
+          <span class="byte"><em>74자</em> / 1000자</span>
+        </div>            
+      </div>
+      <div class="pop-footer">
+        <div class="btn-wrap">
+          <button type="button" class="btn-type4 st2 w-size1" onclick="popClose('#pop-review-write');">취소</button>
+          <button type="button" class="btn-type4 st1 w-auto" onclick="popClose('#pop-review-write');">등록</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- // layer-popup -->

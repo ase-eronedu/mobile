@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <!-- lectoure-course -->
+      <div class="lectoure-course">
+        <div class="desc">
+          <div class="root"><span>정보처리산업기사</span><span>알고리즘 문제풀이 입문</span></div>
+          <b class="tit">it 취업을 위한 알고리즘 문제풀이 입문 (with C/C++) : 코딩테스트 대비</b>
+        </div>      
+        <button type="button" class="img">
+          <img src="../images/temp/temp-lecture.jpg" alt="">
+          <div class="play-wrap">
+            <i class="ico-play"></i>
+            <div class="txt">이어 계속하기</div>
+          </div>
+          <div class="gage-wrap">
+            <span class="txt">진도율 : 14강/100강(12.3%)</span>
+            <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
+          </div>
+        </button>
+      </div>
+      <!-- // lectoure-course -->
+
+      <div class="tab-type1 sticky">
+        <ul>
+          <li><a href="javascript:void(0);">대시보드</a></li>
+          <li><a href="javascript:void(0);">공지사항</a></li>
+          <li><a href="javascript:void(0);">질문답변</a></li>
+          <li class="on"><a href="javascript:void(0);">수강평</a></li>
+        </ul>
+      </div>
+      <div class="lecure-review-wrap">
+        <h1 class="title-subject"><i class="ico-reple"></i><span>수강평</span></h1>
+        
+        <div class="lecture-review-wrap">
+          <div class="review-input-box">
+            <strong class="tit">흥달쌤에게 후기를 남겨주세요! <br>큰 힘이 됩니다.</strong>
+            <div class="input-box">
+              <div class="input"><textarea name="" id="" placeholder="응원 댓글을 남겨주세요!"></textarea></div>
+              <button class="btn">등록하기</button>
+            </div>
+          </div>
+  
+  
+          <script>
+            $.get("common/review.html", function(data) {
+               $(data).appendTo(".lecture-review-wrap");
+               $('.paging-wrap').show();
+           });
+         </script>        
+        </div>        
+      </div>
+    </main>
+
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+
+</body>
+</html>

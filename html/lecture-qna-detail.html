@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <!-- lectoure-course -->
+      <div class="lectoure-course">
+        <div class="desc">
+          <div class="root"><span>정보처리산업기사</span><span>알고리즘 문제풀이 입문</span></div>
+          <b class="tit">it 취업을 위한 알고리즘 문제풀이 입문 (with C/C++) : 코딩테스트 대비</b>
+        </div>      
+        <button type="button" class="img">
+          <img src="../images/temp/temp-lecture.jpg" alt="">
+          <div class="play-wrap">
+            <i class="ico-play"></i>
+            <div class="txt">이어 계속하기</div>
+          </div>
+          <div class="gage-wrap">
+            <span class="txt">진도율 : 14강/100강(12.3%)</span>
+            <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
+          </div>
+        </button>
+      </div>
+      <!-- // lectoure-course -->
+      <div class="tab-type1 sticky">
+        <ul>
+          <li><a href="javascript:void(0);">대시보드</a></li>
+          <li><a href="javascript:void(0);">공지사항</a></li>
+          <li class="on"><a href="javascript:void(0);">질문답변</a></li>
+          <li><a href="javascript:void(0);">수강평</a></li>
+        </ul>
+      </div>
+      <div class="lecure-notice-wrap">
+        <h1 class="title-subject"><i class="ico-question"></i><span>질문답변</span></h1>
+        
+        <div class="detail-view">
+          <div class="detail-header">
+            <h2 class="tit">43번 강의내용에 문의있습니다.</h2>
+            <p class="txt">섹션1 실기강의 > 코드분석 강의입니다.</p>
+            <div class="info">
+              <span>홍길동</span>
+              <span class="date">2024.03.22</span>
+              <span class="view">200</span>
+              <span class="reple">3</span>
+            </div>
+          </div>
+          <div class="view-wrap">
+            <div class="view pre-line">안녕하세요.
+              학습에 불편을 드린 점 사과드립니다.
+              2023대비 정보처리산업기사 실기 8차 정오표를 올려드리오니 참고 부탁드립니다.
+              미흡한 부분으로 학습하시는데 불편을 드린 점 사과의 말씀을 드립니다.
+              관리자 드림
+              <div class="go-lecture">
+                <span>섹션 1. 문제(소스) 파일 및 자동채점폴더</span>
+                <a href="javascript:void(0);" class="link">강의 영상</a>
+              </div><img src="../images/temp/temp-img-ex.jpg" alt="">
+            </div>
+            <div class="menus">
+              <div class="row">
+                <a href="www.naver.com" class="btn-type3 st4 pad2"><i class="ico-link"></i><span>www.naver.com</span></a>
+              </div>
+              <div class="row">
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            $.get("common/review.html", function(data) {
+               $(data).appendTo(".detail-view");
+               $('.review-answer').show();
+               $('.top-menu').show();
+               $('.paging-wrap').show();
+               $('.btn-wrap').show();
+           });
+         </script>
+        </div>
+      </div>
+      <!-- // lecure-notice-wrap -->
+    </main>
+    <!-- // content -->
+
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+</body>
+</html>

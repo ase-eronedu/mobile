@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body class="body-player">
+  <div class="wrap">
+    <div class="frame-player">
+      <!-- 플레이영역 -->
+      <section class="player-wrap">
+        <div class="player">
+          플레이어영역
+        </div>
+      </section>
+    
+      <!-- 메뉴영역 -->
+      <div class="player-menu-wrap">
+        <div class="tab-type1 sticky">
+          <ul>
+            <li class="on"><a href="javascript:void(0);" onclick="menuOpen('#curriculum');"><i class="ico-curriculum"></i><span>커리큘럼</span></a></li>
+            <li><a href="javascript:void(0);" onclick="menuOpen('#qna');"><i class="ico-question"></i><span>질문하기</span></a></li>
+          </ul>
+        </div>
+        <div class="menu-detail-wrap">
+          <!-- 커리큘럼 -->
+          <section class="menu-detail" id="curriculum">
+            <div class="menu-body">
+              <div class="curriculum-desc">
+                <div class="status-wrap">
+                  <i class="ico"><img src="../images/common/ico-book.svg" alt=""></i>
+                  <div class="gage-wrap">
+                    <div class="gage">
+                      <span class="label">진도율</span> 
+                      <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
+                      <span class="per">12.17%</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">강의</span> <span class="tx"><em>25</em>/115</span>
+                        <span class="bar"></span>
+                        <span class="tx"><em>4시간 28분</em> / 총 25시간 10분</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="curriculum-list">
+                <li>
+                  <dl>
+                    <dt>
+                      <b class="tit">섹션0.문제(소스) 파일 및 자동채점폴더</b>
+                      <div class="right"><span class="time">1강 / 1분 미만</span></div>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <div class="left">
+                            <div class="lecture-name checked">
+                              <i></i>
+                              <div class="desc">
+                                <div class="name">강의자료</div>
+                                <div class="etc">
+                                  <span class="time">3분 30초</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>
+                      <b class="tit">섹션 1. 문제(소스) 파일 및 자동채점폴더</b>
+                      <div class="right"><span class="time">3강 / 2시간10분</span></div>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <div class="left">
+                            <div class="lecture-name checked">
+                              <i></i>
+                              <div class="desc">
+                                <div class="name">기출문제 풀이 100분 토론 100분 토론 100분 토론 100분 토론  100분 토론 100분 토론 100분 토론 100분 토론 100분 토론</div>
+                                <div class="etc">
+                                  <span class="tag-st3">시청중</span>
+                                  <span class="time">3분 30초</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="left">
+                            <div class="lecture-name checked">
+                              <i></i>
+                              <div class="desc">
+                                <div class="name">기출문제 풀이 100분 토론</div>
+                                <div class="etc">
+                                  <span class="time">3분 30초</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="left">
+                            <div class="lecture-name checked">
+                              <i></i>
+                              <div class="desc">
+                                <div class="name">기출문제 풀이 100분 토론</div>
+                                <div class="etc">
+                                  <span class="time">3분 30초</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- // 커리큘럼 -->
+          <!-- 질문하기 -->
+          <section class="menu-detail" id="qna" style="display:none">
+            <div class="menu-body">
+              <div class="auto">
+                <ul class="data-list">
+                  <li>
+                    <a href="javascript:void(0);" onclick="menuOpen('#qna-detail');">
+                      <div class="tags"><span class="tag-st3">답변완료</span></div>
+                      <b class="tit">43번 강의내용에 문의사항 있습니다</b>
+                      <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드</p>
+                      <div class="info">
+                        <span>홍길동</span>
+                        <span class="date">2024.03.22</span>
+                        <span class="view">200</span>
+                        <span class="reple">3</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="menuOpen('#qna-detail');">
+                      <div class="tags"><span class="tag-st3">답변완료</span></div>
+                      <b class="tit">43번 강의내용에 문의사항 있습니다</b>
+                      <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드</p>
+                      <div class="info">
+                        <span>홍길동</span>
+                        <span class="date">2024.03.22</span>
+                        <span class="view">200</span>
+                        <span class="reple">3</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="menuOpen('#qna-detail');">
+                      <div class="tags"><span class="tag-st4">미답변</span></div>
+                      <b class="tit">43번 강의내용에 문의사항 있습니다</b>
+                      <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드</p>
+                      <div class="info">
+                        <span>홍길동</span>
+                        <span class="date">2024.03.22</span>
+                        <span class="view">200</span>
+                        <span class="reple">3</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="menuOpen('#qna-detail');">
+                      <div class="tags"><span class="tag-st4">미답변</span></div>
+                      <b class="tit">43번 강의내용에 문의사항 있습니다</b>
+                      <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드</p>
+                      <div class="info">
+                        <span>홍길동</span>
+                        <span class="date">2024.03.22</span>
+                        <span class="view">200</span>
+                        <span class="reple">3</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-wrap btm-fixed">
+                <button type="button" class="btn-type-full st1" onclick="menuOpen('#qna-regist')">질문하기</button>
+              </div>
+            </div>
+          </section>
+          <!-- // 질문하기 -->
+          <!-- 질문하기 상세 -->
+          <section class="menu-detail" id="qna-detail" style="display:none">
+            <div class="menu-body">
+              <div class="detail-view">
+                <div class="detail-header">
+                  <h2 class="tit">43번 강의내용에 문의있습니다.</h2>
+                  <p class="txt">섹션1 실기강의 > 코드분석 강의입니다.</p>
+                  <div class="info">
+                    <span>홍길동</span>
+                    <span class="date">2024.03.22</span>
+                    <span class="view">200</span>
+                    <span class="reple">3</span>
+                  </div>
+                </div>
+                <div class="view-wrap">
+                  <div class="view pre-line">안녕하세요.
+                    학습에 불편을 드린 점 사과드립니다.
+                    2023대비 정보처리산업기사 실기 8차 정오표를 올려드리오니 참고 부탁드립니다.
+                    미흡한 부분으로 학습하시는데 불편을 드린 점 사과의 말씀을 드립니다.
+                    관리자 드림
+                    <div class="go-lecture">
+                      <span>섹션 1. 문제(소스) 파일 및 자동채점폴더</span>
+                      <a href="javascript:void(0);" class="link">강의 영상</a>
+                    </div><img src="../images/temp/temp-img-ex.jpg" alt="">
+                  </div>
+                  <div class="menus">
+                    <div class="row">
+                      <a href="www.naver.com" class="btn-type3 st4 pad2"><i class="ico-link"></i><span>www.naver.com</span></a>
+                    </div>
+                    <div class="row">
+                      <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                      <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <script>
+                  $.get("common/review.html", function(data) {
+                     $(data).appendTo(".detail-view");
+                     $('.review-answer').show();
+                     $('.top-menu').show();
+                     $('.paging-wrap').show();
+                     $('.btn-wrap').show();
+                 });
+               </script>
+              </div>
+            </div>
+          </section>
+          <!-- // 질문하기 상세 -->
+          <!-- 질문하기 등록 -->
+          <section class="menu-detail" id="qna-regist" style="display:none">
+            <div class="menu-body">
+              <div class="form-wrap">
+                <div class="col">
+                  <div class="label">제목</div>
+                  <div class="form">
+                    <div class="input">
+                      <div class="inp"><input type="text" placeholder="제목에 핵심내용을 요약해 보세요."></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="label">내용</div>
+                  <div class="form">
+                    <div class="textarea" style="height:400px;">
+                      <textarea placeholder="- 학습 관련 질문을 남겨주세요. 상세히 작성하면 더 좋아요! &#13;&#10;- 먼저 유사한 질문이 있었는지 검색해보세요. &#13;&#10- 서로 예의를 지키며 존중하는 문화를 만들어가요."></textarea>
+                    </div>
+                  </div>
+                </div>
+               </div>
+               <div class="btn-wrap">
+                <button type="button" class="btn-type2 st2 w-size1" onclick="menuOpen('#qna');">취소</button>
+                <button type="button" class="btn-type2 st1 auto" onclick="menuOpen('#qna');">등록</button>
+               </div>
+            </div>
+          </section>
+        </div>
+        <!-- // 질문하기 등록 -->
+      </div>
+    </div>
+  </div>
+
+<script>
+  function menuOpen(id){
+    $('.menu-detail').hide();
+    $(id).show();
+    $(event.target).parents('li').addClass('on');
+    $(event.target).parents('li').siblings().removeClass('on');
+  }
+  function menuClose(){
+    $('.menu-detail').hide();
+    $('.player-menu li').removeClass('on');
+  }
+
+  </script>
+
+
+</body>
+</html>

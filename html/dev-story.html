@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header"><h1 class="title-main">소주한잔 개발한줄</h1></header>
+      <div class="movie-list-wrap">
+        <div class="noti-box">
+          <img src="../images/common/ico-noti-box.svg" alt="">
+          <div class="text">
+            회원님을 위한 무료강의 영상입니다.
+            <br>흥달쌤 <b>구독 및 좋아요!</b>는 영상제작에 큰힘이 됩니다.
+          </div>
+        </div>
+        <ul class="movie-list">
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/27PrKdNkCDs/mqdefault.jpg" alt=""></div><span class="txt">2024년 대비 정보처리기사/산업기사 실기 6주플랜2024년 대비 정보처리기사/산업기사 실기 6주플랜</span><span class="view">367</span></a></li>
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/XpuBnYBKktc/mqdefault.jpg" alt=""></div><span class="txt">[Q&A] 영상답변 | 생성자</span><span class="view">367</span></a></li>
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/nxWKCty77nI/mqdefault.jpg" alt=""></div><span class="txt">깨알 C언어 | 04. 변수의 종류와 유효범위</span><span class="view">367</span></a></li>
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/9PddGl6bg1U/mqdefault.jpg" alt=""></div><span class="txt">2024년 대비 정보처리기사/산업기사 실기 6주플랜</span><span class="view">367</span></a></li>
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/-w6O5Bq8OMY/mqdefault.jpg" alt=""></div><span class="txt">[Q&A] 영상답변 | 생성자</span><span class="view">367</span></a></li>
+          <li><a href="javascript:void(0);"><div class="img"><img src="https://img.youtube.com/vi/fCM_SS1bHLc/mqdefault.jpg" alt=""></div><span class="txt">[Q&A] 영상답변 | 생성자</span><span class="view">367</span></a></li>
+        </ul>
+
+        <div class="paging-wrap">
+          <div class="paging">
+            <button type="button" disabled class="btn-first"></button>
+            <button type="button" disabled class="btn-prev"></button>
+            <button type="button">1</button>
+            <button type="button" class="on">2</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+            <button type="button" class="btn-next"></button>
+            <button type="button" class="btn-last"></button>
+          </div>
+        </div>        
+      </div>
+    </main>
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+</body>
+</html>

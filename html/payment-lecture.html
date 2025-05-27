@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header">
+        <h1 class="title-main">결제하기</h1>
+        <div class="right">
+          <ol class="step">
+            <li class="checked"><span></span></li>
+            <li class="checked"><span></span></li>
+            <li class="on"><span></span></li>
+          </ol>
+        </div>
+      </header>
+      <div class="payment-wrap">
+        <div class="detail-wrap">
+          <!-- 내용 -->
+          <h2 class="title-section"><em>01</em><b>내용</b></h2>
+          <div class="detail-box">
+            <div class="row">
+              <h3 class="title">2024대비 정보처리기사 패키지 패키지 패키지 패키지(필기+실기)</h3>
+              <div class="right">
+                <span class="price">200,000원</span>
+              </div>
+            </div>
+            <div class="row bg column">
+              <div class="date-guide">
+                <span class="label">수강시작일 설정:</span>
+                <div class="input-calendar">
+                  <div class="inp"><input type="text" class="datepicker"></div>
+                  <span class="dash">~</span>
+                  <div class="inp"><input type="text" class="datepicker"></div>
+                </div>
+              </div>
+              <p class="txt"><em>수강기간 : 60일</em> 클래스 시작일은 결제일 이후부터 7일 이내의 날짜여야만 합니다.</p>
+              <p class="txt">클래스의 수강시작일을 설정하지 않은 경우 결제일로부터 7일 후 자동 시작됩니다</p>
+            </div>
+            <div class="row">
+              <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t">필기교재</span>
+              </label>
+              <div class="right">
+                <span class="price">30,000원</span>
+                <div class="inp-num-type1" data-evt="inp-number" data-max="50">
+                  <button type="button" class="btn down" title="감소"></button>
+                  <input type="number" value="1" class="num">
+                  <button type="button" class="btn up" title="증가"></button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t">실기교재</span>
+              </label>
+              <div class="right">
+                <span class="price">30,000원</span>
+                <div class="inp-num-type1" data-evt="inp-number" data-max="50">
+                  <button type="button" class="btn down" title="감소"></button>
+                  <input type="number" value="0" class="num">
+                  <button type="button" class="btn up" title="증가"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="line-bar"></div>
+
+          <!-- 결제방식 -->
+          <h2 class="title-section"><em>02</em><b>결제방식</b></h2>
+          <div class="detail-box">
+            <div class="row">
+              <ul class="payment-method">
+                <li>
+                  <label class="inp-chk st2">
+                      <input type="radio" checked name="method"><span class="ic"></span>
+                      <span class="t">신용카드 결제</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-chk st2">
+                      <input type="radio" name="method"><span class="ic"></span>
+                      <span class="t">실시간 계좌이체</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="inp-chk st2">
+                      <input type="radio" name="method"><span class="ic"></span>
+                      <span class="t">무통장 입금</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="line-bar"></div>
+
+          <!-- 배송정보 -->
+          <h2 class="title-section"><em>03</em><b>배송정보</b></h2>
+          <div class="detail-box delivery-info">
+            <div class="col">
+              <div class="label">받으시는분</div>
+              <div class="input full">
+                <div class="inp"><input type="text" placeholder="멤버 이름을 입력해주세요."></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">연락처</div>
+              <div class="input full">
+                <div class="inp"><input type="text"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">우편번호검색</div>
+              <div class="input-address">
+                <div class="input">
+                  <div class="inp"><input type="text"></div>
+                </div>
+                <button type="button" class="btn-type4 st3">우편번호</button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">기본주소</div>
+              <div class="input full">
+                <div class="inp"><input type="text" placeholder="기본주소"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">상세주소</div>
+              <div class="input full">
+                <div class="inp"><input type="text" placeholder="상세주소"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">배송시 요청사항</div>
+              <select>
+                <option>문앞에 놓아주세요.</option>
+                <option>텍스트2</option>
+                <option>텍스트3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-wrap">
+            <button class="btn-type2 st1 full">결제하기(12,300원)</button>
+          </div>
+        </div>
+        <!-- // detail-wrap -->
+      </div>
+      <!-- // payment-wrap -->
+
+      <div class="desc-box">
+          
+      </div>
+      <!-- // desc-box -->
+    </main>
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+</body>
+</html>

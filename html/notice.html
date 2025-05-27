@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header">
+        <h1 class="title-main">공지사항</h1>
+      </header>
+      <div class="notice-wrap">
+        <div class="menu-box">
+          <div class="condition">
+            <select>
+              <option>제목</option>
+              <option>내용</option>
+              <option>제목 + 내용</option>
+            </select>
+            <div class="input input-search">
+              <div class="inp"><input type="text" placeholder="내용"></div>
+              <button class="btn-search"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-type1 sticky">
+          <ul>
+              <li class="on"><a href="javascript:void(0);" data-tab-id="tab1">전체</a></li>
+              <li><a href="javascript:void(0);" data-tab-id="tab2">이벤트</a></li>
+          </ul>
+        </div>
+
+        <!-- 전체 -->
+        <div id="tab1" class="tab-content">
+          <ul class="data-list">
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st1">공지사항</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st1">공지사항</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니 내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="paging-wrap">
+            <div class="paging">
+              <button type="button" disabled class="btn-first"></button>
+              <button type="button" disabled class="btn-prev"></button>
+              <button type="button">1</button>
+              <button type="button" class="on">2</button>
+              <button type="button">3</button>
+              <button type="button">4</button>
+              <button type="button" class="btn-next"></button>
+              <button type="button" class="btn-last"></button>
+            </div>
+          </div>
+        </div>
+        <!-- // 전체 -->
+         <!-- 이벤트 -->
+        <div id="tab2" class="tab-content" style="display: none;">
+          <ul class="data-list">
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <div class="tags"><span class="tag-st2">이벤트</span></div>
+                <b class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</b>
+                <p class="txt">내용 1줄 it취업을 위한 알고리즘 문제풀이" 후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서 알려드립니다.후속 강의가 오픈되어서니</p>
+                <div class="info">
+                  <span class="date">2024.03.22</span>
+                  <span class="view">200</span>
+                  <span class="reple">3</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- // 이벤트 -->
+
+        <div class="nodata-box">
+          <i></i>
+          <strong class="tit">검색 결과가 없습니다.</strong>
+          <p class="txt">
+            원하는 검색 결과를 찾지 못했다면 
+            <br>다른 검색어를 입력해 주세요.
+          </p>
+        </div>        
+        
+      </div>
+    </main>
+  </div>
+  <!-- // container -->
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+</body>
+</html>
