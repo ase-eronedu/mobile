@@ -22,15 +22,16 @@
   <script>
      $.get("common/header.html", function(data) {
         $(data).prependTo(".wrap");
+
+        $('.header-tit').text('공지사항')
+        $('#header-type1').hide()
+        $('#header-type2').show()
     });
   </script>
 
   <!-- container -->
   <div class="container">
     <main class="content">
-      <header class="page-header">
-        <h1 class="title-main">공지사항</h1>
-      </header>
       <div class="detail-view">
         <div class="detail-header">
           <h2 class="tit">[24년1회] 기사/산업기사 실기 원서접수 안내(시험장 현황 추가)</h2>
@@ -63,7 +64,6 @@
           $.get("common/review.html", function(data) {
              $(data).appendTo(".detail-view");
              $('.top-menu').show();
-             $('.paging-wrap').show();
              $('.btn-wrap').show();
          });
        </script>     

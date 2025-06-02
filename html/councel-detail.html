@@ -20,18 +20,18 @@
 <!-- wrap -->
 <div class="wrap">
   <script>
-     $.get("common/header.html", function(data) {
-        $(data).prependTo(".wrap");
-    });
-  </script>
+    $.get("common/header.html", function(data) {
+       $(data).prependTo(".wrap");
 
+       $('.header-tit').text('1:1 상담')
+       $('#header-type1').hide()
+       $('#header-type2').show()
+   });
+ </script>
   <!-- container -->
   <div class="container">
     
     <main class="content">
-      <header class="page-header">
-        <h1 class="title-main">1:1 상담</h1>
-      </header>
       <div class="detail-view">
         <div class="detail-header">
           <h2 class="tit">43번 강의내용에 문의있습니다.</h2>
@@ -67,7 +67,6 @@
              $(data).appendTo(".detail-view");
              $('.review-answer').show();
              $('.top-menu').show();
-             $('.paging-wrap').show();
              $('.btn-wrap').show();
          });
        </script>
@@ -92,7 +91,7 @@
     <div class="popup">
       <button type="button" class="close" onclick="popClose('#pop-review-modify');"></button>
       <header class="pop-header">
-        <h1 class="pop-tit">답글 수정</h1>
+        <h1 class="pop-tit">댓글 수정</h1>
       </header>
       <div class="pop-body">
         <div class="textarea st-pop">
@@ -118,7 +117,7 @@
     <div class="popup">
       <button type="button" class="close" onclick="popClose('#pop-review-write');"></button>
       <header class="pop-header">
-        <h1 class="pop-tit">답글 등록</h1>
+        <h1 class="pop-tit">댓글 등록</h1>
       </header>
       <div class="pop-body">
         <div class="textarea st-pop">

@@ -62,3 +62,18 @@
 	font-display: swap;
 	src: local('Pretendard Thin'), url('../font/Pretendard-Thin.woff') format('woff');
 }
+
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 500;
+	unicode-range: U+0030-0039, U+002C, U+0025;
+	src: local('Roboto Medium'), url('../font/Roboto-Medium.woff') format('woff')
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 400;
+	unicode-range: U+0030-0039, U+002C, U+0025;
+	src: local('Roboto Regular'), url('../font/Roboto-Regular.woff') format('woff')
+}

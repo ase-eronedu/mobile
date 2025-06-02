@@ -59,6 +59,40 @@
             <div class="txt-info"><em>PIN 번호</em>는 간편 로그인 오류 시 사용됩니다.</div>
           </li>
         </ul>
+        <div class="agree-checks">
+          <div class="check-all">
+            <div class="txt">전체동의</div>
+            <label class="inp-chk all">
+              <input type="checkbox" id="allCheck">
+              <span class="ic"></span>
+            </label>
+          </div>
+          <ul>
+            <li>
+              <div class="txt">(선택) 이벤트 및 할인 소식 알림 동의</div>
+              <label class="inp-chk">
+                <input type="checkbox" value="1">
+                <span class="ic"></span>
+              </label>
+            </li>
+            <li>
+                <div class="txt">(필수) 이용약관 동의</div>
+                <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                <label class="inp-chk">
+                  <input type="checkbox" value="2" name="rule">
+                  <span class="ic"></span>
+                </label>
+            </li>
+            <li>
+                <div class="txt">(필수) 개인정보취급방침 동의</div>
+                <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                <label class="inp-chk">
+                  <input type="checkbox" value="2" name="rule2">
+                  <span class="ic"></span>
+                </label>
+            </li>
+          </ul>
+        </div>
         <div class="btn-wrap col">
           <button class="btn-type2 st1 full" data-id="active" disabled onclick="alertOpen('가입 시 등록하신 <br>이메일&PIN번호가 아닙니다.<br>다시 입력해 주세요.', ['확인'], alertCallback);">이라온에듀 시작하기</button>
         </div>
@@ -80,7 +114,7 @@
 
 
 <script>
-   formCheck('.login-form', '[name=email], [name=name], [name=phone], [name=pin]');
+   formCheck('.login-wrap', '[name=email], [name=name], [name=phone], [name=pin], [name=rule], [name=rule2]'); // 체크할 폼들
   
   function alertCallback(val){
     alert(val);
@@ -105,15 +139,15 @@
   function formCheck(wrap, inputs){
     let formChecked = function(){
       let checked = $.map($(wrap).find(inputs), function(el){
-            return el.value ? true : false
+            return el.type =='text' || el.type =='number' ?  (el.value ? true : false) : (el.checked ? true : false)
           });
       let valid = (checked.includes(false) ? false : true) && ($(wrap + ' .txt-error').length === 0);
       return valid;
     }
   
-    function activeBtnCheck(checked){   
+    function activeBtnCheck(checked){    // 최종확인 버튼 활성화
       let $btnActive = $(wrap).find('[data-id="active"]');
-  
+
       if(checked()){
         $btnActive.removeAttr('disabled');
       }else{
@@ -121,13 +155,42 @@
       }
     }
   
-    $(wrap).find(inputs).on('keyup blur', function(){
+    $(wrap).find(inputs).on('keyup blur change', function(){
       activeBtnCheck(formChecked) 
     });    
-    $(document).on('click', wrap + ' .input .btn-del', function(){
+    $(wrap).find('#allCheck').on('change', function(){ // 전체동의버튼도 체크해야되므로 따로추가
+      setTimeout(function(){ 
+        activeBtnCheck(formChecked)
+      })
+    });    
+    $(document).on('click', wrap + ' .input .btn-del', function(){ 
       $(wrap).find('[data-id="active"]').attr('disabled', 'disabled');
     });    
   }
+
+  
+  //이용동의 선택(checkbox)          
+  const checkboxs = $(".agree-checks ul .inp-chk input[type=checkbox]");
+  $("#allCheck").on("change", function() {
+      if ($(this).is(':checked')) {
+          $(".check-all").addClass("checked");
+          checkboxs.prop('checked', true);
+      } else {
+          $(".check-all").removeClass("checked");
+          checkboxs.prop('checked', false);
+      }
+  });
+  checkboxs.on("change", function(event) {
+      let total = $(".agree-checks ul .inp-chk input[type=checkbox]").length;
+      let checked = $(".agree-checks ul .inp-chk input[type=checkbox]:checked").length;
+      if (total === checked) {
+          $(".check-all").addClass("checked");
+          $("#allCheck").prop("checked", true);
+      } else {
+          $(".check-all").removeClass("checked");
+          $("#allCheck").prop("checked", false);
+      }
+  });
 </script>
 
 

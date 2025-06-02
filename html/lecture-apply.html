@@ -91,10 +91,11 @@
 
           <div class="tab-type1 scroll sticky">
             <ul>
-                <li class="on"><a href="javascript:void(0);" data-scroll-id="tab1">클래스 소개</a></li>
-                <li><a href="javascript:void(0);" data-scroll-id="tab2">커리큘럼</a></li>
-                <li><a href="javascript:void(0);" data-scroll-id="tab3">크리에이터</a></li>
-                <li><a href="javascript:void(0);" data-scroll-id="tab4">환불정책</a></li>
+              <li class="on"><a href="javascript:void(0);" data-scroll-id="tab1">클래스 소개</a></li>
+              <li><a href="javascript:void(0);" data-scroll-id="tab2">커리큘럼</a></li>
+              <li><a href="javascript:void(0);" data-scroll-id="tab2-2">클래스 구성</a></li>
+              <li><a href="javascript:void(0);" data-scroll-id="tab3">크리에이터</a></li>
+              <li><a href="javascript:void(0);" data-scroll-id="tab4">환불정책</a></li>
             </ul>
           </div>         
           <!-- 클래스 소개 -->
@@ -160,6 +161,41 @@
             </div>
           </div> 
 
+          <!-- 클래스 구성 -->
+          <div id="tab2-2" class="product-detail">
+            <h3 class="title-section"><em>02</em><b>클래스 구성</b></h3>
+            <ul class="product-list st3">
+              <li>
+                <a href="javascript:void(0);" class="item"> 
+                  <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                  <dl class="desc">
+                    <dt><b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b></dt>
+                    <dd>
+                      <ul>
+                        <li>총 160강</li>
+                        <li>바로 수강가능</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </a>
+              </li>              
+              <li>
+                <a href="javascript:void(0);" class="item"> 
+                  <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                  <dl class="desc">
+                    <dt><b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b></dt>
+                    <dd>
+                      <ul>
+                        <li>총 160강</li>
+                        <li>바로 수강가능</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </a>
+              </li>              
+            </ul>
+          </div>           
+
           <div class="line-bar"></div>
           <!-- 크리에이터 -->
           <div id="tab3" class="product-detail">
@@ -171,7 +207,7 @@
 
           <div class="line-bar"></div>
           <!-- 환불정책 -->
-          <div id="tab3" class="product-detail">
+          <div id="tab4" class="product-detail">
             <h3 class="title-section"><em>04</em><b>환불정책</b></h3>
             <div class="text-policy pre-line"><span class="c-red">샘플내용.......</span>
               # 수강 안내
@@ -215,6 +251,7 @@
         <div class="bottom-area">
           <div class="total-price">총 상품금액 <span class="price">12,3000원</span></div>
           <button class="btn-type2 st1 full">수강신청하기</button>
+          <button type="button" class="btn-type2 st3 full" onclick="popOpen('#pop-share');">공유하기</button>
         </div>
       </div>
     </main>
@@ -229,5 +266,45 @@
 </div>
 <!-- // wrap -->
 
+
+<!-- layer-popup -->
+<section class="layer-popup" id="pop-share">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <button type="button" class="close" onclick="popClose('#pop-share');"></button>
+      <header class="pop-header">
+        <h1 class="pop-tit">공유하기</h1>
+      </header>
+      <div class="pop-body">
+        <div class="sns-share-wrap">
+          <ul class="sns-list">
+            <li><button type="button"><i class="ico-sns-kakao"></i><span class="txt">카카오톡</span></button></li>
+            <li><button type="button"><i class="ico-sns-twitter"></i><span class="txt">트위터</span></button></li>
+            <li><button type="button"><i class="ico-sns-facebook"></i><span class="txt">페이스북</span></button></li>
+          </ul>
+          <div class="link-copy">
+            <div class="link"><span id="link">http://www.eraonedu.com/sdfdsfe</span></div>
+            <button type="button" class="btn-type4 st3" onclick="navigator.clipboard.writeText(document.querySelector('#link').innerText).then(() => {
+              alert('링크가 복사되었습니다');
+            })">링크복사</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- // layer-popup -->
+
+<!-- 페이지구분위한 퍼블용 소스-->
+<script>
+  if(window.location.href.includes('#2')){
+    $('.tab-type1 li:nth-child(2)').hide();
+    $('#tab2').hide();
+  }else{
+    $('.tab-type1 li:nth-child(3)').hide();
+    $('#tab2-2').hide();
+  }
+  </script>
 </body>
 </html>

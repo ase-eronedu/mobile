@@ -20,17 +20,18 @@
 <!-- wrap -->
 <div class="wrap">
   <script>
-     $.get("common/header.html", function(data) {
-        $(data).prependTo(".wrap");
-    });
-  </script>
+    $.get("common/header.html", function(data) {
+       $(data).prependTo(".wrap");
+
+       $('.header-tit').text('교재 정오표')
+       $('#header-type1').hide()
+       $('#header-type2').show()
+   });
+ </script>
 
   <!-- container -->
   <div class="container">
     <main class="content">
-      <header class="page-header">
-        <h1 class="title-main">교재 정오표</h1>
-      </header>
       <div class="detail-view">
         <div class="detail-header">
           <h2 class="tit">2023대비 정보처리산업기사 실기 교재 정오표 8차 (2023.07.25.)</h2>

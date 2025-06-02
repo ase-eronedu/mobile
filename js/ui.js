@@ -15,7 +15,7 @@ function gnbMenu(){
       }, 250);
     });  
   // close
-  $('.gnb-menu-wrap .btn-close').on('click', function(){
+  $(document).on('click', '.gnb-menu-wrap .btn-close', function(){
       $('.gnb-menu-wrap').stop().animate({
         left: "-100%",
       }, 250, function() {
@@ -427,7 +427,7 @@ function fileAdd(wrap, tit){
                 </div>
                 <div class="btns">
                   <button type="button" class="btn btn-add">파일첨부</button>
-                  <button type="button" class="btn btn-del">파일삭제</button>
+                  <!-- <button type="button" class="btn btn-del">파일삭제</button> -->
                 </div>
               </div>
             </div>  `;
@@ -438,9 +438,9 @@ function fileAdd(wrap, tit){
       $fileset.find('input[type=file]').on('change', function(){
         let v = $(this).val();
         $fileset.find('input[type=text]').val(v.split('fakepath\\')[1]);
-        if(v && checkInput() === 0) {
-          fileAdd(wrap);numbering();
-        }
+        // if(v && checkInput() === 0) {
+        //   fileAdd(wrap);numbering();
+        // }
       });
       $fileset.find('.btn-add').on('click', function(){
         $fileset.find('input[type=file]').click();
@@ -453,8 +453,8 @@ function fileAdd(wrap, tit){
           return;
         }else{
           $fileset.find('input[type=text]').val('');
-          $fileset.remove();
-          numbering();
+          // $fileset.remove();
+          // numbering();
         }
       });
   }
@@ -469,7 +469,7 @@ function fileAdd(wrap, tit){
 
   function numbering(){
     $wrap.find('.num').each(function(i){
-      $(this).text(i+1)
+      i > 0 ? $(this).text(i+1) : ''
     })
     $wrap.find('[type=file]').each(function(i){
       $(this).attr('name', 'file'+i+1)
@@ -676,6 +676,42 @@ function loadingClose(){
   $('body, html').css('overflow', '');
 }
 
+function pageScrolling(){
+
+  function f(){
+    let top = $(window).scrollTop();
+
+      if(top > 0 ){
+        $('body').addClass('scrolling');
+        if($('header').length > 0) $('header').addClass('scrolling');
+      }else{
+        $('body').removeClass('scrolling');
+        if($('header').length > 0) $('header').removeClass('scrolling');
+      }
+  }
+
+  f();
+  $(document).on('scroll', f);
+}
+
+
+function priceActive(){
+  if($('.payment-wrap .detail-box .inp-chk input').length <= 0) return;
+  function f(obj){
+    if($(obj).prop('checked')){
+      $(obj).parents('.row').addClass('checked');
+    }else{
+      $(obj).parents('.row').removeClass('checked');
+    }    
+  }
+  $('.payment-wrap .detail-box .inp-chk input').each(function(){
+    f($(this));
+  });
+  $('.payment-wrap .detail-box .inp-chk input').on('change', function(){
+    f($(this));
+  });
+}
+
 
 $(function(){
   gnbMenu();
@@ -692,4 +728,6 @@ $(function(){
   datepicker();
   layerMenu();
   upani();
+  pageScrolling();
+  priceActive();
 });
