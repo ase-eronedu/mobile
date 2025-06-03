@@ -268,12 +268,13 @@ function tabScrollEvt(){
 			return;
 		}
 
-		$('[data-scroll-id]').each(function(){
-        let h = $('.header').height() 
+		$('[data-scroll-id]').not(':hidden').each(function(){
+		    let h = $('.header').height() + $('.tab-type1').height() + 20
         let id = $(this).data('scroll-id');
 
 			if($('#'+id).length <= 0 ) return
 			let t = $('#'+id).offset().top - h
+      console.log(h);
 				if(sct > t){
 					$('[data-scroll-id]').parents('li').removeClass('on')
 						$(this).parents('li').addClass('on');
@@ -602,6 +603,57 @@ function popOpen(id, callback){
 	$(id).find('.close').on('click', function(){
 		popClose(id);
 	})
+}
+
+
+let orgPos = 0;
+// 하단 팝업
+function btmPopOpen(id, callback, closeCallback){
+  let $sideMenuWrap = $(id);
+  let $sideMenu = $sideMenuWrap.find('.pop-wrap');
+  let $close = $sideMenuWrap.find('.btn-close');
+
+  orgPos = $(window).scrollTop();
+
+  $sideMenuWrap.show();
+  $sideMenu.slideDown(300, function(){
+    $('body, html').addClass('hidden');
+    $sideMenuWrap.addClass('on');
+    $sideMenu.height($sideMenu.height());
+    if(callback) callback();
+  });
+
+  $close.on('click', function(){
+    btmPopClose(id, closeCallback);
+  });
+}
+
+function getPos(obj){
+  orgPos = $(window).scrollTop();
+}
+function setPos(){
+  $(window).scrollTop(orgPos);
+  orgPos = null
+}
+
+
+function btmPopClose(id, callback){
+  let $sideMenuWrap = $(id);
+  let $sideMenu = $sideMenuWrap.find('.pop-wrap');
+
+    $sideMenu.css('min-height', 0);
+    $sideMenu.slideUp(function(){
+      $sideMenuWrap.removeClass('on');
+      $sideMenu.css('bottom', 0);
+      $sideMenu.attr('style', '');
+      $sideMenuWrap.fadeOut();
+
+      $(window).scrollTop(orgPos); //위치 원복
+
+      if(callback) callback();
+    })
+
+    $('body, html').removeClass('hidden');
 }
 
 

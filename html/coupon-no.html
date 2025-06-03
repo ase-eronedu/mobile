@@ -28,27 +28,26 @@
   <!-- container -->
   <div class="container">
     <main class="content">
-      <header class="page-header"><h1 class="title-main">공개강좌 후기</h1></header>
-      <div class="lecture-review-wrap">
-        <div class="review-input-box">
-          <strong class="tit">흥달쌤에게 후기를 남겨주세요! <br>큰 힘이 됩니다.</strong>
-          <div class="input-box">
-            <div class="input"><textarea name="" id="" placeholder="응원 댓글을 남겨주세요!"></textarea></div>
-            <button class="btn">등록하기</button>
+      <header class="page-header">
+        <h1 class="title-main">쿠폰</h1>
+      </header>
+      <div class="coupon-wrap">
+        <div class="title-wrap">
+          <h2 class="tit">보유쿠폰</h2>
+          <div class="right">
+            <button type="button" class="btn-coupon-regist">+ 할인쿠폰 등록</button>
           </div>
         </div>
-
-
-        <script>
-          $.get("common/review.html", function(data) {
-             $(data).appendTo(".lecture-review-wrap");
-             $('.paging-wrap').show();
-         });
-       </script>        
+        
+        <div class="no-coupon">
+          <p>사용 가능한 쿠폰이 없습니다.</p>
+        </div>
+        
       </div>
     </main>
   </div>
   <!-- // container -->
+  
 
   <script>
     $.get("common/footer.html", function(data) {

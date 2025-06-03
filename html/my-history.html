@@ -32,9 +32,28 @@
         <h1 class="title-main">주문/결제 내역</h1>
       </header>
       <div class="my-history-wrap">
+        <div class="date-setting-box">
+          <div class="set-date-wrap">
+            <i class="ico-cal"></i><span><span class="set-date-txt">날짜선택</span> <em class="set-date"></em></span>
+            <button type="button" class="btn-toggle" onclick="$(this).parents('.date-setting-box').toggleClass('on');"></button>
+          </div>
+          <div class="date-select">
+            <button type="button" id="month3">최근 3개월</button>
+            <button type="button" id="month6">최근 6개월</button>
+            <button type="button" id="month12">최근 1년</button>
+            <div class="input-calendar" id="range-calener">
+              <div class="inp"><input type="text" class="datepicker" id="startDate"></div>
+              <span class="dash">~</span>
+              <div class="inp"><input type="text" class="datepicker" id="endDate"></div>
+            </div>
+          </div>
+        </div>        
         <dl class="history-list">
           <dt>
             <strong class="tit">주문날자<b>2024.05.22</b></strong>
+            <div class="right">
+              <a href="javascript:void(0);" class="btn-order-detail">주문상세내역 ></a>
+            </div>
           </dt>
           <dd>
             <div class="info">
@@ -45,8 +64,8 @@
               <div class="row">
                 <span class="total">합계<b>220,000원</b></span>
                 <div class="right">
-                  <button class="btn-type5 st3">영수증</button>
-                  <button class="btn-type5 st3">거래명세서</button>
+                  <button type="button" class="btn-type5 st3">영수증</button>
+                  <button type="button" class="btn-type5 st6" onclick="btmPopOpen('#pop-refund');">환불요청</button>
                 </div>
               </div>
             </div>
@@ -77,7 +96,7 @@
           <dd>
             <div class="info">
               <div class="row">
-                <span class="tag-st3">결제완료</span>
+                <span class="tag-st5">환불완료</span>
                 <div class="right"><span class="number">주문번호<b>234422</b></span></div>
               </div>
               <div class="row">
@@ -88,7 +107,7 @@
                 </div>
               </div>
             </div>
-            <ul class="list">
+            <ul class="list refund">
               <li>
                 <span class="tit">24년 정보처리기사 실기강좌</span>
                 <div class="right">
@@ -96,13 +115,7 @@
                 </div>
               </li>
               <li>
-                <span class="tit">실기강좌 교재 1권 <a href="javascript:void(0);" class="link">(배송조회)</a></span>
-                <div class="right">
-                  <span class="price">200,000원</span>
-                </div>
-              </li>
-              <li>
-                <span class="tit">실기강좌 교재 1권 <a href="javascript:void(0);" class="link">(배송조회)</a></span>
+                <span class="tit">24년 정보처리기사 실기강좌</span>
                 <div class="right">
                   <span class="price">200,000원</span>
                 </div>
@@ -127,6 +140,56 @@
   </div>
   <!-- // container -->
 
+<div class="btm-popup-wrap" id="pop-refund">
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-header">
+        <strong class="tit">환불요청</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
+      <div class="pop-body">
+        <div class="form-wrap st2">
+          <div class="col">
+            <div class="label">이메일</div>
+            <div class="form">
+              <b class="txt-email">123@naver.com</b>
+            </div>
+          </div>
+          <div class="col">
+            <div class="label">이름 <span class="c-red">*</span></div>
+            <div class="form">
+              <div class="input">
+                <div class="inp"><input type="text" placeholder="이름"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="label">전화번호 <span class="c-red">*</span></div>
+            <div class="form">
+              <div class="input">
+                <div class="inp"><input type="number" placeholder="전화번호"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="label">환불사유 <span class="c-red">*</span></div>
+            <div class="form">
+              <div class="textarea" style="height:100px;">
+                <textarea placeholder="정확한 환불 신청을 위해 사유 기재를 부탁드립니다."></textarea>
+              </div>
+            </div>
+          </div>
+         </div>            
+      </div>
+      <div class="pop-footer line-t">
+        <div class="btn-wrap">
+          <button type="button" class="btn-type4-2 st5 w-size1" onclick="btmPopClose('#pop-refund');">취소</button>
+          <button type="button" class="btn-type4-2 st1 w-auto" onclick="sendRefund()">환불요청</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
   <script>
     $.get("common/footer.html", function(data) {
        $(data).appendTo(".wrap");
@@ -135,5 +198,127 @@
 </div>
 <!-- // wrap -->
 
+<script>
+
+  function sendRefund(){
+    btmPopClose('#pop-refund');
+    alertOpen('정확한 환불 처리를 위해 <br><em class="c-point">성함, 연락처, 환불 사유</em>를 기재해 주시기 <br>바랍니다.', ['확인'], alertCallback);
+  }
+  
+  function alertCallback(val){
+      alertOpen('내용 확인 후 개별 연락드리겠습니다. <br>단, 교재는 구매일로부터 7일이 경과한 경우 <br>환불이 불가하오니 참고 부탁드립니다.', ['확인']);
+  }  
+
+  function formatDate(date) {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = ("0" + (d.getMonth() + 1)).slice(-2);
+    const day = ("0" + d.getDate()).slice(-2);
+    return `${year}.${month}.${day}`;
+  }
+
+  function updateDateRangeDisplay(startDate, endDate) {
+    if (startDate && endDate) {
+      const formatted = `(${formatDate(startDate)}~${formatDate(endDate)})`;
+      $(".set-date").text(formatted);
+    }
+  }
+
+  function setDateRange(months, labelText) {
+    const end = new Date();
+    const start = new Date();
+    start.setMonth(end.getMonth() - months);
+
+    $('#startDate').datepicker("setDate", start);
+    $('#endDate').datepicker("setDate", end);
+
+    // 날짜 표시 업데이트
+    updateDateRangeDisplay(start, end);
+    $('.set-date-txt').text(labelText);
+  }
+
+function formatDate(date) {
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = ("0" + (d.getMonth() + 1)).slice(-2);
+  const day = ("0" + d.getDate()).slice(-2);
+  return `${year}.${month}.${day}`;
+}
+
+function updateDateRangeDisplay(startDate, endDate) {
+  if (startDate && endDate) {
+    const formatted = `(${formatDate(startDate)}~${formatDate(endDate)})`;
+    $(".set-date").text(formatted);
+  }
+}
+function isExactMonthRange(startDate, endDate, months) {
+  const expectedStart = new Date(endDate);
+  expectedStart.setMonth(expectedStart.getMonth() - months);
+
+  // 날짜 비교
+  const format = d => `${d.getFullYear()}-${("0" + (d.getMonth() + 1)).slice(-2)}-${("0" + d.getDate()).slice(-2)}`;
+
+  return format(startDate) === format(expectedStart);
+}
+
+$(".datepicker").datepicker({
+  dateFormat: 'yy-mm-dd',
+  onSelect: function () {
+    setTimeout(() => {
+      const startDateStr = $('#startDate').val();
+      const endDateStr = $('#endDate').val();
+
+      if (startDateStr && endDateStr) {
+        const startDate = new Date(startDateStr);
+        const endDate = new Date(endDateStr);
+
+        if (startDate > endDate) {
+          alert('시작일은 종료일보다 클 수 없습니다.');
+          $('#endDate').val('');
+          return;
+        }
+
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${("0" + (today.getMonth() + 1)).slice(-2)}-${("0" + today.getDate()).slice(-2)}`;
+
+        if (endDateStr === todayStr) {
+          if (isExactMonthRange(startDate, endDate, 3)) {
+            $('.set-date-txt').text('최근 3개월');
+          } else if (isExactMonthRange(startDate, endDate, 6)) {
+            $('.set-date-txt').text('최근 6개월');
+          } else if (isExactMonthRange(startDate, endDate, 12)) {
+            $('.set-date-txt').text('최근 1년');
+          } else {
+            $('.set-date-txt').text('직접 선택');
+          }
+        } else {
+          $('.set-date-txt').text('직접 선택');
+        }
+
+        updateDateRangeDisplay(startDateStr, endDateStr);
+      }
+    }, 10);
+  }
+});
+
+//최근 3개월 처음셋팅
+setDateRange(3, '최근 3개월');
+$('#month3').addClass('on');
+
+$('#month3').on('click', function () {
+  setDateRange(3, '최근 3개월');
+  $(this).addClass('on').siblings('button').removeClass('on');
+});
+
+$('#month6').on('click', function () {
+  setDateRange(6, '최근 6개월');
+  $(this).addClass('on').siblings('button').removeClass('on');
+});
+
+$('#month12').on('click', function () {
+  setDateRange(12, '최근 1년');
+  $(this).addClass('on').siblings('button').removeClass('on');
+});
+</script>
 </body>
 </html>

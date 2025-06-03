@@ -28,73 +28,75 @@
   <!-- container -->
   <div class="container">
     <main class="content">
-      <div class="login-form">
-        <div class="guide-text">
-          <i class="ico"><img src="../images/common/ico-character-love.svg" alt=""></i>
-          <div class="tit">
-            이라온에듀 이용에 필요한 
-            <br>필수 정보를 입력해주세요.
+      <div class="login-wrap">
+        <div class="login-form">
+          <div class="guide-text">
+            <i class="ico"><img src="../images/common/ico-character-love.svg" alt=""></i>
+            <div class="tit">
+              이라온에듀 이용에 필요한
+              <br>필수 정보를 입력해주세요.
+            </div>
           </div>
-        </div>
-        <ul class="form">
-          <li>
-            <div class="input">
-              <div class="inp"><input type="text" name="email" onblur="validateEmail(this)" placeholder="이메일 주소"></div>
-            </div>
-          </li>
-          <li>
-            <div class="input">
-              <div class="inp"><input type="number" name="phone" placeholder="핸드폰번호" onkeyup="onlyNumber(this);"></div>
-            </div>
-          </li>
-          <li>
-            <div class="input">
-              <div class="inp"><input type="text" name="name" placeholder="이름"></div>
-            </div>
-          </li>
-          <li>
-            <div class="input">
-              <div class="inp"><input type="number" name="pin" maxLength="4" placeholder="PIN번호" onkeyup="onlyNumber(this);"></div>
-            </div>
-            <div class="txt-info"><em>PIN 번호</em>는 간편 로그인 오류 시 사용됩니다.</div>
-          </li>
-        </ul>
-        <div class="agree-checks">
-          <div class="check-all">
-            <div class="txt">전체동의</div>
-            <label class="inp-chk all">
-              <input type="checkbox" id="allCheck">
-              <span class="ic"></span>
-            </label>
-          </div>
-          <ul>
+          <ul class="form">
             <li>
-              <div class="txt">(선택) 이벤트 및 할인 소식 알림 동의</div>
-              <label class="inp-chk">
-                <input type="checkbox" value="1">
-                <span class="ic"></span>
-              </label>
+              <div class="input">
+                <div class="inp"><input type="text" name="email" onblur="validateEmail(this)" placeholder="이메일 주소"></div>
+              </div>
             </li>
             <li>
-                <div class="txt">(필수) 이용약관 동의</div>
-                <a href="javascript:void(0);" class="btn-detail">전체보기</a>
-                <label class="inp-chk">
-                  <input type="checkbox" value="2" name="rule">
-                  <span class="ic"></span>
-                </label>
+              <div class="input">
+                <div class="inp"><input type="number" name="phone" placeholder="핸드폰번호" onkeyup="onlyNumber(this);"></div>
+              </div>
             </li>
             <li>
-                <div class="txt">(필수) 개인정보취급방침 동의</div>
-                <a href="javascript:void(0);" class="btn-detail">전체보기</a>
-                <label class="inp-chk">
-                  <input type="checkbox" value="2" name="rule2">
-                  <span class="ic"></span>
-                </label>
+              <div class="input">
+                <div class="inp"><input type="text" name="name" placeholder="이름"></div>
+              </div>
+            </li>
+            <li>
+              <div class="input">
+                <div class="inp"><input type="number" name="pin" maxLength="4" placeholder="PIN번호" onkeyup="onlyNumber(this);"></div>
+              </div>
+              <div class="txt-info"><em>PIN 번호</em>는 간편 로그인 오류 시 사용됩니다.</div>
             </li>
           </ul>
-        </div>
-        <div class="btn-wrap col">
-          <button class="btn-type2 st1 full" data-id="active" disabled onclick="alertOpen('가입 시 등록하신 <br>이메일&PIN번호가 아닙니다.<br>다시 입력해 주세요.', ['확인'], alertCallback);">이라온에듀 시작하기</button>
+          <div class="agree-checks">
+            <div class="check-all">
+              <div class="txt">전체동의</div>
+              <label class="inp-chk all">
+                <input type="checkbox" id="allCheck">
+                <span class="ic"></span>
+              </label>
+            </div>
+            <ul>
+              <li>
+                <div class="txt">(선택) 이벤트 및 할인 소식 알림 동의</div>
+                <label class="inp-chk">
+                  <input type="checkbox" value="1">
+                  <span class="ic"></span>
+                </label>
+              </li>
+              <li>
+                  <div class="txt">(필수) 이용약관 동의</div>
+                  <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                  <label class="inp-chk">
+                    <input type="checkbox" value="2" name="rule">
+                    <span class="ic"></span>
+                  </label>
+              </li>
+              <li>
+                  <div class="txt">(필수) 개인정보취급방침 동의</div>
+                  <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                  <label class="inp-chk">
+                    <input type="checkbox" value="2" name="rule2">
+                    <span class="ic"></span>
+                  </label>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-wrap col">
+            <button class="btn-type2 st1 full" data-id="active" disabled onclick="alertOpen('가입 시 등록하신 <br>이메일&PIN번호가 아닙니다.<br>다시 입력해 주세요.', ['확인'], alertCallback);">이라온에듀 시작하기</button>
+          </div>
         </div>
       </div>
 

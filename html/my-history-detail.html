@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header">
+        <h1 class="title-main">주문/결제 내역</h1>
+      </header>
+      <div class="my-history-detail-wrap">
+        <h2 class="tit">주문번호/날짜</h2>
+        <div class="history-detail-box">
+          <ul>
+            <li>
+              <b class="tit">주문번호 <strong>234422</strong></b>
+            </li>
+            <li>
+              <b class="tit">주문날짜 <strong>2024.05.22 15:38:11</strong></b>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="tit">주문정보</h2>
+        <div class="history-detail-box">
+          <ul class="list">
+            <li>
+              <b class="tit">결제채널</b>
+              <div class="txt">PC</div>
+            </li>
+            <li>
+              <b class="tit">결제수단</b>
+              <div class="txt">신용카드</div>
+            </li>
+            <li>
+              <b class="tit">카드사</b>
+              <div class="txt">토스페이</div>
+            </li>
+          </ul>
+          <ul class="list">
+            <li>
+              <b class="tit">총 상품 금액</b>
+              <div class="txt">20,000원</div>
+            </li>
+            <li>
+              <b class="tit">상품 할인 금액</b>
+              <div class="txt">-8,000원</div>
+            </li>
+            <li>
+              <b class="tit">쿠폰 할인 금액</b>
+              <div class="txt">-0원</div>
+            </li>
+          </ul>
+          <div class="total">
+            <b class="tit">총 결제 금액</b>
+            <div class="price">12,000원</div>
+          </div>
+        </div>
+        <h2 class="tit">구매상품</h2>
+        <div class="history-detail-box">
+          <ul class="product-list st3">
+            <li>
+              <a href="javascript:void(0);" class="item"> 
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <dl class="desc">
+                  <dt><b class="tit">2024대비 정보처리기사</b></dt>
+                  <dd>
+                    <div class="sale-price-wrap">
+                      <div class="sale-price">
+                        <div class="price"><span class="prev">32,3000원</span><b>12,3000원</b></div>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>              
+            <li>
+              <a href="javascript:void(0);" class="item"> 
+                <div class="img"><img src="../images/temp/temp-textbooks.jpg" alt=""></div>
+                <dl class="desc">
+                  <dt><b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b></dt>
+                  <dd>
+                    <div class="sale-price-wrap">
+                      <div class="sale-price">
+                        <div class="price"><span class="prev">32,3000원</span><b>12,3000원</b></div>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>              
+          </ul>
+        </div>
+        
+        <div class="btn-wrap">
+          <a href="javascript:void(0);" class="btn-type2 st2 full">목록으로</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- // container -->
+
+<!-- // wrap -->
+
+</body>
+</html>

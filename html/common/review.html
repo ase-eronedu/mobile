@@ -17,7 +17,7 @@
     </div>
   </div>
 </div>
-<div class="top-menu" style="display: none;"><button type="button" class="btn-reple" onclick="popOpen('#pop-review-write');">홍길동님, 댓글을 작성해보세요.</button></div>
+<div class="top-menu" style="display: none;"><button type="button" class="btn-reple" onclick="btmPopOpen('#pop-review-write');">홍길동님, 댓글을 작성해보세요.</button></div>
 <div class="review-list-wrap">
   <ul class="review-list">
     <li>
@@ -26,7 +26,7 @@
           <button type="button" class="btn-menu"></button>
           <div class="menu-layer">
             <ul>
-              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button" onclick="btmPopOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
               <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
             </ul>
           </div>
@@ -49,7 +49,7 @@
           <button type="button" class="btn-menu"></button>
           <div class="menu-layer">
             <ul>
-              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button" onclick="btmPopOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
               <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
             </ul>
           </div>
@@ -72,7 +72,7 @@
           <button type="button" class="btn-menu"></button>
           <div class="menu-layer">
             <ul>
-              <li><button type="button" onclick="popOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
+              <li><button type="button" onclick="btmPopOpen('#pop-review-modify');"><i class="ico-review-modify"></i><span>수정</span></button></li>
               <li><button type="button"><i class="ico-review-del"></i><span>삭제</span></button></li>
             </ul>
           </div>
@@ -114,55 +114,46 @@
 
 
 
-
-<!-- layer-popup -->
-<section class="layer-popup" id="pop-review-modify">
-  <div class="dim"></div>
+<div class="btm-popup-wrap" id="pop-review-modify">
   <div class="pop-wrap">
     <div class="popup">
-      <button type="button" class="close" onclick="popClose('#pop-review-modify');"></button>
-      <header class="pop-header">
-        <h1 class="pop-tit">댓글 수정</h1>
-      </header>
+      <div class="pop-header">
+        <strong class="tit">댓글 수정</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
       <div class="pop-body">
-        <div class="textarea st-pop">
-          <textarea placeholder="댓글을 작성해 주세요."></textarea>
+        <div class="textarea st-pop" style="height:32rem">
+          <textarea placeholder="답글을 작성해 주세요."></textarea>
           <span class="byte"><em>74자</em> / 1000자</span>
         </div>            
       </div>
-      <div class="pop-footer">
+      <div class="pop-footer line-t">
         <div class="btn-wrap">
-          <button type="button" class="btn-type4 st2 w-size1" onclick="popClose('#pop-review-modify');">취소</button>
-          <button type="button" class="btn-type4 st1 w-auto" onclick="popClose('#pop-review-modify');">수정</button>
+          <button type="button" class="btn-type4-2 st5 w-size1" onclick="btmPopClose('#pop-review-modify');">취소</button>
+          <button type="button" class="btn-type4-2 st1 w-auto" onclick="btmPopClose('#pop-review-modify');">등록</button>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- // layer-popup -->
 
-<!-- layer-popup -->
-<section class="layer-popup" id="pop-review-write">
-  <div class="dim"></div>
+<div class="btm-popup-wrap" id="pop-review-write">
   <div class="pop-wrap">
     <div class="popup">
-      <button type="button" class="close" onclick="popClose('#pop-review-write');"></button>
-      <header class="pop-header">
-        <h1 class="pop-tit">댓글 등록</h1>
-      </header>
+      <div class="pop-header">
+        <strong class="tit">댓글 등록</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
       <div class="pop-body">
-        <div class="textarea st-pop">
+        <div class="textarea st-pop" style="height:32rem">
           <textarea></textarea>
           <span class="byte"><em>74자</em> / 1000자</span>
         </div>            
       </div>
-      <div class="pop-footer">
+      <div class="pop-footer line-t">
         <div class="btn-wrap">
-          <button type="button" class="btn-type4 st2 w-size1" onclick="popClose('#pop-review-write');">취소</button>
-          <button type="button" class="btn-type4 st1 w-auto" onclick="popClose('#pop-review-write');">등록</button>
+          <button type="button" class="btn-type4-2 st5 w-size1" onclick="btmPopClose('#pop-review-write');">취소</button>
+          <button type="button" class="btn-type4-2 st1 w-auto" onclick="btmPopClose('#pop-review-write');">등록</button>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- // layer-popup -->

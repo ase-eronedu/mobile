@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content">
+      <header class="page-header">
+        <h1 class="title-main">쿠폰</h1>
+      </header>
+      <div class="coupon-wrap">
+        <div class="title-wrap">
+          <h2 class="tit">보유쿠폰</h2>
+          <div class="right">
+            <button type="button" class="btn-coupon-regist">+ 할인쿠폰 등록</button>
+          </div>
+        </div>
+        <div class="coupon-list">
+          <ul>
+            <li>
+              <div class="box">
+                <div class="coupon">
+                  <div class="bg">
+                    <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M94 0C97.3137 1.28851e-07 100 2.68629 100 6V22.0635C96.0538 22.5557 93 25.9204 93 30C93 34.0795 96.0538 37.4433 100 37.9355V54C100 57.3137 97.3137 60 94 60H6C2.68629 60 4.83208e-08 57.3137 0 54V6C7.73132e-07 2.68629 2.68629 1.28851e-07 6 0H94Z" fill="url(#paint0_linear_468_1176)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_468_1176" x1="100" y1="60" x2="-1.2219e-06" y2="15" gradientUnits="userSpaceOnUse">
+                    <stop class="start" stop-color="#eee"/>
+                    <stop offset="1" class="end" stop-color="#eee"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    <div class="txt">
+                      <b class="per">10%</b>
+                      <span>COUPON</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <b><em>10%</em> 할인쿠폰</b>
+                  <div class="info">
+                    <span>50,000원 이상 구매시 사용가능</span>
+                    <span>유효기간: 24.05.03 ~ 25.05.09</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-type5 st3">할인대상보기</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div class="coupon">
+                  <div class="bg">
+                    <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M94 0C97.3137 1.28851e-07 100 2.68629 100 6V22.0635C96.0538 22.5557 93 25.9204 93 30C93 34.0795 96.0538 37.4433 100 37.9355V54C100 57.3137 97.3137 60 94 60H6C2.68629 60 4.83208e-08 57.3137 0 54V6C7.73132e-07 2.68629 2.68629 1.28851e-07 6 0H94Z" fill="url(#paint0_linear_468_1176)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_468_1176" x1="100" y1="60" x2="-1.2219e-06" y2="15" gradientUnits="userSpaceOnUse">
+                    <stop class="start" stop-color="#eee"/>
+                    <stop offset="1" class="end" stop-color="#eee"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    <div class="txt">
+                      <b class="per">20,000</b>
+                      <span>COUPON</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <b><em>20,000원</em> 할인쿠폰</b>
+                  <div class="info">
+                    <span>50,000원 이상 구매시 사용가능</span>
+                    <span>유효기간: 24.05.03 ~ 25.05.09</span>
+                  </div>
+                </div>
+                <div class="right">
+                  <button type="button" class="btn-type5 st3">할인대상보기</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="dot-list-box">
+          <ul class="dot-list st2">
+            <li>할인쿠폰: 중복으로 사용할 수 없으며, 상품 1개당 사용 가능합니다.</li>
+            <li>일부 카테고리 상품은 쿠폰할인 적용이 불가능합니다. (할인대상 확인필요)</li>
+            <li>환불시 사용한 쿠폰은 재발급되지 않습니다. 단, 판매자 귀책사유로 취소/반품처리 되었을 경우에는 재발급됩니다.</li>
+          </ul>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+  <!-- // container -->
+
+<div class="btm-popup-wrap" id="pop-coupon-regist">
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-header">
+        <strong class="tit">쿠폰 등록</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
+      <div class="pop-body">
+          <div class="coupon-regist-wrap">
+            <div class="form-wrap form-coupon">
+              <div class="row">
+                <div class="input auto">
+                  <div class="inp"><input type="text" placeholder="쿠폰번호를 입력해주세요."></div>
+                </div>
+                <button type="button" class="btn-type4 st3" style="min-width:5rem">등록</button>
+              </div>
+            </div>
+            <ul class="dot-list st2">
+              <li>유효기간이 지난 쿠폰은 등록이 불가합니다.</li>
+              <li>쿠폰 등록 내역은 ‘마이페이지 > 쿠폰’ 내역에서 확인할 수 있습니다. 등록 후 최대 1분 이내에 반영됩니다.</li>
+              <li>대소문자를 구분해 정확하게 입력해 주세요.</li>
+              <li>다양한 채널에서 받은 이라온에듀 쿠폰을 등록할 수 있습니다.</li>
+            </ul>
+          </div>        
+      </div>
+    </div>
+  </div>  
+</div>  
+
+<div class="btm-popup-wrap" id="pop-coupon">
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-header">
+        <strong class="tit">할인대상</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
+      <div class="pop-body">
+        <div class="coupon-set">
+          <div class="coupon">
+            <div class="bg">
+              <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M94 0C97.3137 1.28851e-07 100 2.68629 100 6V22.0635C96.0538 22.5557 93 25.9204 93 30C93 34.0795 96.0538 37.4433 100 37.9355V54C100 57.3137 97.3137 60 94 60H6C2.68629 60 4.83208e-08 57.3137 0 54V6C7.73132e-07 2.68629 2.68629 1.28851e-07 6 0H94Z" fill="url(#paint0_linear_468_1176)"/>
+              <defs>
+              <linearGradient id="paint0_linear_468_1176" x1="100" y1="60" x2="-1.2219e-06" y2="15" gradientUnits="userSpaceOnUse">
+              <stop class="start" stop-color="#eee"/>
+              <stop offset="1" class="end" stop-color="#eee"/>
+              </linearGradient>
+              </defs>
+              </svg>
+              <div class="txt">
+                <b class="per">10%</b>
+                <span>COUPON</span>
+              </div>
+            </div>
+          </div>
+          <div class="name"><em>10%</em> 할인쿠폰</div>
+        </div>
+        <div class="dot-list-pop-bottom">
+          <ul class="dot-list st2">
+            <li>정보처리기사 강의만 할인 적용 가능한 쿠폰입니다.</li>
+            <li>교재상품의 경우 쿠폰 할인 적용대상에서 제외됩니다.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>  
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+<script>
+
+  btmPopOpen('#pop-coupon-regist');
+  btmPopOpen('#pop-coupon');
+
+</script>
+</body>
+</html>
