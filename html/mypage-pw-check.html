@@ -28,44 +28,34 @@
   <!-- container -->
   <div class="container">
     <main class="content">
-      <div class="login-wrap">
+      <div class="login-wrap" id="phone-auth">
         <div class="login-form">
           <div class="guide-text">
-            <div class="tit">
-              지금 이라온에듀에서
-              <br>흥달쌤과 함께 시작하세요!
-            </div>
-            <div class="txt"><a href="javascript:void(0);" class="link"><em>회원가입</em></a>하고 이라온에듀에서 시작하세요.</div>
+            <div class="tit">비밀번호 확인</div>
+            <div class="txt">회원님의 정보를 보호하기 위해 비밀번호를 다시 확인합니다.</div>
           </div>
-          <ul class="form form-login">
-            <li>
-              <div class="input">
-                <div class="inp"><input type="text" name="email" onblur="validateEmail(this)" placeholder="아이디(이메일)"></div>
-              </div>
-            </li>
+          <ul class="form">
             <li>
               <div class="input input-pw">
-                <div class="inp"><input type="password" name="password" placeholder="비밀번호"></div>
+                <div class="inp"><input type="password" name="pw" placeholder="비밀번호"></div>
                 <button class="btn-pw-view"></button>
               </div>
             </li>
+            <!-- <li>
+              <div class="input input-pw error">
+                <div class="inp"><input type="password" name="pw" placeholder="비밀번호"></div>
+                <button class="btn-pw-view"></button>
+              </div>
+              <div class="txt-error">비밀번호가 맞지 않습니다.</div>
+            </li> -->
           </ul>
           
-          <div class="login-menu">
-            <ul>
-              <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-email');"><span>아이디(이메일) 찾기</span></button></li>
-              <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-pin');"><span>비밀번호 찾기</span></button></li>
-            </ul>
-          </div>
-
           <div class="btn-wrap col">
-            <button class="btn-type2 st1 full btn-login" data-id="active" disabled>이라온에듀 시작하기</button>
-            <div class="or"><span>OR</span></div>
-            <button class="btn-type2 full btn-kakao"><span>카카오 계정으로 로그인</span></button>
-            <button class="btn-type2 full btn-naver"><span>네이버 계정으로 로그인</span></button>
-          </div>        
+            <button type="button" class="btn-type2 st1 full" data-id="active" disabled>회원정보 수정하기</button>
+          </div>
         </div>      
       </div>
+
     </main>
   </div>
   <!-- // container -->
@@ -81,8 +71,9 @@
 
 
 <script>
-  formCheck('.login-wrap', '[name=email], [name=password]'); // 체크할 폼들
+    formCheck('.login-wrap', '[name=pw]'); // 체크할 폼들
 </script>
+
 
 </body>
 </html>

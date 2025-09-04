@@ -598,6 +598,10 @@ function popOpen(id, callback){
 	$(id).fadeIn(300);
 	$('body').css('overflow','hidden');
   $(id).find('input[type=text], input[type=number], textarea').val('');
+
+  inputFocus('.input');
+  inputFocus('.textarea');
+
 	if(callback !=undefined ) callback();
 
 	$(id).find('.close').on('click', function(){
@@ -626,6 +630,9 @@ function btmPopOpen(id, callback, closeCallback){
   $close.on('click', function(){
     btmPopClose(id, closeCallback);
   });
+
+  inputFocus('.input');
+  inputFocus('.textarea');
 }
 
 function getPos(obj){
@@ -765,6 +772,94 @@ function priceActive(){
 }
 
 
+function toggleBtn(){
+    $('[data-evt=toggleBtn]').on('click', function(){
+      $(this).toggleClass('on');
+      $(this).find('.text span').toggleClass('on');
+    });
+  }
+
+
+
+function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if(re.test(email.value)){
+    $(email).parents('.input').removeClass('error');
+    $(email).parents('li').find('.txt-error').remove();
+  }else{
+    if($(email).parents('li').find('.txt-error').length > 0 ) return;
+    $(email).parents('.input').addClass('error');
+    $(email).parents('li').append('<div class="txt-error">이메일형식으로 입력해주세요.</div>')
+  }
+}
+
+function validatePassword(password) {
+  // 최소 6자, 영문 + 숫자 + 특수문자 모두 포함
+  const re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/;
+
+  if(re.test(password.value)){
+    $(password).parents('.input').removeClass('error');
+    $(password).parents('li').find('.txt-error').remove();
+  }else{
+    if($(password).parents('li').find('.txt-error').length > 0 ) return;
+    $(password).parents('.input').addClass('error');
+    $(password).parents('li').append('<div class="txt-error">비밀번호는 영문, 숫자, 특수문자를 포함해 6자리 이상 입력해주세요.</div>');
+  }
+}
+
+function formCheck(wrap, inputs){
+  let formChecked = function(){
+    let checked = $.map($(wrap).find(inputs), function(el){
+          return el.type =='text' || el.type =='number' || el.type =='password' ?  (el.value ? true : false) : (el.checked ? true : false)
+        });
+    let valid = (checked.includes(false) ? false : true) && ($(wrap + ' .txt-error').length === 0);
+    return valid;
+  }
+
+  function activeBtnCheck(checked){    // 최종확인 버튼 활성화
+    let $btnActive = $(wrap).find('[data-id="active"]');
+
+    if(checked()){
+      $btnActive.removeAttr('disabled');
+    }else{
+      $btnActive.attr('disabled', 'disabled');
+    }
+  }
+
+  $(wrap).find(inputs).on('keyup blur change', function(){
+    activeBtnCheck(formChecked) 
+  });    
+  $(wrap).find('#allCheck').on('change', function(){ // 전체동의버튼도 체크해야되므로 따로추가
+    setTimeout(function(){ 
+      activeBtnCheck(formChecked)
+    })
+  });    
+  $(document).on('click', wrap + ' .input .btn-del', function(){ 
+    $(wrap).find('[data-id="active"]').attr('disabled', 'disabled');
+  });    
+}
+
+
+function inputPw(){
+  if($('.input-pw').length <= 0) return;
+  $('.input-pw .btn-pw-view').on('click',function(){
+    if($(this).parents('.input-pw').hasClass('on')){
+      $(this).parents('.input-pw').removeClass('on');
+      $(this).parents('.input-pw').find('input').attr('type', 'password');
+    }else{
+      $(this).parents('.input-pw').addClass('on');
+      $(this).parents('.input-pw').find('input').attr('type', 'text');
+    }
+  });
+}
+
+
+function onlyNumber(input){
+  $(input).val($(input).val().replace(/[^-0-9]/g, ''));
+}
+
+
+
 $(function(){
   gnbMenu();
   basicSlide();
@@ -782,4 +877,5 @@ $(function(){
   upani();
   pageScrolling();
   priceActive();
+  inputPw();
 });

@@ -36,86 +36,88 @@
   $(function(){
     let data =[
       //공통 
-      ["공통", "title", "", ""],
-      ["", "로딩", "", "", "html/loading.html", "", "", ""],
-      ["", "alert", "", "", "html/alert.html", "", "", ""],
-      ["", "데이터 없음", "", "", "html/nodata.html", "", "", ""],
-      ["", "페이지 없음", "", "", "html/nopage.html", "", "", ""],
+      ["공통", "title"],
+      ["", "로딩", "", "", "html/loading.html", ""],
+      ["", "alert", "", "", "html/alert.html", ""],
+      ["", "데이터 없음", "", "", "html/nodata.html", ""],
+      ["", "페이지 없음", "", "", "html/nopage.html", ""],
       //메인 
-      ["메인", "title", "", ""],
-      ["", "메인", "", "", "html/main.html", "", "", ""],      
+      ["메인", "title"],
+      ["", "메인", "", "", "html/main.html", ""],      
       //시험정보 
-      ["시험정보", "title", "", ""],
-      ["", "정보처리기사 안내", "", "", "html/info-processing-engineer.html", "", "", ""],      
-      ["", "정보처리산업기사 안내", "", "", "html/info-processing-industry-engineer.html", "", "", ""],      
-      ["", "SQLD 안내", "", "", "html/sqld.html", "", "", ""],      
-      ["", "인력공단 전국지사 안내", "", "", "html/hrdk.html", "", "", ""],
+      ["시험정보", "title"],
+      ["", "정보처리기사 안내", "", "", "html/info-processing-engineer.html", ""],      
+      ["", "정보처리산업기사 안내", "", "", "html/info-processing-industry-engineer.html", ""],      
+      ["", "SQLD 안내", "", "", "html/sqld.html", ""],      
+      ["", "인력공단 전국지사 안내", "", "", "html/hrdk.html", ""],
      //흥달영상 
-     ["흥달영상", "title", "", ""],
-      ["", "소주한잔 개발한줄", "", "", "html/dev-story.html", "", "", ""],      
-      ["", "흥달쌤 이야기", "", "", "html/teacher-story.html", "", "", ""],      
-      ["", "5분특강", "", "", "html/special-lecture.html", "", "", ""],      
-      ["", "공개강좌 후기", "", "", "html/open-lecture-review.html", "", "", ""],      
+     ["흥달영상", "title"],
+      ["", "소주한잔 개발한줄", "", "", "html/dev-story.html", ""],      
+      ["", "흥달쌤 이야기", "", "", "html/teacher-story.html", ""],      
+      ["", "5분특강", "", "", "html/special-lecture.html", ""],      
+      ["", "공개강좌 후기", "", "", "html/open-lecture-review.html", ""],      
       //수강/교재신청 
-      ["수강/교재신청", "title", "", ""],
-      ["", "정보처리기사", "", "", "html/lecture-apply-list.html#1", "", "", ""],
-      ["", "정보처리산업기사", "", "", "html/lecture-apply-list.html#2", "", "", ""],
-      ["", "SQLD", "", "", "html/lecture-apply-list.html#3", "", "", ""],
-      ["", "수강신청하기", "", "", "html/lecture-apply.html", "", "", ""],
-      ["", "", "(묶음상품 - #2로 구분)", "", "html/lecture-apply.html#2", "", "", ""],
+      ["수강/교재신청", "title"],
+      ["", "정보처리기사", "", "", "html/lecture-apply-list.html#1", ""],
+      ["", "정보처리산업기사", "", "", "html/lecture-apply-list.html#2", ""],
+      ["", "SQLD", "", "", "html/lecture-apply-list.html#3", ""],
+      ["", "수강신청하기", "", "", "html/lecture-apply.html", ""],
+      ["", "", "(묶음상품 - #2로 구분)", "", "html/lecture-apply.html#2", ""],
       ["", "", "결제", "", "html/payment-lecture.html", "",  "", ""],
-      ["", "", "구매완료", "", "html/payment-complete-lecture.html", "", "", ""],
-      ["", "교재구매", "", "", "html/purchase-textbook.html", "", "", ""],
-      ["", "", "결제", "", "html/payment-textbook.html", "", "", ""],
-      ["", "", "구매완료", "", "html/payment-complete-textbook.html", "", "", ""],
-      ["", "교재 정오표", "", "", "html/errata-sheet.html", "", "", ""],
-      ["", "", "상세", "", "html/errata-sheet-detail.html", "", "", ""],
+      ["", "", "구매완료", "", "html/payment-complete-lecture.html", ""],
+      ["", "교재구매", "", "", "html/purchase-textbook.html", ""],
+      ["", "", "결제", "", "html/payment-textbook.html", ""],
+      ["", "", "구매완료", "", "html/payment-complete-textbook.html", ""],
+      ["", "교재 정오표", "", "", "html/errata-sheet.html", ""],
+      ["", "", "상세", "", "html/errata-sheet-detail.html", ""],
       //문제은행
-      ["문제은행", "title", "", ""],
-      ["", "문제은행", "", "", "html/question-bank.html", "", "", ""],
+      ["문제은행", "title"],
+      ["", "문제은행", "", "", "html/question-bank.html", ""],
       //학습지원센터
-      ["학습지원센터", "title", "", ""],
-      ["", "공지사항", "", "", "html/notice.html", "", "", ""],
-      ["", "", "상세", "", "html/notice-detail.html", "", "", ""],
-      ["", "이용안내(FAQ)", "", "", "html/faq.html", "", "", ""],
-      ["", "1:1 상담", "", "", "html/councel.html", "", "", ""],
-      ["", "", "상세", "", "html/councel-detail.html", "", "", ""],
-      ["", "", "등록", "", "html/councel-regist.html", "", "", ""],
-      ["", "필수프로그램 다운", "", "", "html/program-down.html", "", "", ""],
+      ["학습지원센터", "title"],
+      ["", "공지사항", "", "", "html/notice.html", ""],
+      ["", "", "상세", "", "html/notice-detail.html", ""],
+      ["", "이용안내(FAQ)", "", "", "html/faq.html", ""],
+      ["", "1:1 상담", "", "", "html/councel.html", ""],
+      ["", "", "상세", "", "html/councel-detail.html", ""],
+      ["", "", "등록", "", "html/councel-regist.html", ""],
+      ["", "필수프로그램 다운", "", "", "html/program-down.html", ""],
       //로그인
-      ["로그인", "title", "", ""],
-      ["", "로그인1", "", "", "html/login1.html", "", "", ""],
-      ["", "로그인2", "", "", "html/login2.html", "", "", ""],
-      ["", "이메일&PIN번호 찾기", "", "", "html/login-info-find.html", "", "", ""],
-      ["", "PIN번호 발송", "", "", "html/send-pin.html", "", "", ""],
+      ["로그인", "title"],
+      ["", "로그인1", "", "", "html/login1.html", "new"],
+      ["", "로그인2", "", "", "html/login2.html", "new"],
+      ["", "아이디 찾기", "", "", "html/id-find.html", "new"],
+      ["", "비밀번호 찾기", "", "", "html/pw-find.html", "new"],    
       //마이페이지
-      ["마이페이지", "title", "", ""],
-      ["", "회원정보 수정", "", "", "html/mypage.html", "", "", ""],
-      ["", "주문/결제 내역", "", "", "html/my-history.html", "", "", ""],
-      ["", "", "상세", "", "html/my-history-detail.html", "", "", ""],
-      ["", "쿠폰", "", "", "html/coupon.html", "", "", ""],
-      ["", "", "없음", "", "html/coupon-no.html", "", "", ""],      
-      ["", "회원탈퇴", "", "", "html/withdrawal.html", "", "", ""],
-      ["", "탈퇴완료", "", "", "html/withdrawal-complete.html", "", "", ""],
+      ["마이페이지", "title"],
+      ["", "비밀번호 확인", "", "", "html/mypage-pw-check.html", ""],
+      ["", "회원정보 수정", "", "", "html/mypage.html", ""],
+      ["", "주문/결제 내역", "", "", "html/my-history.html", ""],
+      ["", "", "상세", "", "html/my-history-detail.html", ""],
+      ["", "쿠폰", "", "", "html/coupon.html", ""],
+      ["", "", "없음", "", "html/coupon-no.html", ""],      
+      ["", "회원탈퇴", "", "", "html/withdrawal.html", "new"],
+      ["", "탈퇴완료", "", "", "html/withdrawal-complete.html", ""],
       //내 강의실
-      ["내 강의실", "title", "", ""],
-      ["", "수강중인 강좌", "", "", "html/courses-list.html", "", "", ""],
-      ["", "대시보드", "", "", "html/lecture-dashboard.html", "", "", ""],
-      ["", "공지사항", "", "", "html/lecture-notice.html", "", "", ""],
-      ["", "", "상세", "", "html/lecture-notice-detail.html", "", "", ""],
-      ["", "질문답변", "", "", "html/lecture-qna.html", "", "", ""],
-      ["", "", "상세", "", "html/lecture-qna-detail.html", "", "", ""],
-      ["", "", "등록", "", "html/lecture-qna-regist.html", "", "", ""],
-      ["", "수강평", "", "", "html/lecture-review.html", "", "", ""],
-      ["", "증빙서류 발급신청", "수강확인증", "", "html/evidence-document.html", "", "", ""],
-      ["", "", "수료증", "", "html/evidence-document2.html", "", "", ""],
+      ["내 강의실", "title"],
+      ["", "수강중인 강좌", "", "", "html/courses-list.html", ""],
+      ["", "대시보드", "", "", "html/lecture-dashboard.html", ""],
+      ["", "공지사항", "", "", "html/lecture-notice.html", ""],
+      ["", "", "상세", "", "html/lecture-notice-detail.html", ""],
+      ["", "질문답변", "", "", "html/lecture-qna.html", ""],
+      ["", "", "상세", "", "html/lecture-qna-detail.html", ""],
+      ["", "", "등록", "", "html/lecture-qna-regist.html", ""],
+      ["", "수강평", "", "", "html/lecture-review.html", ""],
+      ["", "증빙서류 발급신청", "수강확인증", "", "html/evidence-document.html", ""],
+      ["", "", "수료증", "", "html/evidence-document2.html", ""],
       //시청
-      ["시청", "title", "", ""],
-      ["", "시청", "", "", "html/frame-player.html", "", "", ""], 
+      ["시청", "title"],
+      ["", "시청", "", "", "html/frame-player.html", ""], 
       //약관
-      ["약관", "title", "", ""],
-      ["", "이용약관", "", "", "html/rule-using.html", "", "", ""],      
-      ["", "개인정보취급방침", "", "", "html/rule-personal.html", "", "", ""],            
+      ["약관", "title"],
+      ["", "이용약관", "", "", "html/rule-using.html", ""],      
+      ["", "개인정보취급방침", "", "", "html/rule-personal.html", ""],            
+
     ]
 
     for(var i = 0 ; i<= data.length -1 ; i++){
@@ -139,6 +141,16 @@
         '</tr>')
       }
     }
+
+    setTimeout(function(){
+      $('td').each(function(){
+        if($(this).text().indexOf('new') > -1){
+          $(this).parents('tr').attr('style', 'background:yellow;');
+        }
+      });
+
+    }, 100)
+
   });
 
 

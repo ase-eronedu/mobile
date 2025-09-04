@@ -28,41 +28,91 @@
   <!-- container -->
   <div class="container">
     <main class="content">
-      <div class="login-wrap">
+      <div class="login-wrap" id="phone-auth">
         <div class="login-form">
           <div class="guide-text">
-            <i class="ico"><img src="../images/common/ico-character-love.svg" alt=""></i>
-            <div class="tit">
-              이라온에듀 이용에 필요한
-              <br>필수 정보를 입력해주세요.
-            </div>
+            <div class="tit">휴대폰 인증</div>
+            <div class="txt">휴대폰 번호 입력 후 인증번호 발송을 클릭해주세요.</div>
           </div>
           <ul class="form">
-            <li>
-              <div class="input">
-                <div class="inp"><input type="text" name="email" onblur="validateEmail(this)" placeholder="이메일 주소"></div>
-              </div>
-            </li>
-            <li>
-              <div class="input">
-                <div class="inp"><input type="number" name="phone" placeholder="핸드폰번호" onkeyup="onlyNumber(this);"></div>
-              </div>
-            </li>
             <li>
               <div class="input">
                 <div class="inp"><input type="text" name="name" placeholder="이름"></div>
               </div>
             </li>
             <li>
-              <div class="input">
-                <div class="inp"><input type="number" name="pin" maxLength="4" placeholder="PIN번호" onkeyup="onlyNumber(this);"></div>
+              <div class="form-row">
+                <div class="input">
+                  <div class="inp"><input type="text" name="phone" placeholder="휴대폰번호" onkeyup="onlyNumber(this);"></div>
+                </div>
+                <button type="button" class="btn-type4 st3 btn-input" onclick="alertOpen('휴대전화로 인증번호가<br>발송되었습니다.', ['확인'], alertCallback);">인증번호 발송</button>
               </div>
-              <div class="txt-info"><em>PIN 번호</em>는 간편 로그인 오류 시 사용됩니다.</div>
+            </li>
+            <li>
+              <div class="input">
+                <div class="inp"><input type="number" name="authum" placeholder="인증번호"></div>
+                <div class="time">05:00</div>
+              </div>
             </li>
           </ul>
+          <div class="btn-wrap col">
+            <button class="btn-type2 st1 full" data-id="active" disabled onclick="$('#phone-auth').hide();$('#basic-info').show();">이라온에듀 시작하기</button>
+          </div>
+        </div>      
+      </div>
+
+      <div class="login-wrap" id="basic-info" style="display:none;">
+        <div class="login-form">
+          <div class="guide-text">
+            <div class="tit">기본 정보 등록</div>
+            <div class="txt">입력하신 정보는 개인정보보호 정책에 의해 보호받습니다.</div>
+          </div>
+          <ul class="form">
+            <li>
+              <div class="input">
+                <div class="inp"><input type="text" name="name2" placeholder="이름"></div>
+              </div>
+            </li>
+            <li>
+              <div class="input">
+                <div class="inp"><input type="text" name="email" onblur="validateEmail(this)" placeholder="이메일"></div>
+              </div>
+            </li>
+            <li>
+              <div class="input disabled">
+                <div class="inp"><input type="number" value="01022223333" disabled></div>
+              </div>
+            </li>
+            <li>
+              <div class="input input-pw">
+                <div class="inp"><input type="password" name="pw" onblur="validatePassword(this)" placeholder="비밀번호"></div>
+                <button class="btn-pw-view"></button>
+              </div>
+              <div class="txt-info">*영문/특수문자/숫자 사용해서 6글자 이상</div>
+            </li>
+            <li>
+              <div class="input input-pw">
+                <div class="inp"><input type="password" name="pw2" placeholder="비밀번호 확인"></div>
+                <button class="btn-pw-view"></button>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="btn-wrap col">
+            <button class="btn-type2 st1 full" data-id="active" disabled onclick="$('#basic-info').hide();$('#rule-agree').show();">다음</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-wrap" id="rule-agree" style="display:none;">
+        <div class="login-form">
+          <div class="guide-text">
+            <div class="tit">약관동의</div>
+          </div>
+          
           <div class="agree-checks">
             <div class="check-all">
-              <div class="txt">전체동의</div>
+              <div class="txt">안내사항을 모두 확인하였으며, 동의합니다. </div>
               <label class="inp-chk all">
                 <input type="checkbox" id="allCheck">
                 <span class="ic"></span>
@@ -70,23 +120,23 @@
             </div>
             <ul>
               <li>
-                <div class="txt">(선택) 이벤트 및 할인 소식 알림 동의</div>
-                <label class="inp-chk">
+                <div class="txt">[필수] 서비스 이용약관 동의</div>
+                <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                <label class="inp-chk require">
                   <input type="checkbox" value="1">
                   <span class="ic"></span>
                 </label>
               </li>
               <li>
-                  <div class="txt">(필수) 이용약관 동의</div>
+                  <div class="txt">[필수] 개인정보취급방침 동의</div>
                   <a href="javascript:void(0);" class="btn-detail">전체보기</a>
-                  <label class="inp-chk">
+                  <label class="inp-chk require">
                     <input type="checkbox" value="2" name="rule">
                     <span class="ic"></span>
                   </label>
               </li>
               <li>
-                  <div class="txt">(필수) 개인정보취급방침 동의</div>
-                  <a href="javascript:void(0);" class="btn-detail">전체보기</a>
+                  <div class="txt">[선택] 이벤트 및 할인 소식 알림 동의(이메일&SMS)</div>
                   <label class="inp-chk">
                     <input type="checkbox" value="2" name="rule2">
                     <span class="ic"></span>
@@ -95,11 +145,26 @@
             </ul>
           </div>
           <div class="btn-wrap col">
-            <button class="btn-type2 st1 full" data-id="active" disabled onclick="alertOpen('가입 시 등록하신 <br>이메일&PIN번호가 아닙니다.<br>다시 입력해 주세요.', ['확인'], alertCallback);">이라온에듀 시작하기</button>
+            <button class="btn-type2 st1 full" data-id="active-agree" disabled onclick="$('#rule-agree').hide();$('#complate').show();">동의하고 가입하기</button>
+          </div>
+        </div>      
+      </div>
+
+      <div class="login-wrap" id="complate" style="display:none;">
+        <div class="login-complete">
+          <div class="img-visual">
+            <img src="../images/common/img-sam.jpg" alt="">
+          </div>
+          <div class="complete-text">
+            <div class="tit">회원가입 완료</div>
+            <div class="txt">이라온에듀 회원이 되신 것을 환영합니다.
+              <br>합격 페이스 메이커 흥달쌤과 함께 시작하세요!</div>
+          </div>
+          <div class="btn-wrap col">
+            <button class="btn-type2 st1 full"><span>이라온에듀 시작하기</span></button>
           </div>
         </div>
       </div>
-
 
     </main>
   </div>
@@ -116,81 +181,37 @@
 
 
 <script>
-   formCheck('.login-wrap', '[name=email], [name=name], [name=phone], [name=pin], [name=rule], [name=rule2]'); // 체크할 폼들
+  formCheck('#phone-auth', '[name=name], [name=phone], [name=authum]'); // 체크할 폼들
+  formCheck('#basic-info', '[name=name2], [name=email], [name=pw], [name=pw2]'); // 체크할 폼들
   
   function alertCallback(val){
     alert(val);
   }  
 
-  function onlyNumber(input){
-    $(input).val($(input).val().replace(/[^-0-9]/g, ''));
-  }
-
-  function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if(re.test(email.value)){
-      $(email).parents('.input').removeClass('error');
-      $(email).parents('li').find('.txt-error').remove();
-    }else{
-      if($(email).parents('li').find('.txt-error').length > 0 ) return;
-      $(email).parents('.input').addClass('error');
-      $(email).parents('li').append('<div class="txt-error">이메일형식으로 입력해주세요.</div>')
-    }
-  }
-
-  function formCheck(wrap, inputs){
-    let formChecked = function(){
-      let checked = $.map($(wrap).find(inputs), function(el){
-            return el.type =='text' || el.type =='number' ?  (el.value ? true : false) : (el.checked ? true : false)
-          });
-      let valid = (checked.includes(false) ? false : true) && ($(wrap + ' .txt-error').length === 0);
-      return valid;
-    }
-  
-    function activeBtnCheck(checked){    // 최종확인 버튼 활성화
-      let $btnActive = $(wrap).find('[data-id="active"]');
-
-      if(checked()){
-        $btnActive.removeAttr('disabled');
-      }else{
-        $btnActive.attr('disabled', 'disabled');
-      }
-    }
-  
-    $(wrap).find(inputs).on('keyup blur change', function(){
-      activeBtnCheck(formChecked) 
-    });    
-    $(wrap).find('#allCheck').on('change', function(){ // 전체동의버튼도 체크해야되므로 따로추가
-      setTimeout(function(){ 
-        activeBtnCheck(formChecked)
-      })
-    });    
-    $(document).on('click', wrap + ' .input .btn-del', function(){ 
-      $(wrap).find('[data-id="active"]').attr('disabled', 'disabled');
-    });    
-  }
-
-  
   //이용동의 선택(checkbox)          
   const checkboxs = $(".agree-checks ul .inp-chk input[type=checkbox]");
   $("#allCheck").on("change", function() {
       if ($(this).is(':checked')) {
           $(".check-all").addClass("checked");
           checkboxs.prop('checked', true);
+          $("#rule-agree").find('[data-id="active-agree"]').removeAttr('disabled');
       } else {
           $(".check-all").removeClass("checked");
           checkboxs.prop('checked', false);
+          $("#rule-agree").find('[data-id="active-agree"]').attr('disabled', 'disabled');
       }
   });
   checkboxs.on("change", function(event) {
-      let total = $(".agree-checks ul .inp-chk input[type=checkbox]").length;
-      let checked = $(".agree-checks ul .inp-chk input[type=checkbox]:checked").length;
+      let total = $(".agree-checks ul .inp-chk.require input[type=checkbox]").length;
+      let checked = $(".agree-checks ul .inp-chk.require input[type=checkbox]:checked").length;
       if (total === checked) {
           $(".check-all").addClass("checked");
           $("#allCheck").prop("checked", true);
+          $("#rule-agree").find('[data-id="active-agree"]').removeAttr('disabled');
       } else {
           $(".check-all").removeClass("checked");
           $("#allCheck").prop("checked", false);
+          $("#rule-agree").find('[data-id="active-agree"]').attr('disabled', 'disabled');
       }
   });
 </script>
