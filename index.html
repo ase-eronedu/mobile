@@ -84,10 +84,10 @@
       ["", "필수프로그램 다운", "", "", "html/program-down.html", ""],
       //로그인
       ["로그인", "title"],
-      ["", "로그인1", "", "", "html/login1.html", "new"],
-      ["", "로그인2", "", "", "html/login2.html", "new"],
-      ["", "아이디 찾기", "", "", "html/id-find.html", "new"],
-      ["", "비밀번호 찾기", "", "", "html/pw-find.html", "new"],    
+      ["", "로그인1", "", "", "html/login1.html", ""],
+      ["", "로그인2", "", "", "html/login2.html", ""],
+      ["", "아이디 찾기", "", "", "html/id-find.html", ""],
+      ["", "비밀번호 찾기", "", "", "html/pw-find.html", ""],    
       //마이페이지
       ["마이페이지", "title"],
       ["", "비밀번호 확인", "", "", "html/mypage-pw-check.html", ""],
@@ -96,7 +96,7 @@
       ["", "", "상세", "", "html/my-history-detail.html", ""],
       ["", "쿠폰", "", "", "html/coupon.html", ""],
       ["", "", "없음", "", "html/coupon-no.html", ""],      
-      ["", "회원탈퇴", "", "", "html/withdrawal.html", "new"],
+      ["", "회원탈퇴", "", "", "html/withdrawal.html", ""],
       ["", "탈퇴완료", "", "", "html/withdrawal-complete.html", ""],
       //내 강의실
       ["내 강의실", "title"],
@@ -142,14 +142,13 @@
       }
     }
 
-    setTimeout(function(){
-      $('td').each(function(){
-        if($(this).text().indexOf('new') > -1){
-          $(this).parents('tr').attr('style', 'background:yellow;');
-        }
-      });
-
-    }, 100)
+    // setTimeout(function(){
+    //   $('td').each(function(){
+    //     if($(this).text().indexOf('') > -1){
+    //       $(this).parents('tr').attr('style', 'background:yellow;');
+    //     }
+    //   });
+    // }, 100)
 
   });
 
