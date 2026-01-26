@@ -104,12 +104,12 @@
           </div>
           <div class="col">
             <div class="label">SNS 계정 연결</div>
-            <ul class="form form-sns-set">
+            <ul class="form">
               <li>
                 <div class="input-sns-set">
                   <div class="sns"><i class="ico-sns-kakao"></i><span class="txt">카카오</span></div>
                   <label class="input-range">
-                    <input type="checkbox" class="btn_range" checked>
+                    <input type="checkbox" class="btn_range" onchange="if ($(this).is(':checked')) alert('카카오 연결');">
                     <i></i>
                   </label>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="input-sns-set">
                   <div class="sns"><i class="ico-sns-naver"></i><span class="txt">네이버</span></div>
                   <label class="input-range">
-                    <input type="checkbox" class="btn_range">
+                    <input type="checkbox" class="btn_range" onchange="if ($(this).is(':checked')) alert('네이버 연결');">
                     <i></i>
                   </label>
                 </div>
@@ -133,6 +133,13 @@
                 <b class="t">SMS 정보수신 동의 (이메일&SMS)</b>
               </label>
               <div class="txt-info"><em>✲ 이벤트 및 각종 할인정보 안내드립니다.</em></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="label">회원탈퇴</div>
+            <div class="box-withdraw">
+              <button class="btn-type4 st3">회원탈퇴</button>
+              <div class="txt-info"><em>✲ 탈퇴 시 구매내역을 제외한(이용약관 참조) 모든 개인정보는 삭제 됩니다.</em></div>
             </div>
           </div>
         </div>

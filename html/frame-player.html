@@ -19,8 +19,22 @@
 <body class="body-player">
   <div class="wrap">
     <div class="frame-player">
+        <script>
+            $.get("common/header.html", function(data) {
+              $(data).prependTo(".frame-player");
+              $('.btn-my-lecture').hide();
+          });
+        </script>      
       <!-- 플레이영역 -->
       <section class="player-wrap">
+        <header class="player-header">
+          <div class="left">
+            <div class="lecture-title">
+              <a href="javascript:void(0);" class="label"><i class="ico-external"></i><span>강의 대시보드</span></a>
+              <div class="name">10. 동전교환(냅색 알고리즘)</div>
+            </div>
+          </div>
+        </header>
         <div class="player">
           플레이어영역
         </div>
@@ -249,15 +263,34 @@
                     </div>
                   </div>
                 </div>
-      
-                <script>
-                  $.get("common/review.html", function(data) {
-                     $(data).appendTo(".detail-view");
-                     $('.review-answer').show();
-                     $('.top-menu').show();
-                     $('.btn-wrap').show();
-                 });
-               </script>
+                <div class="review-answer">
+                  <strong class="tit">답변드립니다.</strong>
+                  <div class="info"><span>흥달쌤</span><span>2024.03.22</span></div>
+                  <div class="answer pre-line">안녕하세요^^
+                    죄송합니다. 테스트 케이스 입력크기를 1000까지만 들어가야 하는데 100,000만까지 넣은 것 같습니다.
+                    일단 코드에서 배열의 크기를 1001 로 하지 말고 100001로 해서 채점받아 보세요.
+                      
+                    <img src="../images/temp/temp-img-ex.jpg" alt="">
+                  </div>
+                  <div class="menus">
+                    <div class="row">
+                      <a href="www.naver.com" class="btn-type-link st4 pad2"><i class="ico-link"></i><span>www.naver.com</span></a>
+                    </div>
+                    <div class="row">
+                      <a href="javascript:void(0);" class="btn-type-link st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                      <a href="javascript:void(0);" class="btn-type-link st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                    </div>
+                  </div>
+                </div>        
+                <div class="view-menu">
+                  <button type="button" class="btn-type6 st7">수정</button>
+                  <button type="button" class="btn-type6 st7">삭제</button>
+                </div>
+
+                <div class="btn-wrap">
+                  <button class="btn-type2 st2 auto">목록</button>
+                </div>
+                
               </div>
             </div>
           </section>

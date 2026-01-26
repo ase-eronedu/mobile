@@ -42,6 +42,7 @@ function mainSlide(){
         disableOnInteraction: false,
       },
       speed:800,
+      effect: 'fade',
       slidesPerView: 1,
       navigation: {
         nextEl: ".main-slider .swiper-button-next",
@@ -68,8 +69,8 @@ function mainSlide(){
 
 function mainLectureSlide(){
   let list = [];
-  $('.main-lecture-list-wrap').each(function(i){
-      $(this).addClass('main-lecture-list-wrap'+i);
+  $('.main-lecture-list:not(.st-vertical)').each(function(i){
+      $(this).parent().addClass('main-lecture-list-wrap'+i);
       list.push('main-lecture-list-wrap'+i);
   });    
   for(let i= 0; i<list.length;i++){    
@@ -83,8 +84,8 @@ function mainLectureSlide(){
 
 
 function mainlectureSlide(){
-  if($('.main-lecture-list').length <=0) return;
-    let swiper = new Swiper('.main-lecture-list', {
+  if($('.main-lecture-list:not(.st-vertical)').length <=0) return;
+    let swiper = new Swiper('.main-lecture-list:not(.st-vertical)', {
         speed :800,
         slidesPerView: 'auto'
     });   

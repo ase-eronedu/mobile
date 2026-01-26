@@ -32,93 +32,94 @@
         <h1 class="title-main">주문/결제 내역</h1>
       </header>
       <div class="my-history-detail-wrap">
-        <h2 class="tit">주문번호/날짜</h2>
+        <div class="history-detail-header">
+          <div class="tags"><span class="tag-st3">결제완료</span><span class="tag-st6">교재 배송 준비중</span></div>
+          <div class="date">2025.01.28 18:01</div>
+          <div class="title">
+            <strong class="tit">2026 정보처리기사 실기(연장 미포함)</strong>
+            <div class="right">
+              <span class="date">수강기간 90일 (2026. 01. 19~2026. 04. 08)</span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="tit">강의 결제 정보</h2>
         <div class="history-detail-box">
-          <ul>
+          <ul class="list">
             <li>
-              <b class="tit">주문번호 <strong>234422</strong></b>
+              <b class="tit">주문번호</b>
+              <div class="txt">234422</div>
             </li>
             <li>
-              <b class="tit">주문날짜 <strong>2024.05.22 15:38:11</strong></b>
+              <b class="tit">주문날짜</b>
+              <div class="txt">2024.05.22 15:38:11</div>
+            </li>
+            <li>
+              <b class="tit">결제채널</b>
+              <div class="txt">PC웹</div>
+            </li>
+          </ul>
+
+          <ul class="list">
+            <li>
+              <b class="tit">총 상품 금액</b>
+              <div class="txt">190,000원</div>
+            </li>
+            <li>
+              <b class="tit">상품 할인 금액</b>
+              <div class="txt">-62,700원</div>
+            </li>
+          </ul>
+
+          <div class="total">
+            <b class="tit">총 결제 금액</b>
+            <div class="price">127,300원</div>
+          </div>
+
+          <div class="menu">
+            <button type="button" class="btn-type5 st3">영수증</button>
+            <button type="button" class="btn-type5 st6">환불요청</button>
+          </div>
+        </div>
+
+
+
+        <h2 class="tit">교재 배송 정보</h2>
+        <div class="history-detail-box">
+          <ul class="list">
+            <li>
+              <b class="tit">이름</b>
+              <div class="txt">홍길동</div>
+            </li>
+            <li>
+              <b class="tit">전화번호</b>
+              <div class="txt">010.2222.2222</div>
+            </li>
+            <li>
+              <b class="tit">주소</b>
+              <div class="txt">[07215] 서울 홍길동구 홍길동로 111 (홍길동아파트) 100동 100호</div>
+            </li>
+            <li>
+              <b class="tit">배송업체</b>
+              <div class="txt">CJ대한통운</div>
+            </li>
+            <li>
+              <b class="tit">송장번호</b>
+              <div class="txt">123456</div>
+            </li>
+            <li>
+              <b class="tit">배송조회</b>
+              <div class="txt"><button type="button" class="btn-type5 st3">배송조회</button></div>
             </li>
           </ul>
         </div>
 
-        <h2 class="tit">주문정보</h2>
-        <div class="history-detail-box">
-          <ul class="list">
-            <li>
-              <b class="tit">결제채널</b>
-              <div class="txt">PC</div>
-            </li>
-            <li>
-              <b class="tit">결제수단</b>
-              <div class="txt">신용카드</div>
-            </li>
-            <li>
-              <b class="tit">카드사</b>
-              <div class="txt">토스페이</div>
-            </li>
-          </ul>
-          <ul class="list">
-            <li>
-              <b class="tit">총 상품 금액</b>
-              <div class="txt">20,000원</div>
-            </li>
-            <li>
-              <b class="tit">상품 할인 금액</b>
-              <div class="txt">-8,000원</div>
-            </li>
-            <li>
-              <b class="tit">쿠폰 할인 금액</b>
-              <div class="txt">-0원</div>
-            </li>
-          </ul>
-          <div class="total">
-            <b class="tit">총 결제 금액</b>
-            <div class="price">12,000원</div>
-          </div>
-        </div>
-        <h2 class="tit">구매상품</h2>
-        <div class="history-detail-box">
-          <ul class="product-list st3">
-            <li>
-              <a href="javascript:void(0);" class="item"> 
-                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
-                <dl class="desc">
-                  <dt><b class="tit">2024대비 정보처리기사</b></dt>
-                  <dd>
-                    <div class="sale-price-wrap">
-                      <div class="sale-price">
-                        <div class="price"><span class="prev">32,3000원</span><b>12,3000원</b></div>
-                      </div>
-                    </div>
-                  </dd>
-                </dl>
-              </a>
-            </li>              
-            <li>
-              <a href="javascript:void(0);" class="item"> 
-                <div class="img"><img src="../images/temp/temp-textbooks.jpg" alt=""></div>
-                <dl class="desc">
-                  <dt><b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b></dt>
-                  <dd>
-                    <div class="sale-price-wrap">
-                      <div class="sale-price">
-                        <div class="price"><span class="prev">32,3000원</span><b>12,3000원</b></div>
-                      </div>
-                    </div>
-                  </dd>
-                </dl>
-              </a>
-            </li>              
-          </ul>
-        </div>
-        
+          
         <div class="btn-wrap">
           <a href="javascript:void(0);" class="btn-type2 st2 full">목록으로</a>
         </div>
       </div>
+      
     </main>
   </div>
   <!-- // container -->
