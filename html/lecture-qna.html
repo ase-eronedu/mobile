@@ -58,6 +58,39 @@
       </div>
       <div class="lecure-notice-wrap">
         <!-- <h1 class="title-subject"><i class="ico-question"></i><span>질문답변</span></h1> -->
+        <div class="menu-box type2">
+          <div class="row">
+            <div class="input-wrap">
+              <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t">내 글만 보기</span>
+              </label>
+            </div>
+            <div class="right">
+              <button type="button" class="btn-toggle on">상세검색</button>
+            </div>
+          </div>
+          <div class="forms">
+            <div class="row">
+              <select required>
+                <option disabled selected hidden value="">섹션선택</option>
+                <option>섹션선택2</option>
+                <option>섹션선택3</option>
+              </select>
+              <select required>
+                <option disabled selected hidden value="">강의선택</option>
+                <option>강의선택2</option>
+                <option>강의선택3</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="input input-search">
+                <div class="inp"><input type="text" placeholder="내용"></div>
+                <button type class="btn-search"></button>
+              </div>
+            </div>
+          </div>
+        </div>         
         <ul class="data-list">
           <li>
             <a href="javascript:void(0);">
@@ -118,6 +151,25 @@
 </div>
 <!-- // wrap -->
 
+
+<script>
+  // 상세검색박스 토글
+  $(document).on('click', '.menu-box.type2 .btn-toggle', function(){
+    const $box = $(this).closest('.menu-box');
+    const $forms = $box.find('.forms');
+
+    if ($forms.is(':visible')) {
+      $forms.stop(true, true).slideUp(200);
+    } else {
+      $forms.stop(true, true).slideDown(200);
+    }
+  });
+
+  $(document).on('click', '.menu-box.type2 .btn-toggle', function(){
+    $(this).toggleClass('on');
+  });
+
+</script>
 
 </body>
 </html>

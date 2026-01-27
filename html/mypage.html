@@ -108,19 +108,13 @@
               <li>
                 <div class="input-sns-set">
                   <div class="sns"><i class="ico-sns-kakao"></i><span class="txt">카카오</span></div>
-                  <label class="input-range">
-                    <input type="checkbox" class="btn_range" onchange="if ($(this).is(':checked')) alert('카카오 연결');">
-                    <i></i>
-                  </label>
+                  <button type="button" class="btn-range-toggle on" onclick="$(this).toggleClass('on')"></button>
                 </div>
               </li>
               <li>
                 <div class="input-sns-set">
                   <div class="sns"><i class="ico-sns-naver"></i><span class="txt">네이버</span></div>
-                  <label class="input-range">
-                    <input type="checkbox" class="btn_range" onchange="if ($(this).is(':checked')) alert('네이버 연결');">
-                    <i></i>
-                  </label>
+                  <button type="button" class="btn-range-toggle" onclick="$(this).toggleClass('on')"></button>
                 </div>
               </li>
             </ul>

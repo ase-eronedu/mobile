@@ -859,6 +859,102 @@ function onlyNumber(input){
   $(input).val($(input).val().replace(/[^-0-9]/g, ''));
 }
 
+function repleEvt() {
+  const MAX_BYTE = 3000;
+  const MIN_HEIGHT = 24;
+  const encoder = new TextEncoder();
+
+  const getByteLength = (str) => encoder.encode(str).length;
+
+  const cutByByte = (str, maxByte) => {
+    let bytes = 0;
+    let result = '';
+    for (const ch of str) {
+      const chBytes = encoder.encode(ch).length;
+      if (bytes + chBytes > maxByte) break;
+      bytes += chBytes;
+      result += ch;
+    }
+    return result;
+  };
+
+  const resizeTextarea = ($textarea, minHeight) => {
+    $textarea.css('height', 'auto');
+    $textarea.css('height', Math.max($textarea[0].scrollHeight, minHeight) + 'px');
+  };
+
+  const normalizeText = (text) => {
+    return text.split('\n').map(line => line.trim()).join('\n');
+  };
+
+  // 공통 UI 업데이트 
+  const updateUI = ($textarea) => {
+    const $review = $textarea.closest('.review');
+    const $byteEm = $review.find('.byte em');
+    const $btnRegist = $review.find('.btn-regist');
+    
+    let v = normalizeText($textarea.val());
+    let bytes = getByteLength(v);
+
+    if (bytes > MAX_BYTE) {
+      v = cutByByte(v, MAX_BYTE);
+      $textarea.val(v);
+      bytes = getByteLength(v);
+    }
+
+    $byteEm.text(bytes);
+    $btnRegist.toggleClass('st2', v.length > 0);
+    resizeTextarea($textarea, MIN_HEIGHT);
+  };
+
+  // 입력 이벤트
+  $(document).on('input', '.review textarea', function() {
+    updateUI($(this));
+  });
+
+  // 수정 버튼
+  $(document).on('click', '.review.view .menu-layer .btn-modify', function () {
+    const $viewReview = $(this).closest('.review.view');
+    const $modifyReview = $viewReview.next('.review.modify');
+    const viewText = normalizeText($viewReview.find('.text').text());
+    const $textarea = $modifyReview.find('textarea');
+
+    $textarea.data('originalText', viewText);
+    $textarea.val(viewText).trigger('input');
+
+    $viewReview.hide();
+    $modifyReview.show();
+  });
+
+  // 등록/수정 완료
+  $(document).on('click', '.review .btn-regist', function () {
+    const $review = $(this).closest('.review');
+    const $textarea = $review.find('textarea');
+    const newText = normalizeText($textarea.val());
+
+    if ($review.hasClass('modify')) {
+      const $viewReview = $review.prev('.review.view');
+      $viewReview.find('.text').text(newText);
+      $review.hide();
+      $viewReview.show();
+    }
+  });
+
+  // 취소
+  $(document).on('click', '.review.modify .btn-cancel', function () {
+    const $review = $(this).closest('.review.modify');
+    const $textarea = $review.find('textarea');
+    const originalText = $textarea.data('originalText') || '';
+
+    $textarea.val(originalText).trigger('input');
+    $review.hide();
+    $review.prev('.review.view').show();
+  });
+
+  $('.review textarea').each(function() {
+    updateUI($(this));
+  });
+}
 
 
 $(function(){
