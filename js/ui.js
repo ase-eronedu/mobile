@@ -64,6 +64,46 @@ function mainSlide(){
     $(this).prev().show();
     mainswiper.autoplay.start();
   });
+
+
+
+$('.main-slider .swiper-slide img').on('load', function() {
+    const img = this;
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    canvas.width = img.naturalWidth || img.width;
+    canvas.height = img.naturalHeight || img.height;
+    
+    try {
+        context.drawImage(img, 0, 0);
+        
+        // 이미지의 가장 아래쪽 1px 라인 전체 추출
+        const imageData = context.getImageData(0, 0, canvas.width, 1);
+        
+        let r = 0, g = 0, b = 0;
+        const pixels = imageData.data.length / 4;
+        
+        for (let i = 0; i < imageData.data.length; i += 4) {
+            r += imageData.data[i];
+            g += imageData.data[i + 1];
+            b += imageData.data[i + 2];
+        }
+        
+        r = Math.floor(r / pixels);
+        g = Math.floor(g / pixels);
+        b = Math.floor(b / pixels);
+        
+        const rgb = `rgb(${r}, ${g}, ${b})`;
+        $(this).closest('.swiper-slide').css('background-color', rgb);
+        
+    } catch(e) {
+        console.error('Canvas 접근 오류:', e);
+    }
+  }).each(function() {
+      this.crossOrigin = 'Anonymous'; // CORS 해결
+      if (this.complete) $(this).trigger('load');
+  });
 }
 
 
