@@ -559,25 +559,43 @@ function toggleList(){
 }
 
 
-function datepicker(){
+function datepicker(options) {
   if($(".datepicker").length <= 0) return;
-   $(".datepicker").datepicker({
-     dateFormat:'yy-dd-mm',
-     showOn: "button",
-      buttonImage: "../images/common/ico-datepicker.svg",
-   });
-   $.datepicker.setDefaults({
-     dateFormat: 'yymmdd',
-     prevText: '이전 달',
-     nextText: '다음 달',
-     monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-     monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-     dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-     showMonthAfterYear: true,
-     yearSuffix: '년'
-   });
+  
+  var defaults = {
+    minDate: new Date(2026, 1, 3), // 2026-02-03
+    maxDate: null
+  };
+  
+  var settings = $.extend({}, defaults, options);
+  
+  $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년',
+    minDate: settings.minDate,
+    maxDate: settings.maxDate,
+    beforeShow: function(input, inst) {
+      if($(input).data('min')) $(input).datepicker('option', 'minDate', $(input).data('min'));
+      if($(input).data('max')) $(input).datepicker('option', 'maxDate', $(input).data('max'));
+    },
+    onClose: function(selectedDate) {
+      //add on event 
+    }
+  });
+
+  $(".datepicker").datepicker({
+    showOn: "button",
+    buttonImage: "../images/common/ico-datepicker.svg",
+  });
+ 
 }
 
 
@@ -1011,7 +1029,11 @@ $(function(){
   inputFocus('.input');
   inputFocus('.textarea');
   toggleList();
-  datepicker();
+  // datepicker();
+  datepicker({
+    minDate: '2026-02-05',
+    maxDate: '2026-02-20'
+  });
   layerMenu();
   upani();
   pageScrolling();
