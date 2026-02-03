@@ -563,6 +563,8 @@ function datepicker(){
   if($(".datepicker").length <= 0) return;
    $(".datepicker").datepicker({
      dateFormat:'yy-dd-mm',
+     showOn: "button",
+      buttonImage: "../images/common/ico-datepicker.svg",
    });
    $.datepicker.setDefaults({
      dateFormat: 'yymmdd',
