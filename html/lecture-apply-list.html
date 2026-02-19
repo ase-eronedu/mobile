@@ -39,6 +39,9 @@
         </div>
       </header>
       <div class="product-apply-list-wrap">
+        <div class="banner-box" style="display: none;">
+          <img src="../images/content/banner-eraon-njob.png" alt="">
+        </div>
         <ul class="product-list">
           <li>
             <a href="javascript:void(0);" class="item"> 
@@ -136,7 +139,9 @@
 
 <!-- 페이지구분위한 퍼블용 소스-->
  <script>
-  if(window.location.href.includes('#2')){
+  if(window.location.href.includes('#1')){
+    $('.banner-box').show();
+  }else if(window.location.href.includes('#2')){
     $('.lnb li').removeClass('on')
     $('.lnb li:nth-child(2)').addClass('on')
     $('.content .page-header h1').text('정보처리산업기사');

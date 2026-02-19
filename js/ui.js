@@ -107,29 +107,29 @@ function mainSlide(){
 }
 
 
-function mainLectureSlide(){
-  let list = [];
-  $('.main-lecture-list:not(.st-vertical)').each(function(i){
-      $(this).parent().addClass('main-lecture-list-wrap'+i);
-      list.push('main-lecture-list-wrap'+i);
-  });    
-  for(let i= 0; i<list.length;i++){    
-    const lectureSlider = new Swiper('.'+list[i]+' .main-lecture-list', {
-      speed:550,
-      slidesPerView: 'auto',
-      spaceBetween:10,
-    });
-  }
-}  
+// function mainLectureSlide(){
+//   let list = [];
+//   $('.main-lecture-list:not(.st-vertical)').each(function(i){
+//       $(this).parent().addClass('main-lecture-list-wrap'+i);
+//       list.push('main-lecture-list-wrap'+i);
+//   });    
+//   for(let i= 0; i<list.length;i++){    
+//     const lectureSlider = new Swiper('.'+list[i]+' .main-lecture-list', {
+//       speed:550,
+//       slidesPerView: 'auto',
+//       spaceBetween:10,
+//     });
+//   }
+// }  
 
 
-function mainlectureSlide(){
-  if($('.main-lecture-list:not(.st-vertical)').length <=0) return;
-    let swiper = new Swiper('.main-lecture-list:not(.st-vertical)', {
-        speed :800,
-        slidesPerView: 'auto'
-    });   
-}  
+// function mainlectureSlide(){
+//   if($('.main-lecture-list:not(.st-vertical)').length <=0) return;
+//     let swiper = new Swiper('.main-lecture-list:not(.st-vertical)', {
+//         speed :800,
+//         slidesPerView: 'auto'
+//     });   
+// }  
 
 function basicSlide(){
   if($('.basic-slider').length <=0) return;
@@ -537,6 +537,16 @@ function toggleList(){
       $lists.addClass('on');
     }
   });
+  $('.toggle-list.st2 .lecture-title').on('click', function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var $siblings = $('.toggle-list.st2 .lecture-title').not($this);
+    $siblings.removeClass('on');
+    $siblings.next('.lecture-menu').slideUp();
+    $this.toggleClass('on');
+    $this.next('.lecture-menu').slideToggle();
+  });
+
   $('[data-evt="toggle-list"] .toggle-list li > .btn').on('click', function(){
     let $pannel = $(this).next();
     if($pannel.is(':hidden')){

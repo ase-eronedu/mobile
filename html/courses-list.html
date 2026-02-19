@@ -29,7 +29,7 @@
   <div class="container">
     <main class="content">
       <header class="page-header">
-        <h1 class="title-main">수강중인 강좌</h1>
+        <h1 class="title-main">내 강의 목록</h1>
       </header>
       <div class="courses-list-wrap">
         <div class="tab-type1 sticky">
@@ -50,9 +50,12 @@
                     <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
                   </div>
                   <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
-                  <div class="txt">수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</div>
+                  <div class="txt"><span class="tag-st2">수강중</span><span>수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</span></div>
                 </div>
               </a>
+              <div class="pause-wrap">
+                <button type="button" class="disabled btn-pause" onclick="alertOpen('제공된 강의 일시정지 1회를 이미 사용하신 <br>상태이며, 추가 신청은 불가능합니다.', ['확인']/*, alertCallback*/);">수강 일시정지 요청</button>
+              </div>
             </li>
             <li>
               <a href="javascript:void(0);" class="item"> 
@@ -63,22 +66,47 @@
                     <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
                   </div>
                   <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
-                  <div class="txt">수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</div>
+                  <div class="txt"><span class="tag-st2">수강중</span><span>수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</span></div>
                 </div>
               </a>
+              <div class="pause-wrap">
+                <button type="button" class="btn-pause">수강 일시정지 요청</button>
+                <p class="noti">단, 1회, 60일 제한</p>
+              </div>
             </li>
             <li>
               <a href="javascript:void(0);" class="item"> 
-                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="img" onclick="alertOpen('수강 일시정지 해제 후 학습이 가능합니다.', ['확인']/*, alertCallback*/);"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
                 <div class="desc">
                   <div class="gage-wrap">
                     <span class="txt">진도율 : 14강/100강(12.3%)</span>
                     <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
                   </div>
                   <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
-                  <div class="txt">수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</div>
+                  <div class="txt"><span class="tag-st7">수강 일시 정지</span><span>수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</span></div>
                 </div>
               </a>
+              <div class="pause-wrap">
+                <button type="button" class="btn-pause"
+                        onclick="alertOpen('수강 일시정지는 1회(최대 60일)만 가능하며, <br>해제 시 잔여 기간은 소멸됩니다.<br>해제하시겠습니까?', ['취소','확인']/*, alertCallback*/);">수강 일시정지 해제</button>
+                <p class="noti">남은 일시정지 기간: 30일</p>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="item"> 
+                <div class="img" onclick="alertOpen('회원님께서 설정하신 수강 시작일은 <br><b>2026년 2월 22일</b>입니다. <br>해당 일자부터 학습이 가능합니다.', ['확인']/*, alertCallback*/);"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <div class="gage-wrap">
+                    <span class="txt">진도율 : 14강/100강(12.3%)</span>
+                    <div class="gage-bar"><span class="bar" style="width:50%;"></span></div>
+                  </div>
+                  <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
+                  <div class="txt"><span class="tag-st3">수강 대기</span><span>수강기한 : 2024년 3월 12일 ~ 2024년 6월 17일(120일)</span></div>
+                </div>
+              </a>
+              <div class="pause-wrap">
+                <p class="noti">수강 시작일: 2026.02.22</p>
+              </div>
             </li>
             
           </ul>

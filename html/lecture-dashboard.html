@@ -51,70 +51,104 @@
       <div class="tab-type1 sticky">
         <ul>
           <li class="on"><a href="javascript:void(0);">대시보드</a></li>
-          <li><a href="javascript:void(0);">공지사항</a></li>
-          <li><a href="javascript:void(0);">질문답변</a></li>
+          <li><a href="javascript:void(0);">공지사항<span class="new"></span></a></li>
+          <li><a href="javascript:void(0);">내 질문 현황</a></li>
           <li><a href="javascript:void(0);">수강평</a></li>
         </ul>
       </div>
       <div class="lecure-dashboard-wrap">
+        <div class="urgent-notice">
+          <p><span>[긴급]회원님들께 알립니다. 해당 내용을 필독해주세요.</span></p>
+        </div>        
         <!-- 커리큘럼 -->
         <section class="curriculum-wrap">
           <div class="toggle-menu-wrap" data-evt="toggle-list">
             <div class="wrap-header">
               <h1 class="title-subject"><i class="ico-curriculum"></i><span>커리큘럼</span></h1>
               <div class="toggle-menu">
-                <button class="btn-tog on"><span>모두접기</span></button>
+                <button class="btn-tog"><span>모두열기</span></button>
                 <span class="total">115강의</span>
                 <span class="time">25시간 10분</span>
               </div>
             </div>
-            <ul class="toggle-list">
-              <li class="on">
+            <ul class="toggle-list st2">
+              <li>
                 <button type="button" class="btn"><b class="tit">섹션 0. 문제(소스) 파일 및 자동채점폴더</b></button>
-                <ul>
+                <ul style="display: none;">
                   <li>
-                    <div class="left">
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
                       <div class="lecture-name checked">
                         <i></i>
                         <div class="desc">
                           <div class="name">강의자료</div>
                         </div>
+                      </div>
+                    </div>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
                       </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="on">
+              <li>
                 <button type="button" class="btn"><b class="tit">섹션 1. 문제(소스) 파일 및 자동채점폴더</b></button>
-                <ul>
+                <ul style="display: none;">
                   <li>
-                    <div class="left">
-                      <div class="lecture-name checked">
-                        <i></i>
-                        <div class="desc">
-                          <div class="name">1. 1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합</div>
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
+                        <div class="lecture-name checked">
+                          <i></i>
+                          <div class="desc">
+                            <div class="name">1. 1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합배수합1부터 N까지의 M의 배수합1부터 N까지의 M의 배수합</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <div class="left">
-                      <div class="lecture-name checked">
-                        <i></i>
-                        <div class="desc">
-                          <div class="name">1부터 N까지의 M의 배수합</div>
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
+                        <div class="lecture-name checked">
+                          <i></i>
+                          <div class="desc">
+                            <div class="name">1부터 N까지의 M의 배수합</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <div class="left">
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
                       <div class="lecture-name">
                         <i></i>
                         <div class="desc">
@@ -122,12 +156,21 @@
                         </div>
                       </div>
                     </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <div class="left">
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
                       <div class="lecture-name">
                         <i></i>
                         <div class="desc">
@@ -135,30 +178,26 @@
                         </div>
                       </div>
                     </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="on">
+              <li>
                 <button type="button" class="btn"><b class="tit">섹션 1. 문제(소스) 파일 및 자동채점폴더</b></button>
-                <ul>
+                <ul style="display: none;">
                   <li>
-                    <div class="left">
-                      <div class="lecture-name">
-                        <i></i>
-                        <div class="desc">
-                          <div class="name">1부터 N까지의 M의 배수합</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="left">
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
                       <div class="lecture-name">
                         <i></i>
                         <div class="desc">
@@ -166,8 +205,38 @@
                         </div>
                       </div>
                     </div>
-                    <div class="right">
-                      <a href="javascript:void(0);" class="btn-download"><i class="ico-down"></i></a>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" class="lecture-title">
+                      <div class="left">
+                      <div class="lecture-name">
+                        <i></i>
+                        <div class="desc">
+                          <div class="name">강의자료</div>
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                    <div class="lecture-menu">
+                      <div class="left">
+                        <button class="btn"><i class="ico-lecture-play"></i><span>강의시청</span></button>
+                        <button class="btn"><i class="ico-lecture-down"></i><span>첨부파일</span></button>
+                      </div>
+                      <div class="right">
+                        <span class="reple">3</span>
+                        <span class="time">04 : 53</span>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -178,9 +247,9 @@
         </section>
         
         <div class="line-bar"></div>        
-        <!-- 내 학습상황 -->
+        <!-- 내 학습현황 -->
         <section class="my-study-wrap">
-          <h1 class="title-subject"><i class="ico-trophy"></i><span>내 학습상황</span></h1>
+          <h1 class="title-subject"><i class="ico-trophy"></i><span>내 학습현황</span></h1>
           <div class="btn-more">
             <button type="button"><span>더보기</span></button>
           </div>
@@ -202,6 +271,7 @@
           <div class="btn-more">
             <button type="button"><span>더보기</span></button>
           </div>
+          <p class="no-data">등록된 게시물이 없습니다.</p>
           <ul>
             <li>
               <a href="javascript:void(0);">
@@ -224,12 +294,13 @@
           </ul>
         </section>
         <div class="line-bar"></div>
-        <!-- 최근질문 -->
+        <!-- 내 질문 현황 -->
         <section class="recent-question-wrap">
-          <h1 class="title-subject"><i class="ico-question"></i><span>최근질문</span></h1>
+          <h1 class="title-subject"><i class="ico-question"></i><span>내 질문 현황</span></h1>
           <div class="btn-more">
             <button type="button"><span>더보기</span></button>
           </div>
+          <p class="no-data">등록된 게시물이 없습니다.</p>
           <ul>
             <li>
               <a href="javascript:void(0);">
