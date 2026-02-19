@@ -50,8 +50,8 @@
     <!-- main-lecture-wrap -->
     <section class="main-lecture-wrap">
       <div class="title-main-lecture">
-        <b>기본부터 실무까지 정보처리기사 </b>
-        <span>이미 검증된 쉽고 친절한 입문 강의!!</span>
+        <b> IT 자격증, 기초부터 실무까지! </b>
+        <span>전공자, 비전공자 수강생 모두가 인정한 쉽고 친절한 강의</span>
       </div>
       <div class="main-lecture-list-wrap">
         <ul class="main-lecture-list st-vertical">
@@ -128,7 +128,7 @@
         </div>
       </div>
       <div class="main-lecture-list-wrap">
-        <div class="main-lecture-list">
+        <div class="main-lecture-list" data-id="main-lecture1">
             <div class="lecture">
               <a href="javascript:void(0);" class="box">
                 <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
@@ -162,6 +162,31 @@
                 </div>
               </a>
             </div>
+          </div>
+        <div class="main-lecture-list" data-id="main-lecture2" style="display:none;">
+            <div class="lecture">
+              <a href="javascript:void(0);" class="box">
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <div class="info">
+                    <span class="left"><span class="c-gray">소주한잔 개발한줄</span></span>
+                  </div>
+                  <b class="tit">개발 실무 노하우</b>                    
+                </div>
+              </a>
+            </div>
+            <div class="lecture">
+              <a href="javascript:void(0);" class="box">
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <div class="info">
+                    <span class="left"><span class="c-gray">소주한잔 개발한줄</span></span>
+                  </div>
+                  <b class="tit">흥달 5분특강 흥달 5분특강흥달 5분특강흥달 5분특강흥달 5분특강흥달 5분특강흥달 5분특강 흥달 5분특강흥달 5분특강흥달 5분특강흥달 5분특강흥달 5분특강</b>                    
+                </div>
+              </a>
+            </div>
+            
           </div>
           <div class="more-lecture-view">
           <a href="javascript:void(0);">더 많은 공개강좌 보러가기</a>
@@ -455,6 +480,15 @@
       slidesOffsetAfter: 24,
     });
   }
+
+    // 강좌 탭 전환
+  $(".lecture-tab button").on("click", function () {
+    var idx = $(this).closest(".swiper-slide").index() + 1;
+    $(this).addClass("on");
+    $(".lecture-tab button").not(this).removeClass("on");
+    $("[data-id*=main-lecture]").hide();
+    $(".main-lecture-list[data-id='main-lecture" + idx + "']").show();
+  });
 </script>
 
 
