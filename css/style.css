@@ -499,7 +499,8 @@
 .detail-view .view { line-height: 1.6; color: #373F57; font-size: 0.875rem; }
 .detail-view .view.pre-line img { max-width: 100%; }
 .detail-view .menus .row { margin-top: 0.625rem; display:flex;align-items:center;flex-wrap: wrap;gap:0.625rem;}
-.detail-view .menus .row  [class*=btn-type]{font-weight:400;font-size:0.875rem;height:2.5rem;}
+.detail-view .menus .row [class*=btn-type]{max-width: 100%; font-weight:400;font-size:0.875rem;height:2.5rem;display:flex;align-items:center;}
+.detail-view .menus .row [class*=btn-type] span{flex:1; overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;height:1.3em;}
 .detail-view .lecture-review-wrap { padding-top: 1.25rem; }
 .detail-view .top-menu{padding-top:1.25rem;border-top:0.0625rem solid rgba(240, 240, 240, 1);}
 .detail-view .view-menu{display:flex;align-items:center;gap:0.625rem;padding-bottom:1.25rem; border-bottom: 0.0625rem solid #F0F0F0;}
@@ -541,6 +542,7 @@
 .toggle-list > li ul li .right .btn-download + .time { margin-left: 0.1875rem; }
 .toggle-list > li ul li .right .time { font-size: 0.875rem; line-height: 1; }
 .toggle-list > li ul li .lecture-name .name { color: #1F2125; padding-top: 0.0625rem; }
+.toggle-list > li ul li.ing .name{ color:#5436EA;}
 .toggle-list.st2 > li ul li{display:block;min-height: 0;padding-top:0;padding-bottom:0;}
 .toggle-list.st2 > li ul li .lecture-title{display:flex;align-items:center;min-height:2.75rem;padding:0.4375rem 0;}
 .toggle-list.st2 > li ul li .lecture-menu{display:none;align-items:center;}
