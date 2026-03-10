@@ -78,7 +78,9 @@
 
           <div class="menu">
             <button type="button" class="btn-type5 st3">영수증</button>
-            <button type="button" class="btn-type5 st6">환불요청</button>
+            <button class="btn-type5 st6" onclick="btmPopOpen('#pop-lecture-refund');">강의 환불요청</button>
+            <button class="btn-type5 st6" onclick="btmPopOpen('#pop-book-refund');">교재 반품요청</button>
+            <button class="btn-type5 st6" onclick="purchaseCancel();">구매 취소</button>
           </div>
         </div>
 
@@ -126,5 +128,301 @@
 
 <!-- // wrap -->
 
+
+
+  <!-- layer-popup -->
+  <div class="btm-popup-wrap" id="pop-lecture-refund">
+    <div class="pop-wrap">
+      <div class="popup">
+        <button type="button" class="close" onclick="popClose('#pop-lecture-refund');"></button>
+        <header class="pop-header">
+          <h1 class="pop-tit">환불요청</h1>
+          <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+          <div class="my-history-detail-wrap">
+            <div class="error-box">
+              <p>환불이 진행 중입니다.</p>
+            </div>
+            <h2 class="tit">강의 결제 정보</h2>
+            <div class="history-detail-box st2">
+              <ul class="list">
+                <li>
+                  <b class="tit">상품명</b>
+                  <div class="txt">24년 정보처리기사 실기강좌</div>
+                </li>
+              </ul>
+            </div>
+            <h2 class="tit">강의 결제 정보</h2>
+            <div class="history-detail-box st2">
+              <ul class="list">
+                <li>
+                  <b class="tit">총 상품 금액</b>
+                  <div class="txt">190,000원</div>
+                </li>
+                <li>
+                  <b class="tit">사용 금액</b>
+                  <div class="txt">-80,000원</div>
+                </li>
+                <li>
+                  <b class="tit">
+                    <a href="javascript:void(0);" class="alert-wrap" onclick="alertOpen('위약금은 총 강의 수강료에서 <br>이미 수강한 강의 금액을 제외한 <br>잔여 금액의 10%로 산정됩니다.', ['확인']);">위약금 <i class="ico-tooltip"></i></a>
+                  </b>
+                  <div class="txt">-10,000원</div>
+                </li>
+              </ul>
+              <div class="total">
+                <b class="tit">총 환불 금액</b>
+                <div class="price">70,000원</div>
+              </div>
+            </div>
+            <div class="btn-councel-wrap">
+              <button type="button" class="btn-councel" onclick="btmPopClose('#pop-lecture-refund');btmPopOpen('#pop-councel');"><i class="ico-councel"></i><span>상담 요청</span></button>
+            </div>
+            <div class="refund-agree">
+              <label class="inp-chk">
+                <input type="checkbox"><span class="ic"></span>
+                <span class="t">환불 예상 금액을 확인하였으며, 환불 요청 시 해당 금액으로 환불받는 것에 동의합니다.</span>
+              </label>
+              
+              <div class="btn-wrap">
+                <button type="button" class="btn-type2 st2" style="max-width:30%;" onclick="lectureRefundCancel();">환불 취소</button>
+                <button type="button" class="btn-type2 st1" onclick="lectureRefundRequest();">환불 요청</button>
+              </div>
+            </div>
+            <!-- //refund-agree -->
+          </div>
+          <!-- // my-history-detail-wrap -->
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- // layer-popup -->
+
+  <!-- layer-popup -->
+  <div class="btm-popup-wrap" id="pop-book-refund">
+    <div class="pop-wrap">
+      <div class="popup">
+        <header class="pop-header">
+          <h1 class="pop-tit">교재 반품 요청</h1>
+          <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+            <div class="my-history-detail-wrap">
+              <h2 class="tit">상품 정보</h2>
+              <div class="history-detail-box st2">
+                <ul class="list">
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox" checked><span class="ic"></span>
+                      <span class="t">정보처리기사 필기 세트 1권</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">정보처리기사 필기 세트 1권</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="info-guide">
+                <p>
+                  정확한 반품 안내를 위해 아래 상세 정보를 입력해 주세요.
+                  <br>담당자 확인 후 영업일 기준 3일 이내에 안내 전화를 드리겠습니다.
+                </p>
+              </div>
+
+              <div class="form-wrap box-st">
+                <div class="col">
+                  <div class="label">이름 <span class="c-red">*</span></div>
+                  <div class="form">
+                    <div class="input">
+                      <div class="inp"><input type="text" placeholder="이름"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="label">전화번호 <span class="c-red">*</span></div>
+                  <div class="form">
+                    <div class="input">
+                      <div class="inp"><input type="number" placeholder="전화번호"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="label">상담 내용 <span class="c-red">*</span></div>
+                  <div class="form">
+                    <div class="textarea" style="height:100px;">
+                      <textarea placeholder="정확한 반품 신청을 위해 사유 기재를 부탁드립니다."></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>            
+            <div class="refund-agree">
+                <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t">입고된 도서는 검수 결과와 관계없이 반환이 <br>불가하며, 전량 폐기 처리됩니다.</span>
+                </label>
+                
+                <div class="btn-wrap">
+                  <button type="button" class="btn-type2 st2" style="max-width:30%;" onclick="bookRefundCancel();">반품 취소</button>
+                  <button type="button" class="btn-type2 st1" onclick="bookRefundRequest();">반품 요청</button>
+                </div>
+              </div>
+            </div>
+            <!-- // my-history-detail-wrap -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // layer-popup -->
+
+  
+  <!-- layer-popup -->
+  <div class="btm-popup-wrap" id="pop-councel">
+    <div class="pop-wrap">
+      <div class="popup">
+        <header class="pop-header">
+          <h1 class="pop-tit">상담 요청</h1>
+          <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+          <div class="my-history-detail-wrap">
+            <h2 class="tit">강의 결제 정보</h2>
+            <div class="history-detail-box st2">
+              <ul class="list">
+                <li>
+                  <b class="tit">상품명</b>
+                  <div class="txt">24년 정보처리기사 실기강좌</div>
+                </li>
+              </ul>
+            </div>          
+          </div>          
+          <!-- // my-history-detail-wrap -->
+          <div class="form-wrap st2">
+            <div class="col">
+              <div class="label">이메일</div>
+              <div class="form">
+                <b class="txt-email">123@naver.com</b>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">이름 <span class="c-red">*</span></div>
+              <div class="form">
+                <div class="input">
+                  <div class="inp"><input type="text" placeholder="이름"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">전화번호 <span class="c-red">*</span></div>
+              <div class="form">
+                <div class="input">
+                  <div class="inp"><input type="number" placeholder="전화번호"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="label">상담 내용 <span class="c-red">*</span></div>
+              <div class="form">
+                <div class="textarea" style="height:100px;">
+                  <textarea placeholder="정확한 환불 신청을 위해 사유 기재를 부탁드립니다."></textarea>
+                </div>
+              </div>
+            </div>
+         </div>
+
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="btn-type4 st2 w-size1" onclick="councelCancel();">취소</button>
+            <button type="button" class="btn-type4 st1 w-auto" onclick="councelRequest();">상담 요청</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // layer-popup -->
+
+
+
+<script>
+  function bookRefundCancel() {
+    alertOpen('반품 요청이 취소되었습니다.', ['확인'], function() {
+      popClose('#pop-book-refund');
+    });
+  }
+
+  function bookRefundRequest() {
+    var $pop = $('#pop-book-refund');
+    var productChecked = $pop.find('.history-detail-box input[type=checkbox]:checked').length > 0;
+    if (!productChecked) {
+      alertOpen('반품 요청할 상품을<br>선택해주세요.', ['확인']);
+      return;
+    }
+    var name = $pop.find('.form-wrap input[type=text]').val().trim();
+    var tel  = $pop.find('.form-wrap input[type=number]').val().trim();
+    var cont = $pop.find('.form-wrap textarea').val().trim();
+    if (!name || !tel || !cont) {
+      alertOpen('정확한 상담을 위해<br><span class="c-point">성함, 연락처, 상담 내용</span>을<br>기재해 주시기 바랍니다.', ['확인']);
+      return;
+    }
+    var agreeChecked = $pop.find('.refund-agree input[type=checkbox]').is(':checked');
+    if (!agreeChecked) {
+      alertOpen('반품 안내 사항을 확인하시고<br>동의란에 체크해 주세요.', ['확인']);
+      return;
+    }
+    alertOpen('반품 요청이 정상적으로 접수되었습니다.<br>(담당자 확인 후 영업일 기준<br>3일 이내에 연락드리겠습니다.)', ['확인'], function() {
+      popClose('#pop-book-refund');
+    });
+  }
+
+  function councelCancel() {
+    alertOpen('상담 요청이 취소되었습니다.', ['확인'], function() {
+      popClose('#pop-councel');
+    });
+  }
+
+  function councelRequest() {
+    var $pop = $('#pop-councel');
+    var name = $pop.find('input[type=text]').val().trim();
+    var tel  = $pop.find('input[type=number]').val().trim();
+    var cont = $pop.find('textarea').val().trim();
+    if (!name || !tel || !cont) {
+      alertOpen('정확한 상담을 위해<br><span class="c-point">성함, 연락처, 상담 내용</span>을<br>기재해 주시기 바랍니다.', ['확인']);
+      return;
+    }
+    alertOpen('상담 요청이 정상적으로 접수되었습니다.<br>(담당자 확인 후 영업일 기준<br>3일 이내에 연락드리겠습니다.)', ['확인'], function() {
+      popClose('#pop-councel');
+    });
+  }
+
+  function purchaseCancel() {
+    alertOpen('구매를 취소하시겠습니까?', ['취소', '확인'], function(val) {
+      if (val !== '확인') return;
+      alertOpen('<b>구매 취소가 완료되었습니다.</b><br>(결제하신 수단에 따라 환불 완료까지<br>영업일 기준 3~5일 정도 소요될 수 있습니다.)', ['확인']);
+    });
+  }
+
+  function lectureRefundCancel() {
+    alertOpen('환불 요청이 취소되었습니다.', ['확인'], function() {
+      popClose('#pop-lecture-refund');
+    });
+  }
+
+  function lectureRefundRequest() {
+    var checked = $('#pop-lecture-refund').find('input[type=checkbox]').is(':checked');
+    if (!checked) {
+      alertOpen('환불 안내 사항을 확인하시고<br>동의란에 체크해 주세요.', ['확인']);
+      return;
+    }
+    alertOpen('<b>환불 처리되었습니다.</b><br>(결제하신 수단에 따라 환불 완료까지 영업일 기준 <br>3~5일 정도 소요될 수 있습니다.)', ['확인'], function() {
+      popClose('#pop-lecture-refund');
+    });
+  }
+</script>
 </body>
 </html>

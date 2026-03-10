@@ -343,6 +343,8 @@
 .product-list > li .item .desc { flex: 1; margin-top: 1.25rem; }
 .product-list > li .item .desc .gage-wrap { margin-bottom: 1rem; }
 .product-list > li .item .desc .tit { font-weight: 700; font-size: 1rem; display: block; }
+.product-list > li .item .desc .info{ color:#86909C;font-weight:500;font-size:0.9375rem;}
+.product-list > li .item .desc .tit +.info{margin-top:0.188rem;}
 .product-list > li .item .desc .txt { display:flex;align-items:center; color: #86909C; font-size: 0.875rem; margin-top: 0.25rem;  gap: 0.375rem;;}
 .product-list > li .item .desc .txt [class*=tag-] + span{flex:1;}
 .product-list > li .item .desc .txt [class*=tag-] {height:1.5rem;line-height:1.5rem;padding:0 0.5rem;;}
@@ -360,6 +362,7 @@
 .product-list > li .item .desc dd .tag-wrap { margin-top: 0.625rem; }
 .product-list > li .item .desc dd .tag-wrap::-webkit-scrollbar { display: none; }
 .product-list > li.end .item .img .dim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(31, 33, 37, 0.6); display: flex; justify-content: center; align-items: center; color: #fff; font-weight: 700; font-size: 1.25rem; }
+.product-list.st3 > li {display:flex;align-items:center;gap:0.625rem;}
 .product-list.st3 > li ~ li{margin-top:1rem;}
 .product-list.st3 > li .item{display:flex;gap:0.625rem;}
 .product-list.st3 > li .item .img{width:9.0625rem;height:5rem;}
@@ -376,6 +379,13 @@
 .product-list.st3 > li .item .desc dd .sale-price-wrap .sale-price b{font-size:0.875rem;}
 .product-list.st3 > li .item .desc dd .sale-price-wrap{display:flex;flex-direction: column;gap:0.625rem;}
 .product-list.st3 > li .btn-blue-line{margin-top:0.625rem; width:100%; border-radius: 0.375rem;padding: 0 0.75rem;height: 2rem;line-height:1.875rem; border: 0.0625rem solid #356CFF;background:#fff;font-size:0.875rem;font-weight:600; color:#356CFF;}
+.product-list.st3.st3-2 > li{flex-wrap: wrap;position:relative;}
+.product-list.st3.st3-2 > li .check{position:absolute;top:50%;left:0;transform:translateY(-50%);}
+.product-list.st3.st3-2 > li .check + *{margin-left:2.1875rem;}
+.product-list.st3.st3-2 > li .item{align-items: center;width:100%;}
+.product-list.st3.st3-2 > li .item .img{height:5.8125rem;border-radius:0.375rem;}
+.product-list.st3.st3-2 > li .item .img img{width:100%;height:100%;}
+.product-list.st3.st3-2 > li .btn-blue-line{margin-top:0;}
 
 .product-list2 + .btn-more-view { margin-top: 2.5rem; }
 .product-list2 li ~ li { margin-top: 0.625rem; }
@@ -436,7 +446,7 @@
 
 .payment-desc-box { margin-top: 2rem; }
 .payment-desc-box .sale-price .prev { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; color: rgba(31, 33, 37, 0.3); font-size: 1rem; }
-.payment-desc-box .sale-price .price { display: flex; align-items: center; margin-top: 0.375rem; }
+.payment-desc-box .sale-price .price { display: flex; align-items: center; }
 .payment-desc-box .sale-price .price .sale { color: #F05050; font-weight: 700; font-size: 1.25rem; }
 .payment-desc-box .sale-price .price .sale + b { margin-left: 0.625rem; }
 .payment-desc-box .sale-price .price b { font-weight: 700; font-size: 1.25rem; }
@@ -449,6 +459,7 @@
 .payment-desc-box .additional-items li .inp-chk .price { display: block; width: 100%; }
 .payment-desc-box .additional-items li .inp-chk .price .sale { font-weight: 500; font-size: 1rem; color: #F05050; margin-right: 0.3125rem; }
 .payment-desc-box .additional-items li .inp-chk .price b { font-weight: 700; font-size: 1rem; }
+.payment-desc-box + .line-bar{margin-top:1.875rem;}
 
 .data-list { margin-top: 0.625rem; }
 .data-list:first-child { margin-top: 0; }
@@ -507,6 +518,8 @@
 
 .product-detail-wrap .visual img { width: 100%; border-radius: 0.75rem; }
 .product-detail-wrap .title-product { margin-top: 0.9375rem; font-weight: 600; font-size: 1rem; }
+.product-detail-wrap .info{margin-top:0.1875rem;}
+.product-detail-wrap .info span{font-size:0.875rem;font-weight:500; color:#86909C;}
 .product-detail-wrap .desc-list { font-size: 0.875rem; margin-top: 0.625rem; }
 .product-detail-wrap .desc-list li { padding-left: 0.625rem; position: relative; }
 .product-detail-wrap .desc-list li ~ li { margin-top: 0.1875rem; }
@@ -852,17 +865,39 @@
 .my-history-detail-wrap .history-detail-box {padding: 0.875rem; background: #FFFFFF; border: 0.0625rem solid #F0F0F0; border-radius: 0.75rem;}
 .my-history-detail-wrap .history-detail-box ul {font-size:0.875rem;display:flex;flex-direction: column;gap:0.625rem;}
 .my-history-detail-wrap .history-detail-box ul ~ ul{border-top:0.0625rem solid #F0F0F0;padding-top:0.875rem;margin-top:0.875rem;}
-.my-history-detail-wrap .history-detail-box ul li {display:flex;align-items:center;margin-top:0;}
+.my-history-detail-wrap .history-detail-box ul li {display:flex;align-items:center;margin-top:0;gap:1.25rem;}
 .my-history-detail-wrap .history-detail-box ul li .tit {font-weight:400;}
 .my-history-detail-wrap .history-detail-box ul li .tit strong {font-weight:600;margin-left:0.25rem;}
-.my-history-detail-wrap .history-detail-box ul li .txt{margin-left:auto;margin-top:0rem;}
+.my-history-detail-wrap .history-detail-box ul li .txt{flex:1; text-align:right; margin-left:auto;margin-top:0rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;}
 .my-history-detail-wrap .history-detail-box .total{border-top:0.0625rem solid #F0F0F0;margin-top:0.875rem;padding-top:0.875rem;font-weight:600;font-size:1rem;display:flex;align-items:center;}
 .my-history-detail-wrap .history-detail-box .total .price{margin-left:auto;margin-top:0;}
+.my-history-detail-wrap .history-detail-box.st2 ul li .tit{ color:#86909C;font-size:0.875rem;}
+.my-history-detail-wrap .history-detail-box.st2 .total .tit{font-size:16px;}
 .my-history-detail-wrap * + .history-detail-box-both {margin-top:1.875rem;}
 .my-history-detail-wrap .history-detail-box-both {display:flex;gap:1.25rem;}
 .my-history-detail-wrap .history-detail-box-both .box.order-info{width:21.25rem;}
 .my-history-detail-wrap .history-detail-box-both .box.my-product{flex:1;}
-.my-history-detail-wrap .history-detail-box .menu{display:flex;align-items:center;justify-content: flex-end; gap:0.625rem;padding-top:0.875rem;margin-top:0.875rem; border-top:0.0625rem solid #F0F0F0;}
+.my-history-detail-wrap .history-detail-box .menu{display:block;align-items:center;justify-content: flex-end; gap:0.625rem;padding-top:0.875rem;margin-top:0.875rem; border-top:0.0625rem solid #F0F0F0;overflow-x:auto;white-space: nowrap;text-align:right;}
+.my-history-detail-wrap .history-detail-box .menu > * ~ *{margin-left: 0.3125rem;}
+.my-history-detail-wrap .btn-councel-wrap{margin-top: 1.25rem;}
+.my-history-detail-wrap .btn-councel{ display: flex; align-items: center; gap:0.375rem;font-size:0.875rem; padding: 0.625rem 1rem; height: 2.25rem; border: 0.0625rem solid #DDDDDD; border-radius: 0.625rem;  color:#1F2125;}
+.my-history-detail-wrap .refund-agree{border-top:0.0625rem solid #E5E5E5;padding-top:1.25rem;margin-top:1rem;position: sticky;bottom:-1.5rem;background:#fff;}
+.my-history-detail-wrap .refund-agree .inp-chk {display:flex;align-items:flex-start;}
+.my-history-detail-wrap .refund-agree .inp-chk .ic {min-width: 1.375rem;}
+.my-history-detail-wrap .refund-agree .inp-chk .t {flex:1;white-space: normal;line-height:1.6;}
+.my-history-detail-wrap .refund-agree .btn-wrap {gap:0.75rem;margin-top:0.625rem;}
+.my-history-detail-wrap .refund-agree .btn-wrap  [class*=btn-type]{flex:1;margin:0 !important;}
+.my-history-detail-wrap .error-box{margin-bottom:1.25rem; display: flex; justify-content: center; align-items: center; padding: 0rem 1.875rem; gap: 0.875rem; min-height: 3.125rem; background: rgba(240, 80, 80, 0.1); border-radius: 0.75rem;}
+.my-history-detail-wrap .error-box{margin-bottom:1.25rem; display: flex; justify-content: center; align-items: center; padding: 0rem 1.875rem; gap: 0.875rem; min-height: 3.125rem; background: rgba(240, 80, 80, 0.1); border-radius: 0.75rem;}
+.my-history-detail-wrap .error-box p{font-weight:600; color:#F05050;font-size:1.0625rem;display:flex;gap:0.3125rem}
+.my-history-detail-wrap .error-box p:before{content:'';display:block;transform:translateY(0.3125rem); width: 1rem;height:0.9375rem;background: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.81201 1.29191C6.78442 -0.430626 9.21462 -0.430648 10.187 1.29191L15.6567 10.9814C16.6291 12.704 15.414 14.8573 13.4692 14.8573H2.52979C0.585019 14.8573 -0.630098 12.704 0.342286 10.9814L5.81201 1.29191ZM7.82569 11.164C7.59407 11.164 7.39553 11.2465 7.23096 11.4111C7.07266 11.5694 6.99374 11.7646 6.99365 11.996C6.99365 12.2276 7.0725 12.4235 7.23096 12.582C7.39553 12.7465 7.59407 12.828 7.82569 12.828C8.05716 12.828 8.25222 12.7463 8.41065 12.582C8.57521 12.4235 8.65772 12.2276 8.65772 11.996C8.65763 11.7646 8.57512 11.5694 8.41065 11.4111C8.25221 11.2466 8.05721 11.164 7.82569 11.164ZM7.12158 5.71476C6.94494 5.7148 6.85698 5.80644 6.85694 5.98918L7.14893 10.332C7.14893 10.5148 7.24053 10.6063 7.42334 10.6064H8.31983C8.50237 10.6062 8.59326 10.5147 8.59326 10.332L8.86768 5.98918C8.87372 5.80647 8.78568 5.71484 8.60303 5.71476H7.12158Z' fill='%23F05050'/%3E%3C/svg%3E") no-repeat 50% 50%;background-size:auto 100%;}
+.my-history-detail-wrap * + .info-guide{margin-top:1.25rem;}
+.my-history-detail-wrap .info-guide + *{margin-top:1.25rem;}
+.my-history-detail-wrap .info-guide{display: flex; align-items: center; padding: 1rem 0.875rem; min-height: 4.375rem; background: rgba(84, 54, 234, 0.1); border-radius: 0.75rem;}
+.my-history-detail-wrap .info-guide p{font-size:0.75rem; color:#5436EA;display:flex;align-items:center;gap:0.75rem;}
+.my-history-detail-wrap .info-guide p:before{content:'';display:block;width:2.25rem;height:1.875rem;background:url('../images/content/ico-info-guide.svg') no-repeat 0 0;}
+.my-history-detail-wrap .alert-wrap{display:flex;align-items:center;gap:0.3125rem}
+.my-history-detail-wrap + .form-wrap{margin-top:1.25rem;}
 
 .box-withdraw {padding: 1.25rem; background: #F8F9FA; border-radius: 0.75rem; }
 .box-withdraw .txt-inf{margin-top:0.5rem;}
