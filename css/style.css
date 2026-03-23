@@ -871,6 +871,7 @@
 .my-history-detail-wrap .history-detail-box ul li .txt{flex:1; text-align:right; margin-left:auto;margin-top:0rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;}
 .my-history-detail-wrap .history-detail-box ul li.column{flex-direction: column;align-items: flex-start;gap:0.25rem;}
 .my-history-detail-wrap .history-detail-box ul li.column .txt{overflow:initial;text-align:left;text-overflow:initial;-webkit-line-clamp:initial;text-overflow:initial;}
+.my-history-detail-wrap .history-detail-box ul li.column .menu{display:flex;align-items:center;justify-content: flex-end;width:100%;margin-top:0.25rem;padding-top:0;border-top:none;}
 .my-history-detail-wrap .history-detail-box .total{border-top:0.0625rem solid #F0F0F0;margin-top:0.625rem;padding-top:0.625rem;font-weight:600;font-size:0.9375rem;display:flex;align-items:center;}
 .my-history-detail-wrap .history-detail-box .total .tit{font-size:0.9375rem;}
 .my-history-detail-wrap .history-detail-box .total .price{margin-left:auto;margin-top:0;}
@@ -879,7 +880,7 @@
 .my-history-detail-wrap .history-detail-box .total2 .price{margin-left:auto;margin-top:0;}
 .my-history-detail-wrap .history-detail-box.st2 ul li .tit{ color:#86909C;font-size:0.875rem;}
 .my-history-detail-wrap .history-detail-box.st2 .total .tit{font-size:16px;}
-.my-history-detail-wrap * + .history-detail-box-both {margin-top:1.875rem;}
+.my-history-detail-wrap * + .history-detail-box-both {margin-top:1.875rem;} 
 .my-history-detail-wrap .history-detail-box-both {display:flex;gap:1.25rem;}
 .my-history-detail-wrap .history-detail-box-both .box.order-info{width:21.25rem;}
 .my-history-detail-wrap .history-detail-box-both .box.my-product{flex:1;}
@@ -904,6 +905,9 @@
 .my-history-detail-wrap .info-guide p:before{content:'';display:block;width:2.25rem;height:1.875rem;background:url('../images/content/ico-info-guide.svg') no-repeat 0 0;}
 .my-history-detail-wrap .alert-wrap{display:flex;align-items:center;gap:0.3125rem}
 .my-history-detail-wrap + .form-wrap{margin-top:1.25rem;}
+.my-history-detail-wrap .form-wrap.box-st2{display:flex;flex-direction: column;gap:8px;}
+.my-history-detail-wrap .form-wrap.box-st2 .f-wrap{width:100%;}
+.my-history-detail-wrap .form-wrap.box-st2 .input.input-addr{flex:1;}
 
 .box-withdraw {padding: 1.25rem; background: #F8F9FA; border-radius: 0.75rem; }
 .box-withdraw .txt-inf{margin-top:0.5rem;}

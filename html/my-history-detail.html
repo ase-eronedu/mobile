@@ -126,6 +126,9 @@
             <li class="column">
               <b class="tit">주소</b>
               <div class="txt">[07215] 서울 홍길동구 홍길동로 111 (홍길동아파트) 100동 100호</div>
+              <div class="menu">
+                <button type="button" class="btn-type5 st3" onclick="btmPopOpen('#pop-delivery-change');">배송지 변경</button>
+              </div>
             </li>
           </ul>
         </div>
@@ -434,9 +437,90 @@
   </div>
   <!-- // layer-popup -->
 
+  <!-- layer-popup -->
+  <div class="btm-popup-wrap" id="pop-delivery-change" style="display: none;">
+    <div class="pop-wrap">
+      <div class="popup">
+        <button type="button" class="close" onclick="popClose('#pop-delivery-change');"></button>
+        <header class="pop-header">
+          <h1 class="pop-tit">배송지 변경</h1>
+          <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+          <div class="my-history-detail-wrap">
+            <h2 class="tit">상품 정보</h2>
+            <div class="history-detail-box st2">
+              <ul class="list">
+                <li>
+                  <b class="tit">상품명</b>
+                  <div class="txt">2026 홍담쌤의 정보처리기사 실기 세트</div>
+                </li>
+              </ul>
+            </div>
+            <h2 class="tit">새로운 주소 입력</h2>
+            <div class="form-wrap box-st2">
+              <div class="f-wrap">
+                <div class="input input-addr">
+                  <div class="inp" style="flex:1;"><input type="text" id="addr-zip" placeholder="우편번호" readonly></div>
+                </div>
+                <button type="button" class="btn-type4 st3" onclick="searchAddress();">우편번호</button>
+              </div>
+              <div class="input">
+                <div class="inp"><input type="text" id="addr-road" placeholder="도로명 주소" readonly></div>
+              </div>
+              <div class="input">
+                <div class="inp"><input type="text" id="addr-detail" placeholder="상세 주소를 입력해주세요."></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="btn-type4 st2 w-size1">취소</button>
+            <button type="button" class="btn-type4 st1 w-auto" onclick="changeAddress();">배송지 변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // layer-popup -->
 
 
+ 
 <script>
+  function searchAddress() {
+    new daum.Postcode({
+      oncomplete: function(data) {
+        $('#addr-zip').val(data.zonecode);
+        $('#addr-road').val(data.roadAddress || data.jibunAddress);
+        $('#addr-detail').val('').focus();
+      }
+    }).open();
+  }
+
+  function changeAddress() {
+    var zip    = $('#addr-zip').val().trim();
+    var road   = $('#addr-road').val().trim();
+    var detail = $('#addr-detail').val().trim();
+    if (!zip || !road) {
+      alertOpen('주소를 검색해 주세요.', ['확인']);
+      return;
+    }
+    if (!detail) {
+      alertOpen('상세 주소를 입력해 주세요.', ['확인']);
+      return;
+    }
+    alertOpen('새 배송지로 변경되었습니다.', ['확인'], function() {
+      popClose('#pop-change-address');
+    });
+  }
+
+  function bookRefundCancel() {
+    alertOpen('반품 요청이 취소되었습니다.', ['확인'], function() {
+      popClose('#pop-book-refund');
+    });
+  }
+
   function bookRefundCancel() {
     alertOpen('반품 요청이 취소되었습니다.', ['확인'], function() {
       popClose('#pop-book-refund');
@@ -511,5 +595,7 @@
     });
   }
 </script>
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>
