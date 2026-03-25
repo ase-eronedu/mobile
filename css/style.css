@@ -886,6 +886,15 @@
 .my-history-detail-wrap .history-detail-box-both .box.my-product{flex:1;}
 .my-history-detail-wrap .history-detail-box .menu{display:block;align-items:center;justify-content: flex-end; gap:0.625rem;padding-top:0.875rem;margin-top:0.875rem; border-top:0.0625rem solid #F0F0F0;overflow-x:auto;white-space: nowrap;text-align:right;}
 .my-history-detail-wrap .history-detail-box .menu > * ~ *{margin-left: 0.3125rem;}
+.my-history-detail-wrap .history-detail-box.st3{padding:0 0;border:none;margin-top:0.75rem;}
+.my-history-detail-wrap .history-detail-box.st3 .list{display:flex;flex-wrap: wrap;flex-direction: row;gap:0.875rem;}
+.my-history-detail-wrap .history-detail-box.st3 li{flex-direction: column;align-items: flex-start;width:100%;gap:0.3125rem;}
+.my-history-detail-wrap .history-detail-box.st3 li.half{width:50%;flex:1;}
+.my-history-detail-wrap .history-detail-box.st3 li .tit{ display:block;color:#86909C;font-size:0.8125rem;}
+.my-history-detail-wrap .history-detail-box.st3 li .tit{ display:block;color:#86909C;}
+.my-history-detail-wrap .history-detail-box.st3 li .input{width:100%;margin-top:0;height:2.625rem;padding:0 0.75rem;}
+.my-history-detail-wrap .history-detail-box.st3 li [class*=btn-type]{height:2.625rem;font-size:0.875rem;padding:0 1.25rem;}
+.my-history-detail-wrap .history-detail-box.st3 li .f-wrap{gap:0.3125rem;}
 .my-history-detail-wrap .btn-councel-wrap{margin-top: 1.25rem;}
 .my-history-detail-wrap .btn-councel{ display: flex; align-items: center; gap:0.375rem;font-size:0.875rem; padding: 0.625rem 1rem; height: 2.25rem; border: 0.0625rem solid #DDDDDD; border-radius: 0.625rem;  color:#1F2125;}
 .my-history-detail-wrap .refund-agree{border-top:0.0625rem solid #E5E5E5;padding-top:1.25rem;margin-top:1rem;position: sticky;bottom:-1.5rem;background:#fff;}

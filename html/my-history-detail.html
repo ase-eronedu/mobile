@@ -127,7 +127,7 @@
               <b class="tit">주소</b>
               <div class="txt">[07215] 서울 홍길동구 홍길동로 111 (홍길동아파트) 100동 100호</div>
               <div class="menu">
-                <button type="button" class="btn-type5 st3" onclick="btmPopOpen('#pop-delivery-change');">배송지 변경</button>
+                <button type="button" class="btn-type5 st3" onclick="btmPopOpen('#pop-change-address');">배송지 변경</button>
               </div>
             </li>
           </ul>
@@ -438,10 +438,10 @@
   <!-- // layer-popup -->
 
   <!-- layer-popup -->
-  <div class="btm-popup-wrap" id="pop-delivery-change" style="display: none;">
+  <div class="btm-popup-wrap" id="pop-change-address" style="display: none;">
     <div class="pop-wrap">
       <div class="popup">
-        <button type="button" class="close" onclick="popClose('#pop-delivery-change');"></button>
+        <button type="button" class="close" onclick="popClose('#pop-change-address');"></button>
         <header class="pop-header">
           <h1 class="pop-tit">배송지 변경</h1>
           <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
@@ -458,19 +458,58 @@
               </ul>
             </div>
             <h2 class="tit">새로운 주소 입력</h2>
-            <div class="form-wrap box-st2">
-              <div class="f-wrap">
-                <div class="input input-addr">
-                  <div class="inp" style="flex:1;"><input type="text" id="addr-zip" placeholder="우편번호" readonly></div>
-                </div>
-                <button type="button" class="btn-type4 st3" onclick="searchAddress();">우편번호</button>
-              </div>
-              <div class="input">
-                <div class="inp"><input type="text" id="addr-road" placeholder="도로명 주소" readonly></div>
-              </div>
-              <div class="input">
-                <div class="inp"><input type="text" id="addr-detail" placeholder="상세 주소를 입력해주세요."></div>
-              </div>
+            <div class="history-detail-box st3">
+              <ul class="list">
+                <li class="half">
+                  <b class="tit">받으시는 분</b>
+                  <div class="input">
+                    <div class="inp">
+                      <input type="text">
+                    </div>
+                  </div>
+                </li>
+                <li class="half">
+                  <b class="tit">연락처</b>
+                  <div class="input">
+                    <div class="inp">
+                      <input type="text">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <b class="tit">우편번호검색</b>
+                  <div class="f-wrap">
+                    <div class="input input-addr">
+                      <div class="inp" style="flex:1;"><input type="text" id="addr-zip" placeholder="우편번호" readonly></div>
+                    </div>
+                    <button type="button" class="btn-type4 st3" onclick="searchAddress();">우편번호</button>
+                  </div>
+                </li>
+                <li>
+                  <b class="tit">기본주소</b>
+                  <div class="input">
+                    <div class="inp">
+                      <input type="text" placeholder="기본주소">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <b class="tit">상세주소</b>
+                  <div class="input">
+                    <div class="inp">
+                      <input type="text" placeholder="상세주소를 입력해주세요.">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <b class="tit">배송시 요청사항</b>
+                  <div class="input">
+                    <div class="inp">
+                      <input type="text" placeholder="배송시 요청사항을 입력해주세요.">
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -499,17 +538,25 @@
   }
 
   function changeAddress() {
-    var zip    = $('#addr-zip').val().trim();
-    var road   = $('#addr-road').val().trim();
-    var detail = $('#addr-detail').val().trim();
+    var pop = $('#pop-change-address');
+    var name    = pop.find('.list .half:eq(0) input').val().trim();
+    var phone   = pop.find('.list .half:eq(1) input').val().trim();
+    var zip     = $('#addr-zip').val().trim();
+    var road    = pop.find('.list li:eq(3) input').val().trim();
+    var detail  = pop.find('.list li:eq(4) input').val().trim();
+    if (!name) {
+      alertOpen('받으시는 분을 입력해 주세요.', ['확인']);
+      return;
+    }
+    if (!phone) {
+      alertOpen('연락처를 입력해 주세요.', ['확인']);
+      return;
+    }
     if (!zip || !road) {
       alertOpen('주소를 검색해 주세요.', ['확인']);
       return;
     }
-    if (!detail) {
-      alertOpen('상세 주소를 입력해 주세요.', ['확인']);
-      return;
-    }
+
     alertOpen('새 배송지로 변경되었습니다.', ['확인'], function() {
       popClose('#pop-change-address');
     });
