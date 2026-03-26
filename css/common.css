@@ -252,7 +252,7 @@ input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0px 1000px white inset !
 .tag-st-new{background: rgba(240, 80, 80, 0.1); color: #F05050 !important; font-weight:500;font-size:0.625rem;height:1rem;line-height:1rem;min-width:0; padding:0 0.4063rem;padding-top:0.0625rem;}
 
 /* table */
-.data-type1.scrollbar-x .pad table { min-width: calc(100vw - 3rem); }
+.data-type1.scrollbar-x .pad table { min-width: calc(100% - 3rem); }
 /* @media screen and (min-width:415px) {
   .data-type1.scrollbar-x table { min-width: 362px; }
 }
