@@ -52,47 +52,105 @@
         <ul class="product-list2">
           <li>
             <div class="item">
-              <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
-              <div class="desc">
-                <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
+              <div class="item-desc">
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <span class="tag">정보처리기사</span>
+                  <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b> 
+                </div>
               </div>
-              <div class="btn">
-                <button class="btn-type4 st1">수강확인증 발급</button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="item">
-              <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
-              <div class="desc">
-                <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
-              </div>
-              <div class="btn">
-                <button class="btn-type4 st1">수강확인증 발급</button>
+              <div class="date">수강기간 : 2024년 3월 12일 ~ 2024년 6월 17일</div>
+              <div class="utility">
+                <button class="btn-type4 st3" onclick="btmPopOpen('#pop-application');">수강확인증 발급 신청</button>
               </div>
             </div>
           </li>
           <li>
             <div class="item">
-              <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
-              <div class="desc">
-                <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b>
+              <div class="item-desc">
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <span class="tag">AI</span>
+                  <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b> 
+                </div>
               </div>
-              <div class="btn">
-                <button class="btn-type4 st1">수강확인증 발급</button>
+              <div class="date">수강기간 : 2024년 3월 12일 ~ 2024년 6월 17일</div>
+              <div class="utility">
+                <button class="btn-type4 st3" onclick="btmPopOpen('#pop-application');">수강확인증 발급 수정</button>
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>이라온에듀_수료증.pdf</span></a>
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>12345.pdf</span></a>
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>이라온에듀_수료증23434512345.pdf</span></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="item-desc">
+                <div class="img"><img src="../images/temp/temp-lecture.jpg" alt=""></div>
+                <div class="desc">
+                  <span class="tag">정보처리산업기사</span>
+                  <b class="tit">2024대비 정보처리기사 패키지(필기+실기)</b> 
+                </div>
+              </div>
+              <div class="date">수강기간 : 2024년 3월 12일 ~ 2024년 6월 17일</div>
+              <div class="utility">
+                <button class="btn-type4 st3" onclick="btmPopOpen('#pop-application');">수강확인증 발급 수정</button>
+                <a href="javascript:void(0);" class="btn-type3 st4 pad2"><i class="ico-down"></i><span>이라온에듀_수료증.pdf</span></a>
               </div>
             </div>
           </li>
         </ul>
-        <div class="btn-more-view">
-          <button class="btn">더보기</button>
-        </div>
         
       </div>
     </main>
     <!-- // content -->
   </div>
   <!-- // container -->
+
+<div class="btm-popup-wrap" id="pop-application">
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-header">
+        <strong class="tit">수강확인증 신청서</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
+      <div class="pop-body">
+        <div class="certificate-application-wrap">
+            <div class="simple-guide"><p>아래 정보를 입력하시면 수강확인증 발급을 신청하실 수 있습니다.</p></div>
+
+            <h2 class="title-section"><em>01</em><b>필수 정보</b></h2>
+            <div class="form-wrap">
+              <div class="col w-full">
+                <div class="label">이름 <span class="c-red">*</span></div>
+                <div class="form">
+                  <div class="input">
+                    <div class="inp"><input type="text" placeholder="이름"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col w-full">
+                <div class="label">요청사항 <span class="c-red">*</span></div>
+                <div class="form">
+                  <div class="textarea st2" style="height:140px;">
+                    <textarea placeholder="요청사항을 상세히 입력해주세요."></textarea>
+                    <span class="byte"><em>0자</em> / 1000자</span>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            
+          </div>
+      </div>
+      <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="btn-type4 st2 w-size1" onclick="popClose('#pop-application');">취소</button>
+            <button type="button" class="btn-type4 st1 w-auto" id="certificateApplication">수강확인증 발급 신청하기</button>
+          </div>
+        </div>
+    </div>
+  </div>  
+</div>  
+
 
   <script>
     $.get("common/footer.html", function(data) {
@@ -102,5 +160,35 @@
 </div>
 <!-- // wrap -->
 
+<script>
+
+  $(function(){
+    var $ta = $('.textarea textarea');
+    var maxLen = 1000;
+    $ta.on('input', function(){
+      var val = $(this).val();
+      if(val.length > maxLen){
+        val = val.substring(0, maxLen);
+        $(this).val(val);
+      }
+      $(this).closest('.textarea').find('.byte em').text(val.length + '자');
+    });
+
+    // 수료증 발급 신청
+    $('#certificateApplication').on('click', function(){
+      var $wrap = $('#pop-application').find('.certificate-application-wrap');
+      var name = $.trim($wrap.find('.inp input[type="text"]').val());
+      var request = $.trim($wrap.find('.textarea textarea').val());
+
+      if(!name || !request){
+        alertOpen('필수 정보를 입력 해주세요.', ['확인']);
+      } else {
+        alertOpen('관리자 확인 후 발급 해드립니다.<br>(영업일 3일이내)', ['확인']);
+      }
+    });
+  });
+  </script>
+
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>
