@@ -664,12 +664,12 @@ function layerMenu(){
 /* popup */
 function popClose(id){
 	$(id).fadeOut(300);
-	$('body').css('overflow','');
+	$('body').removeClass('open-popup');
 } 
 
 function popOpen(id, callback){
 	$(id).fadeIn(300);
-	$('body').css('overflow','hidden');
+	$('body').addClass('open-popup');
   $(id).find('input[type=text], input[type=number], textarea').val('');
 
   inputFocus('.input');
@@ -694,7 +694,7 @@ function btmPopOpen(id, callback, closeCallback){
 
   $sideMenuWrap.show();
   $sideMenu.slideDown(300, function(){
-    $('body, html').addClass('hidden');
+    $('html, body').addClass('open-popup');
     $sideMenuWrap.addClass('on');
     $sideMenu.height($sideMenu.height());
     if(callback) callback();
@@ -733,7 +733,7 @@ function btmPopClose(id, callback){
       if(callback) callback();
     })
 
-    $('body, html').removeClass('hidden');
+    $('html, body').removeClass('open-popup');
 }
 
 
@@ -743,7 +743,7 @@ function alertClose(id){
   $(id).fadeOut(300, ()=>{
     $(id).remove();
   });
-  $('body').css('overflow','');
+  $('body').removeClass('open-alert');
 }
 
 function alertOpen(text, type, callback){
@@ -761,6 +761,7 @@ function alertOpen(text, type, callback){
   const $alert = $(alertHtml);
 
   $('.wrap').append($alert);
+  $('body').addClass('open-alert');
 
   function btnCheck(item){
     if(item.includes('확인') || item.includes('취소')){
