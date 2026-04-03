@@ -670,7 +670,6 @@ function popClose(id){
 function popOpen(id, callback){
 	$(id).fadeIn(300);
 	$('body').addClass('open-popup');
-  $(id).find('input[type=text], input[type=number], textarea').val('');
 
   inputFocus('.input');
   inputFocus('.textarea');
