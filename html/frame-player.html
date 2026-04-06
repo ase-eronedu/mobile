@@ -46,6 +46,7 @@
           <ul>
             <li class="on"><a href="javascript:void(0);" onclick="menuOpen('#curriculum');"><i class="ico-curriculum"></i><span>커리큘럼</span></a></li>
             <li><a href="javascript:void(0);" onclick="menuOpen('#qna');setTimeout(repleEvt,1500)"><i class="ico-question"></i><span>질문하기</span></a></li>
+            <li><a href="javascript:void(0);" onclick="menuOpen('#lecture-list')"><i class="ico-lecture-list"></i><span>강의 목차</span></a></li>
           </ul>
         </div>
         <div class="menu-detail-wrap">
@@ -478,8 +479,48 @@
                </div>
             </div>
           </section>
+          <!-- // 질문하기 등록 -->
+          <!-- 강의 목차 -->
+          <section class="menu-detail" id="lecture-list" style="display:none">
+            <div class="menu-body">
+              <div class="auto">
+                  <div class="chapter-list">
+                    <ul>
+                      <li>
+                        <a href="javascript:void(0);">
+                          <span class="num">1</span>
+                          <span class="time">12:00</span>
+                          <span class="name">강의 소개 및 학습방법</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">
+                          <span class="num">2</span>
+                          <span class="time">21:10</span>
+                          <span class="name">소프트웨어 설계기초</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">
+                          <span class="num">3</span>
+                          <span class="time">32:10</span>
+                          <span class="name">SQL 기본문법</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">
+                          <span class="num">12</span>
+                          <span class="time">41:10</span>
+                          <span class="name">2줄인경우 데이터베이스 설계 데이터베이스 설계 데이D이스...</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </section>
+          <!-- // 강의 목차 -->
         </div>
-        <!-- // 질문하기 등록 -->
       </div>
     </div>
   </div>
@@ -510,6 +551,12 @@
 
   $(document).on('click', '.menu-box.type2 .btn-toggle', function(){
     $(this).toggleClass('on');
+  });
+
+  // 챕터 리스트 클릭
+  $(document).on('click', '.chapter-list li a', function(e){
+    e.preventDefault();
+    $(this).closest('li').addClass('on').siblings().removeClass('on');
   });
 
 </script>

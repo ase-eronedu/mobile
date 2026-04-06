@@ -765,6 +765,18 @@
 .frame-player .player-menu-wrap .detail-view .detail-header .info{flex-direction: column;}
 .frame-player .player-menu-wrap .detail-view .detail-header .info > *{width:100%;margin:0 !important;line-height:1.2 !important;}
 .frame-player .player-menu-wrap .detail-view .detail-header .right { margin-left: auto; margin-top:0.25rem !important;}
+.frame-player .player-menu-wrap .chapter-list ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.375rem; }
+.frame-player .player-menu-wrap .chapter-list ul li { background: white; border: 0.0625rem solid #efefef; border-radius: 0.375rem; }
+.frame-player .player-menu-wrap .chapter-list ul li a { display: flex; align-items: center; gap: 0.5rem; padding: 0.875rem; text-decoration: none; }
+.frame-player .player-menu-wrap .chapter-list ul li a .num { display: flex; align-items: center; justify-content: center; width: 1.25rem; height: 1.25rem; background: #edeef0; color: #86909c; border-radius: 6.25rem; font-size: 0.75rem; font-weight: 600; flex-shrink: 0; }
+.frame-player .player-menu-wrap .chapter-list ul li a .time { color: #86909c; font-size: 0.875rem; font-weight: 400; flex-shrink: 0; }
+.frame-player .player-menu-wrap .chapter-list ul li a .name { color: #1f2125; font-size: 0.875rem; font-weight: 500; flex: 1;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;height:1.3em;}
+.frame-player .player-menu-wrap .chapter-list ul li.on { background: rgba(84, 54, 234, 0.08); border: 0.0625rem solid #5436ea; border-radius: 0.375rem; }
+.frame-player .player-menu-wrap .chapter-list ul li.on a { display: flex; align-items: center; gap: 0.5rem; padding: 0.875rem; text-decoration: none; }
+.frame-player .player-menu-wrap .chapter-list ul li.on a .num { display: flex; align-items: center; justify-content: center; width: 1.25rem; height: 1.25rem; background: #5436ea; color: white; border-radius: 6.25rem; font-size: 0.75rem; font-weight: 600; flex-shrink: 0; }
+.frame-player .player-menu-wrap .chapter-list ul li.on a .time { color: #86909c;}
+.frame-player .player-menu-wrap .chapter-list ul li.on a .name { color: #1f2125;}
+
 
 .nodata-wrap{height:100vh;margin:0 auto;width:22.5rem;overflow-y:auto;display:flex;justify-content:center;align-items:center;}
 .nodata-wrap .nodata-box{padding:0 0;}
