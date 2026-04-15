@@ -114,6 +114,84 @@
                       </div>
                   </div>
               </li>
+              <li>
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li data-id="0215454">
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="faq-box">
+                      <button type="button" class="faq-heading">
+                          <i class="ico-q"></i><b>AI분석을 통해 실시간 인사이트를 확인해 보세요.</b>
+                      </button>
+                      <div class="faq-answer">
+                          <div class="answer">
+                              <i class="ico-a"></i>
+                              <div class="txt">자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 자주묻는질문 <br>자주묻는질문자주묻는질문자주묻는질문 <br>자주묻는질문자주묻는질문 </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
             </ul>
         </div>
         <!-- // 회원정보 -->
@@ -255,6 +333,21 @@
           }
       })
     }  
+
+
+    function openFaqById(id){
+      var $target = $('.faq-list li[data-id="' + id + '"]');
+      if(!$target.length) return;
+      var $heading = $target.find('.faq-heading');
+      var $answer = $target.find('.faq-answer');
+      $heading.addClass('on');
+      $answer.show();
+      $('html, body').animate({ scrollTop: $target.offset().top - 100 }, 400);
+    }
+
+    $(function(){
+      openFaqById('0215454');
+    });    
   </script>
 </body>
 </html>

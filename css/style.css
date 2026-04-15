@@ -989,6 +989,10 @@
 .urgent-notice p span{flex:1;}
 .urgent-notice p:before{content:'';display:block;width: 0.875rem;height:0.8125rem;background: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.81187 1.29195C6.78425 -0.430666 9.21544 -0.430634 10.1878 1.29195L15.6576 10.9814C16.6299 12.704 15.4147 14.8572 13.4701 14.8574H2.53062C0.585849 14.8574 -0.630242 12.704 0.342144 10.9814L5.81187 1.29195ZM7.82652 11.164C7.59491 11.164 7.39636 11.2465 7.23179 11.4111C7.07332 11.5696 6.99449 11.7654 6.99449 11.997C6.9946 12.2284 7.07343 12.4236 7.23179 12.582C7.39636 12.7466 7.59491 12.8291 7.82652 12.8291C8.05798 12.829 8.25308 12.7464 8.41148 12.582C8.57593 12.4236 8.65843 12.2284 8.65855 11.997C8.65855 11.7654 8.57605 11.5696 8.41148 11.4111C8.25308 11.2466 8.05798 11.1641 7.82652 11.164ZM7.12242 5.7148C6.94574 5.7148 6.85687 5.80651 6.85679 5.98922L7.14976 10.332C7.14976 10.5149 7.24132 10.6064 7.42418 10.6064H8.31968C8.50253 10.6064 8.5941 10.5149 8.5941 10.332L8.86851 5.98922C8.87452 5.80665 8.78635 5.71494 8.60386 5.7148H7.12242Z' fill='%23F05050'/%3E%3C/svg%3E") no-repeat 50% 50%;background-size:auto 100%;}
 
+.player-menu-wrap .curriculum-desc + .urgent-notice{margin-top:-0.9375rem;}
+.player-menu-wrap .urgent-notice{height:2.5625rem;}
+.player-menu-wrap .urgent-notice p span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;height:1.3em;}
+
 .banner-box{width:calc(100% + 3rem);margin-left:-1.5rem;}
 .banner-box img{width:100%;margin-bottom:1.875rem;}
 
