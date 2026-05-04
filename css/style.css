@@ -348,6 +348,7 @@
 .product-list > li .item .desc .txt [class*=tag-] {height:1.5rem;line-height:1.5rem;padding:0 0.5rem;;}
 .product-list > li .item .desc dd { margin-top: 0.625rem; }
 .product-list > li .item .desc dd .sale-price { display: flex; align-items: center; margin-bottom: 0.625rem; letter-spacing: -0.05em; }
+.product-list > li .item .desc dd .sale-price:last-child{margin-bottom:0;}
 .product-list > li .item .desc dd .sale-price .prev { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; color: rgba(31, 33, 37, 0.3); font-size: 1rem; margin-left: 0.375rem; }
 .product-list > li .item .desc dd .sale-price .price { display: flex; align-items: center; }
 .product-list > li .item .desc dd .sale-price .price .sale { color: #F05050; font-weight: 600; font-size: 1rem; }
@@ -384,13 +385,13 @@
 .product-list.st3.st3-2 > li .item .img{height:5.8125rem;border-radius:0.375rem;}
 .product-list.st3.st3-2 > li .item .img img{width:100%;height:100%;}
 .product-list.st3.st3-2 > li .btn-blue-line{margin-top:0;}
-.product-list.st4{display:grid;grid-template-columns: repeat(2, 1fr);grid-gap:30px 16px;}
+.product-list.st4{display:grid;grid-template-columns: repeat(2, 1fr);grid-gap:1.25rem 0.625rem;}
 .product-list.st4 > li{ margin:0; }
 .product-list.st4 > li > a{flex-direction: column;}
 .product-list.st4 > li .item .img{border-radius:0.5rem;}
 .product-list.st4 > li .item .desc{margin-top:0.625rem;}
 .product-list.st4 > li .item .desc dt .tit{font-size:0.875rem;font-weight:500;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;height:2.6em;}
-.product-list.st4 > li .item .desc dt .tit + .info{font-size:0.875rem; color:#86909C;margin-top:0.625rem;font-size:0.875rem;font-weight:400;}
+.product-list.st4 > li .item .desc dt .tit + .info{font-size:0.875rem; color:#86909C;margin-top:0.625rem;font-size:0.875rem;font-weight:300;}
 .product-list.st4 > li .item .desc dd{margin-top:0.1875rem;}
 .product-list.st4 > li .item .desc dd .sale-price .price .sale,
 .product-list.st4 > li .item .desc dd .sale-price .price b{font-size:0.875rem;font-weight:500;}
@@ -1053,3 +1054,8 @@
 
 .certificate-application-wrap .form-wrap .col.row-st{display:flex; flex-direction: row;gap:10px;}
 .certificate-application-wrap .form-wrap .col.row-st .auto{flex:1;}
+
+
+.notie-box{margin-top:2.5rem; padding: 0.875rem 1rem 0.625rem 1rem; min-height: 2.75rem;background: #F6F5FE; border-radius: 0.375rem;}
+.notie-box p{font-size:0.875rem;display: flex; align-items: flex-start;gap: 0.25rem; }
+.notie-box p:before{content:'';display:block;width: 0.875rem;min-width: 0.875rem;height:0.875rem;transform:translateY(0.125rem); background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='13' height='13' rx='6.5' stroke='%231F2125'/%3E%3Cpath d='M7.55176 8.41602H6.44824L6.33105 3.42578H7.65918L7.55176 8.41602ZM7.00488 10.5742C6.86816 10.5742 6.74121 10.54 6.62402 10.4717C6.50684 10.4033 6.41406 10.3105 6.3457 10.1934C6.27734 10.0762 6.24316 9.94922 6.24316 9.8125C6.24316 9.67904 6.27734 9.55534 6.3457 9.44141C6.41406 9.32422 6.50684 9.23145 6.62402 9.16309C6.74121 9.09473 6.86816 9.06055 7.00488 9.06055C7.13509 9.06055 7.25716 9.09473 7.37109 9.16309C7.48828 9.23145 7.58105 9.32422 7.64941 9.44141C7.72103 9.55534 7.75684 9.67904 7.75684 9.8125C7.75684 9.94922 7.72103 10.0762 7.64941 10.1934C7.58105 10.3105 7.48828 10.4033 7.37109 10.4717C7.25716 10.54 7.13509 10.5742 7.00488 10.5742Z' fill='black'/%3E%3C/svg%3E") no-repeat 50% 50%;background-size:auto 100%;}
