@@ -454,27 +454,86 @@ function maxLengthChk(object){
   })
 }
 
-function fileAdd(wrap, tit){
+function fileAdd(wrap, maxCount){
   let $wrap = $(wrap);
-  
+
+  if(typeof maxCount === 'number' && maxCount > 0){
+    return createWithList();
+  }
+
   create();
   numbering();
+
+  function createWithList(){
+    let inputHtml = `<div class="input-file">
+        <div class="trigger">
+          <div class="input">
+              <input type="text" class="path" readonly>
+            </div>
+          <input type="file" class="real">
+          <button type="button" class="btn-type4 st3">첨부파일</button>
+        </div>
+      </div>
+      <ul class="file-list"></ul>`;
+    $wrap.append(inputHtml);
+
+    let $real = $wrap.find('input[type=file]');
+    let $path = $wrap.find('.path');
+    let $list = $wrap.find('.file-list');
+
+    $real.on('change', function(){
+      let v = $(this).val();
+      if(!v) return;
+      if($list.children().length >= maxCount){
+        this.value = '';
+        return;
+      }
+      let name = v.split('fakepath\\')[1] || v;
+      let $item = $('<li class="file-item"><button type="button" class="btn-remove" aria-label="삭제"></button><span class="name"></span></li>');
+      $item.find('.name').text(name);
+      $list.append($item);
+
+      $path.val('');
+      this.value = '';
+
+      if($list.children().length >= maxCount){
+        $real.prop('disabled', true);
+      }
+    });
+
+    $list.on('click', '.btn-remove', function(){
+      $(this).closest('li').remove();
+      if($list.children().length < maxCount){
+        $real.prop('disabled', false);
+      }
+    });
+  }
   function create(){
-    let html =`<div class="label">${tit ? tit : '파일첨부'} <span class="num"></span></div>
-            <div class="form">
-              <div class="input-file">
-                <div class="trigger">
-                  <div class="input">
-                     <input type="text" class="path">
-                   </div>
-                 <input type="file" class="real">
+    let html = wrap.includes('tbody') ? `  <tr>
+         <th>파일첨부 <span class="num"></span></th>
+         <td>
+          <div class="input-file">
+            <div class="trigger">
+              <div class="input">
+                  <input type="text" class="path">
                 </div>
-                <div class="btns">
-                  <button type="button" class="btn btn-add">파일첨부</button>
-                  <!-- <button type="button" class="btn btn-del">파일삭제</button> -->
-                </div>
-              </div>
-            </div>  `;
+              <input type="file" class="real">
+              <button type="button" class="btn-type4 st3">파일첨부</button>
+            </div>
+            <!-- <button type="button" class="btn-type4 st3 btn-del">파일삭제</button>    -->
+          </div>    
+        </td>
+      </tr>` : 
+      `<div class="input-file">
+        <div class="trigger">
+          <div class="input">
+              <input type="text" class="path">
+            </div>
+          <input type="file" class="real">
+          <button type="button" class="btn-type4 st3">파일첨부</button>
+        </div>
+        <!-- <button type="button" class="btn-type4 st3 btn-del">파일삭제</button>    -->
+      </div>  `;
 
       let $fileset = $(html);
       $wrap.append($fileset);
@@ -483,11 +542,9 @@ function fileAdd(wrap, tit){
         let v = $(this).val();
         $fileset.find('input[type=text]').val(v.split('fakepath\\')[1]);
         // if(v && checkInput() === 0) {
-        //   fileAdd(wrap);numbering();
+        //   fileAdd(wrap);
+        //   numbering();
         // }
-      });
-      $fileset.find('.btn-add').on('click', function(){
-        $fileset.find('input[type=file]').click();
       });
       //del
       $fileset.find('.btn-del').on('click', function(){
@@ -513,14 +570,10 @@ function fileAdd(wrap, tit){
 
   function numbering(){
     $wrap.find('.num').each(function(i){
-      i > 0 ? $(this).text(i+1) : ''
-    })
-    $wrap.find('[type=file]').each(function(i){
-      $(this).attr('name', 'file'+i+1)
+      $(this).text(i+1)
     })
   }
 }
-
 
 function toggleList(){
   let $pannels = $('[data-evt="toggle-list"] .toggle-list > li > ul');

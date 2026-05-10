@@ -287,10 +287,12 @@
 
 .review-answer { margin-bottom: 1.25rem; }
 .review-answer .tit { color: var(--c-primary); font-weight: 600; font-size: 1rem; }
-.review-answer .info { margin-top: 0.625rem; }
-.review-answer .info span { color: #86909C; font-size: 0.8125rem; }
-.review-answer .info span ~ span { margin-left: 0.625rem; }
-.review-answer .answer { margin-top: 0.625rem; line-height: 1.6; color: #373F57; font-size: 0.875rem; }
+.review-answer .answer-head { display: flex; flex-direction: column; gap: 0.625rem; }
+.review-answer .info { margin-top: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 0.625rem; }
+.review-answer .info span { color: #86909C; font-size: 0.8125rem; line-height: 1.5; }
+.review-answer .info span:first-child { font-size: 0.875rem; }
+.review-answer .info span ~ span { margin-left: 0; }
+.review-answer .answer { margin-top: 0.625rem; line-height: 1.8; letter-spacing: -0.03125rem; color: #373F57; font-size: 0.875rem; }
 .review-answer .answer img{max-width: 100%;}
 .review-answer + .view-menu{padding-top:1.25rem;border-top:0.0625rem solid #F0F0F0;;}
 .review-answer[style*='none'] + .view-menu{padding-top:0;border-top:none;}
@@ -322,8 +324,8 @@
 .review-list-wrap .review-list > li .review .img {display:flex; margin-right: 0.375rem; width: 1.125rem; height: 1.125rem; border-radius: 100%; overflow: hidden; }
 .review-list-wrap .review-list > li .review .img img { width: 100%; height: 100%; }
 .review-list-wrap .review-list > li .review .desc { flex: 1; }
-.review-list-wrap .review-list > li .review .desc .name-area .name { display: inline-block; letter-spacing: -0.5px; font-weight: 600; font-size: 0.875rem; color: #1F2125; }
-.review-list-wrap .review-list > li .review .desc .name-area .date { display: inline-block; margin-left: 0.3125rem; font-size: 0.8125rem; color: #86909C; }
+.review-list-wrap .review-list > li .review .desc .name-area .name { display: inline-block; letter-spacing: -0.5008px; font-weight: 500; font-size: 0.875rem; color: #1F2125; }
+.review-list-wrap .review-list > li .review .desc .name-area .date { display: inline-block; margin-left: 0.3125rem; font-size: 0.8125rem; color: #86909C; font-weight:300;}
 .review-list-wrap .review-list > li .review .text { margin-top: 0.625rem; white-space: pre-line; font-size: 0.875rem; }
 .review-list-wrap .review-list > li .review .form{margin-top:0.625rem;}
 .review-list-wrap .review-list > li .review .form textarea{font-size:0.875rem; color:#1F2125;}
@@ -655,12 +657,10 @@
 .lecure-dashboard-wrap section > .btn-more + ul{margin-top:1.25rem;}
 .lecure-dashboard-wrap section .btn-wrap { margin-top: 2.5rem;}
 .lecure-dashboard-wrap .no-data{font-size:0.875rem; color:#1F2125;padding-top:1.875rem;}
-.lecure-dashboard-wrap .my-study-wrap ul { display: flex; align-items: center; margin-top: 1.25rem; padding: 0 1.25rem; }
-.lecure-dashboard-wrap .my-study-wrap ul li { display: flex; justify-content: center; flex-direction: column; flex: 1; }
-.lecure-dashboard-wrap .my-study-wrap ul li b { font-weight: 600; font-size: 1.75rem; text-align: center; }
-.lecure-dashboard-wrap .my-study-wrap ul li b em { color: var(--c-primary); vertical-align: baseline; }
-.lecure-dashboard-wrap .my-study-wrap ul li span { display: block; font-size: 0.875rem; color: #86909C; text-align: center; }
-.lecure-dashboard-wrap .my-study-wrap ul li b small { font-size: 1.125rem; vertical-align: baseline; }
+.lecure-dashboard-wrap .my-study-wrap .gage-wrap{margin-top:0.875rem;}
+.lecure-dashboard-wrap .my-study-wrap .gage-wrap .txt{margin-bottom:0.5rem;}
+.lecure-dashboard-wrap .my-study-wrap .gage-wrap .txt .bar{display:inline-block;margin:0 0.375rem; width: 0.0625rem; height: 0.625rem; background: rgba(134, 144, 156, 0.5);}
+
 .lecure-dashboard-wrap .recent-question-wrap ul li ~ li { margin-top: 1.125rem; }
 .lecure-dashboard-wrap .recent-question-wrap ul li a { display: flex; align-items: flex-start; flex-wrap: wrap; }
 .lecure-dashboard-wrap .recent-question-wrap ul li a [class*=tag-] {height:1.5rem; margin-right: 0.625rem; font-size:0.75rem;height:1.4375rem;line-height:1.4375rem; padding:0 0.375rem;min-width: 3.5rem;padding-top:0.0625rem;}
@@ -699,6 +699,12 @@
 .lectoure-course .desc .root { font-size: 0.8125rem; }
 .lectoure-course .desc .root span + span:before { content: "-"; display: inline-block; margin: 0 0.1875rem; }
 .lectoure-course .desc .tit { display: block; margin-top: 0.375rem; font-weight: 600; font-size: 1.25rem; }
+.lectoure-course .desc .now-playing{display:block;gap:0.375rem;margin-top:0.375rem;font-size:0.875rem;line-height:1.5;color:#fff;letter-spacing:-0.0625rem;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.6em;height:1.6em;white-space: nowrap;}
+.lectoure-course .desc .now-playing .ico-now-playing{ width: 1.25rem; height: 1.25rem; display:inline-flex;justify-content:center;align-items:center; background: rgba(255, 255, 255, 0.2);border-radius:100%; }
+.lectoure-course .desc .now-playing .ico-now-playing:after{content:'';display:block;width: 0.375rem;min-width: 0.375rem;height:0.4375rem;background: url("data:image/svg+xml,%3Csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.44186 2.47253C6.18605 2.92918 6.18605 4.07082 5.44186 4.52747L1.67442 6.83928C0.930231 7.29593 -4.83521e-07 6.72512 -4.43599e-07 5.81181L-2.41494e-07 1.18819C-2.01572e-07 0.274882 0.930232 -0.295933 1.67442 0.16072L5.44186 2.47253Z' fill='white'/%3E%3C/svg%3E") no-repeat 50% 50%;background-size:auto 100%;}
+.lectoure-course .desc .now-playing .now-course{flex-shrink:0;white-space: nowrap;margin-left:0.3125rem;}
+.lectoure-course .desc .now-playing .now-divider{color:rgba(255,255,255,0.5);flex-shrink:0;}
+.lectoure-course .desc .now-playing .now-lesson{color:#fff;min-width:0;white-space: nowrap;}
 .lectoure-course + * { margin-top: 1.25rem; }
 
 .lecture-name { display: flex; align-items: flex-start; }
@@ -917,12 +923,13 @@
 .my-history-detail-wrap .history-detail-box ul li.column{flex-direction: column;align-items: flex-start;gap:0.25rem;}
 .my-history-detail-wrap .history-detail-box ul li.column .txt{overflow:initial;text-align:left;text-overflow:initial;-webkit-line-clamp:initial;text-overflow:initial;}
 .my-history-detail-wrap .history-detail-box ul li.column .menu{display:flex;align-items:center;justify-content: flex-end;width:100%;margin-top:0.25rem;padding-top:0;border-top:none;}
-.my-history-detail-wrap .history-detail-box .total{border-top:0.0625rem solid #F0F0F0;margin-top:0.625rem;padding-top:0.625rem;font-weight:600;font-size:0.9375rem;display:flex;align-items:center;}
+.my-history-detail-wrap .history-detail-box .total{flex-wrap: wrap; border-top:0.0625rem solid #F0F0F0;margin-top:0.625rem;padding-top:0.625rem;font-weight:600;font-size:0.9375rem;display:flex;align-items:center;}
 .my-history-detail-wrap .history-detail-box .total .tit{font-size:0.9375rem;}
 .my-history-detail-wrap .history-detail-box .total .price{margin-left:auto;margin-top:0;}
-.my-history-detail-wrap .history-detail-box .total2{border-top:0.0625rem solid #F0F0F0;margin-top:0.625rem;padding-top:0.625rem;font-size:0.875rem;display:flex;align-items:center;}
+.my-history-detail-wrap .history-detail-box .total2{border-top:0.0625rem solid #F0F0F0;margin-top:0.625rem;padding-top:0.625rem;font-size:0.875rem;display:flex;align-items:center;flex-wrap:wrap;}
 .my-history-detail-wrap .history-detail-box .total2 .tit{font-weight:400;}
 .my-history-detail-wrap .history-detail-box .total2 .price{margin-left:auto;margin-top:0;}
+.my-history-detail-wrap .history-detail-box .price-note{width:100%;margin-top:0.125rem;color:#86909C;font-size:0.8125rem;line-height:1.4;text-align:right;font-weight:400;}
 .my-history-detail-wrap .history-detail-box.st2 ul li .tit{ color:#86909C;font-size:0.875rem;}
 .my-history-detail-wrap .history-detail-box.st2 .total .tit{font-size:16px;}
 .my-history-detail-wrap * + .history-detail-box-both {margin-top:1.875rem;} 
