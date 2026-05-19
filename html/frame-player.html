@@ -553,110 +553,110 @@
           <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
         </header>
         <div class="pop-body">
-          <div class="lecture-movie-download-wrap">
-            <div class="movie-download-toolbar">
-              <div class="toolbar-left">
-                <label class="inp-chk chk-md">
-                  <input type="checkbox" id="movie-download-check-all" aria-controls="movie-download-groups">
-                  <span class="ic"></span><span class="t">전체선택</span>
-                </label>
+          <div class="toggle-menu-wrap" data-evt="toggle-list">
+            <div class="wrap-header">
+                <div class="toggle-menu">
+                  <button class="btn-tog"><span>모두 열기</span></button>
               </div>
-              <p class="toolbar-hint" role="note">
-                <span class="ico-play-hint" aria-hidden="true"></span><span class="toolbar-hint-txt">다운로드할 영상을 선택해 주세요.</span>
-              </p>
+              <div class="right">
+                <p class="txt-hint" role="note">
+                  <span class="ico-play-hint" aria-hidden="true"></span><span >다운로드할 영상을 선택해 주세요.</span>
+                </p>
+              </div>
             </div>
-            <div class="movie-download-groups" id="movie-download-groups">
+            
+            <ul class="toggle-list movie-download-groups" id="movie-download-groups">
               <!-- 그룹 1 -->
-              <div class="movie-download-group">
-                <div class="group-head">문제(소스) 파일 및 자동채점폴더</div>
-                <ul class="group-rows movie-download-rows">
+              <li class="on">
+                <button type="button" class="btn"><b class="tit">문제(소스) 파일 및 자동채점폴더</b></button>
+                <ul>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-stack"><span class="tit-line">IT 프로젝트 정보시스템 구축 관리 구축 관리구</span><span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1)</span></span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl" checked><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl" checked><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl" checked><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                 </ul>
-              </div>
+              </li>
               <!-- 그룹 2 -->
-              <div class="movie-download-group">
-                <div class="group-head">문제(소스) 파일 및 자동채점폴더</div>
-                <ul class="group-rows movie-download-rows">
+              <li>
+                <button type="button" class="btn"><b class="tit">문제(소스) 파일 및 자동채점폴더</b></button>
+                <ul style="display: none;">
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                 </ul>
-              </div>
+              </li>
               <!-- 그룹 3 -->
-              <div class="movie-download-group">
-                <div class="group-head">문제(소스) 파일 및 자동채점폴더</div>
-                <ul class="group-rows movie-download-rows">
+              <li>
+                <button type="button" class="btn"><b class="tit">문제(소스) 파일 및 자동채점폴더</b></button>
+                <ul style="display: none;">
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                 </ul>
-              </div>
+              </li>
               <!-- 그룹 4 -->
-              <div class="movie-download-group">
-                <div class="group-head">문제(소스) 파일 및 자동채점폴더</div>
-                <ul class="group-rows movie-download-rows">
+              <li>
+                <button type="button" class="btn"><b class="tit">문제(소스) 파일 및 자동채점폴더</b></button>
+                <ul style="display: none;">
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                   <li>
-                    <label class="inp-chk chk-md chk-row">
-                      <input type="checkbox" name="movie-dl"><span class="ic"></span>
-                      <span class="tit-line">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
+                    <label class="inp-chk">
+                      <input type="radio" name="movie-dl"><span class="ic"></span>
+                      <span class="t">IT 프로젝트 정보시스템 구축 관리(1) - 문제</span>
                     </label>
                   </li>
                 </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="pop-footer">
@@ -705,25 +705,6 @@
     e.preventDefault();
     $(this).closest('li').addClass('on').siblings().removeClass('on');
   });
-
-  function refreshMovieDownloadCheckAll() {
-    var $rows = $('#movie-download-groups input[name=movie-dl]');
-    var $all = $('#movie-download-check-all');
-    if (!$rows.length || !$all.length) return;
-    var n = $rows.length;
-    var c = $rows.filter(':checked').length;
-    $all.prop('checked', c === n);
-    $all.prop('indeterminate', c > 0 && c < n);
-  }
-
-  $(document).on('change', '#movie-download-check-all', function () {
-    var on = $(this).prop('checked');
-    $('#movie-download-groups input[name=movie-dl]').prop('checked', on);
-    $(this).prop('indeterminate', false);
-  });
-
-  $(document).on('change', '#movie-download-groups input[name=movie-dl]', refreshMovieDownloadCheckAll);
-  refreshMovieDownloadCheckAll();
 
 </script>
 
