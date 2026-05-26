@@ -52,14 +52,17 @@
           </ul>
           
           <div class="login-menu">
-            <ul>
-              <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-email');"><span>아이디(이메일) 찾기</span></button></li>
-              <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-pin');"><span>비밀번호 찾기</span></button></li>
-            </ul>
+            <label class="inp-chk"><input type="checkbox" name="chk-add-info" value="자동 로그인"><span class="ic"></span><span class="t">자동 로그인</span></label>
           </div>
 
           <div class="btn-wrap col">
             <button class="btn-type2 st1 full btn-login" data-id="active" disabled>이라온에듀 시작하기</button>
+            <div class="login-menu">
+              <ul>
+                <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-email');"><span>아이디(이메일) 찾기</span></button></li>
+                <li><button type="button" onclick="caseClose('#case-login');caseOpen('#case-pin');"><span>비밀번호 찾기</span></button></li>
+              </ul>
+            </div>
             <div class="or"><span>OR</span></div>
             <button class="btn-type2 full btn-kakao"><span>카카오 계정으로 로그인</span></button>
             <button class="btn-type2 full btn-naver"><span>네이버 계정으로 로그인</span></button>
