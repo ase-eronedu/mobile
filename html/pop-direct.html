@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title></title>
+
+<link rel="manifest" href="../manifest.json">
+
+<!-- 기본 파비콘 (필수) -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+
+<!-- 모던 브라우저용 SVG (선택, 우선순위 높음) -->
+<link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
+
+<!-- PNG fallback -->
+<link rel="icon" type="image/png" sizes="32x32" href="../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/icons/favicon-16x16.png">
+
+<!-- PNG fallback -->
+<link rel="apple-touch-icon" href="../images/icons/icon-192x192.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="흥달쌤">
+
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    
+  </div>
+  <!-- // container -->
+
+
+  <div class="btm-popup-wrap shortcut-add-popup" id="pop-shortcut-add">
+    <div class="pop-wrap">
+      <div class="popup">
+        <header class="pop-header">
+          <h1 class="pop-tit">바로가기 추가</h1>
+          <div class="right"><button type="button" class="btn-close" aria-label="닫기"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+          <div class="shortcut-add-body">
+            <div class="shortcut-add-visual">
+              <img class="shortcut-add-photo" src="../images/common/ico-teacher-img2.png" width="159" height="180" alt="">
+            </div>
+            <div class="shortcut-add-copy">
+              <p class="shortcut-add-headline">흥달쌤을 더 빠르게 만나는 방법!</p>
+              <p class="shortcut-add-desc">홈 화면에 바로가기를 추가해 주세요.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="shortcut-add-footer">
+            <label class="inp-chk chk-md">
+              <input type="checkbox">
+              <span class="ic"></span>
+              <span class="t">이 안내창을 더 이상 보지 않겠습니다.</span>
+            </label>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-type4 st2 w-size1" onclick="btmPopClose('#pop-shortcut-add');">취소</button>
+            <button type="button" class="btn-type4 st1 w-auto" onclick="handleAddToHomeScreen()">바로가기 추가</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+
+<script>
+
+  btmPopOpen('#pop-shortcut-add');
+
+
+  // 안드로이드 설치 이벤트를 저장할 변수
+  let deferredPrompt = null;
+
+  // 1. 안드로이드: 브라우저의 기본 설치 프로프트 요청 감지
+  window.addEventListener('beforeinstallprompt', (e) => {
+      // 기본 브라우저 설치 팝업이 바로 뜨지 않도록 차단
+      e.preventDefault();
+      // 이벤트를 변수에 저장
+      deferredPrompt = e;
+      
+      // [선택] 이때 화면에 '바로가기 추가' UI/배너를 보여주도록 처리하면 됩니다.
+      console.log("'beforeinstallprompt' 이벤트가 발생하여 설치 준비가 완료되었습니다.");
+  });
+
+  // 2. '바로가기 추가' 버튼 클릭 시 실행할 함수
+  function handleAddToHomeScreen() {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      
+      // iOS (아이폰, 아이패드) 체크
+      const isIos = /iphone|ipad|ipod/.test(userAgent);
+      // 사파리 브라우저인지 체크 (크롬 등 타 브라우저 인앱 방지용)
+      const isSafari = userAgent.includes('safari') && !userAgent.includes('cacg') && !userAgent.includes('crios');
+
+      if (isIos) {
+          // --- 아이폰 케어 ---
+          // iOS는 자바스크립트로 직접 홈 화면 추가 팝업을 띄울 수 없습니다.
+          // 따라서 이미지와 같은 안내창을 닫고, 브라우저 하단 '공유하기 -> 홈 화면에 추가'를 하도록 유도하는 가이드를 띄워야 합니다.
+          alert("아이폰/iPad에서는 브라우저 하단의 [공유] 버튼을 누른 후, [홈 화면에 추가]를 선택해 주세요!");
+          
+          // (실무 팁) alert 대신 하단 공유 버튼 방향으로 화살표 툴팁 UI를 보여주는 것이 훨씬 자연스럽습니다.
+          return;
+      }
+
+      // --- 안드로이드 케어 ---
+      if (deferredPrompt) {
+          // 저장해둔 설치 팝업 실행
+          deferredPrompt.prompt();
+          
+          // 사용자가 설치를 수락했는지 거절했는지 확인
+          deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                  console.log('사용자가 앱 설치를 수락했습니다.');
+                  // 설치가 완료되었으므로 모달/안내창을 닫는 로직을 여기에 추가하세요.
+              } else {
+                  console.log('사용자가 앱 설치를 거절했습니다.');
+              }
+              // 프로세스 종료 후 변수 초기화
+              deferredPrompt = null;
+          });
+      } else {
+          // beforeinstallprompt 이벤트가 아직 안 왔거나 이미 설치된 상태, 혹은 지원하지 않는 브라우저일 때
+          alert("이미 바로가기가 추가되어 있거나, 현재 브라우저에서 지원하지 않습니다. 브라우저 메뉴에서 '홈 화면에 추가'를 찾아주세요.");
+      }
+  }
+
+  // 3. 앱 설치 완료 이벤트 감지 (선택 사항)
+  window.addEventListener('appinstalled', () => {
+      console.log('PWA/바로가기가 홈 화면에 성공적으로 설치되었습니다.');
+      deferredPrompt = null;
+  });
+
+</script>
+</body>
+</html>

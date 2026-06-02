@@ -38,14 +38,15 @@
             <button type="button" class="btn-toggle" onclick="$(this).parents('.date-setting-box').toggleClass('on');"></button>
           </div>
           <div class="date-select">
+            <button type="button" id="total">전체</button>
             <button type="button" id="month3">최근 3개월</button>
             <button type="button" id="month6">최근 6개월</button>
             <button type="button" id="month12">최근 1년</button>
-            <div class="input-calendar" id="range-calener">
+            <!-- <div class="input-calendar" id="range-calener">
               <div class="inp"><input type="text" class="datepicker" id="startDate"></div>
               <span class="dash">~</span>
               <div class="inp"><input type="text" class="datepicker" id="endDate"></div>
-            </div>
+            </div> -->
           </div>
         </div>        
         <dl class="history-list">
@@ -294,9 +295,21 @@ $(".datepicker").datepicker({
   }
 });
 
-//최근 3개월 처음셋팅
-setDateRange(3, '최근 3개월');
-$('#month3').addClass('on');
+function setAllRange() {
+  $('#startDate').datepicker('setDate', '2025-02-28');
+  $('#endDate').datepicker('setDate', '2025-05-28');
+  $('.set-date-txt').text('전체');
+  $('.set-date').text('(2025.02.28~2025.05.28)');
+}
+
+//전체 처음셋팅
+setAllRange();
+$('#total').addClass('on');
+
+$('#total').on('click', function () {
+  setAllRange();
+  $(this).addClass('on').siblings('button').removeClass('on');
+});
 
 $('#month3').on('click', function () {
   setDateRange(3, '최근 3개월');
