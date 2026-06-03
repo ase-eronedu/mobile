@@ -367,6 +367,7 @@ input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0px 1000px white inset !
 .btn-type5 { height: 2rem; line-height: 1.875rem; padding: 0 1rem; text-align: center; font-size: 0.75rem; border-radius: 0.5rem; font-weight: 500; }
 .btn-type6 { height: 2.25rem; line-height: 2.125rem; padding: 0 1rem; text-align: center; font-size: 0.875rem; border-radius: 0.5rem; font-weight: 500; }
 .btn-type7{height:2.5rem;line-height:2.5rem;padding:0 0.875rem;text-align:center;font-size:0.875rem;border-radius: 0.5rem;font-weight:400;}
+.btn-type8{height:3.25rem;line-height:3.375rem;padding:0 1.875rem;text-align:center;font-size:1rem;border-radius: 0.625rem;font-weight:700;}
 .btn-type-link { height: 2.5rem; line-height: 2.625rem; padding: 0 1.875rem; text-align: center; font-size: 1rem; border-radius: 0.375rem; font-weight: 500; }
 .btn-reple { display: flex;width:100%;font-size:0.875rem;font-weight:400; color:rgba(170, 170, 170, 1); flex-direction: row; align-items: center; padding: 0rem 0.75rem; height: 2.5rem; background: #FFFFFF; border: 0.0625rem solid #DDDDDD; border-radius: 0.5rem;}
 
@@ -398,8 +399,7 @@ input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0px 1000px white inset !
 .loading-bar { width: 100%; height: 100%; max-width: 1024px; position: fixed; top: 0; bottom: 0; margin: auto auto; z-index: 501; pointer-events: none; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.3); }
 .loading-bar.selected { opacity: 1; visibility: visible; }
 .loading-bar .three-bounce { text-align: center; font-size: 1.625rem; position: relative; width: 5rem; pointer-events: none; }
-.loading-bar .three-bounce > div { display: inline-block; width: 1.125rem; height: 1.125rem; border-radius: 100%; background-color: rgba(0, 0, 0, 0.65); pointer-events: none; -webkit-animation: bouncedelay 1.4s infinite ease-in-out; animation: bouncedelay 1.4s infinite ease-in-out; -webkit-animation-fill-mode: both; animation-fill-mode: both; /* Prevent first frame from flickering when animation starts */
-}
+.loading-bar .three-bounce > div { display: inline-block; width: 1.125rem; height: 1.125rem; border-radius: 100%; background-color: rgba(0, 0, 0, 0.65); pointer-events: none; -webkit-animation: bouncedelay 1.4s infinite ease-in-out; animation: bouncedelay 1.4s infinite ease-in-out; -webkit-animation-fill-mode: both; animation-fill-mode: both; /* Prevent first frame from flickering when animation starts */}
 .loading-bar .three-bounce .bounce1 { -webkit-animation-delay: -0.32s; animation-delay: -0.32s; background: var(--c-primary); }
 .loading-bar .three-bounce .bounce2 { -webkit-animation-delay: -0.16s; animation-delay: -0.16s; background: var(--c-primary); }
 .loading-bar .three-bounce .bounce3 { background: var(--c-primary); }

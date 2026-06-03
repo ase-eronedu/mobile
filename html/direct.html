@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no"/>
+<title>이라온에듀 홈 화면 바로가기</title>
+
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="../images/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../images/icons/icon-192x192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="흥달쌤">
+
+<link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+<link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<script src="../js/ui.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+  <script>
+     $.get("common/header.html", function(data) {
+        $(data).prependTo(".wrap");
+    });
+  </script>
+
+  <!-- container -->
+  <div class="container">
+    <main class="content shortcut-guide-wrap">
+
+      <div class="shortcut-guide-head">
+        <div class="shortcut-guide-page-tit">
+          <img src="../images/icons/favicon.svg" width="30" height="30" alt="">
+          <h1 class="tit">이라온에듀 홈 화면 바로가기</h1>
+        </div>
+        <div class="shortcut-guide-tip">
+          <span class="ico" aria-hidden="true">💡</span>
+          <p>앱처럼 바로 실행!<br>매번 주소 입력 없이 홈 화면에서 빠르게 접속하세요.</p>
+        </div>
+      </div>
+
+      <nav class="shortcut-guide-chips-sticky" aria-label="브라우저 바로가기">
+        <div class="shortcut-guide-chips">
+          <a href="#guide-chrome" class="chip" data-guide="guide-chrome"><img src="../images/content/guide/ico-browser-chrome.png" width="16" height="16" alt=""><span>크롬</span></a>
+          <a href="#guide-safari" class="chip" data-guide="guide-safari"><img src="../images/content/guide/ico-browser-safari.png" width="16" height="16" alt=""><span>사파리</span></a>
+          <a href="#guide-samsung" class="chip" data-guide="guide-samsung"><img src="../images/content/guide/ico-browser-samsung.png" width="16" height="16" alt=""><span>삼성</span></a>
+          <a href="#guide-naver" class="chip" data-guide="guide-naver"><img src="../images/content/guide/ico-browser-naver.png" width="16" height="16" alt=""><span>네이버</span></a>
+          <a href="#guide-kakao" class="chip" data-guide="guide-kakao"><img src="../images/content/guide/ico-browser-kakao.png" width="16" height="16" alt=""><span>카카오톡</span></a>
+        </div>
+      </nav>
+
+      <!-- 크롬 -->
+      <section class="shortcut-guide-section" id="guide-chrome">
+        <div class="section-head">
+          <img src="../images/content/guide/ico-browser-chrome.png" width="24" height="24" alt="">
+          <h2 class="tit">크롬(Chrome) 브라우저</h2>
+        </div>
+        <ol class="shortcut-guide-steps">
+          <li>이라온에듀(eraonedu.com) 접속</li>
+          <li>화면 우측 상단에 있는 더보기(세로 점 3개 ⋮) 아이콘을 선택합니다.</li>
+          <li>메뉴 목록에서 ’홈 화면에 추가’를 선택합니다.</li>
+          <li>팝업창이 뜨면 우측 하단의 추가 버튼을 누르면 바탕화면에 아이콘이 생성됩니다.</li>
+        </ol>
+        <div class="swiper shortcut-guide-slide-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/chrome-step-1.png" alt="크롬 1단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/chrome-step-2.png" alt="크롬 2단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/chrome-step-3.png" alt="크롬 3단계"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 사파리 -->
+      <section class="shortcut-guide-section" id="guide-safari">
+        <div class="section-head">
+          <img src="../images/content/guide/ico-browser-safari.png" width="24" height="24" alt="">
+          <h2 class="tit">사파리(Safari) 브라우저</h2>
+        </div>
+        <ol class="shortcut-guide-steps">
+          <li>이라온에듀(eraonedu.com) 접속</li>
+          <li>화면 하단에 있는 더보기(가로 점 3개 ⋯) 아이콘을 선택합니다.</li>
+          <li>메뉴 창을 위로 살짝 올려 ’홈 화면에 추가(+)’를 찾아 선택합니다.</li>
+          <li>우측 상단의 추가 버튼을 누르면 바탕화면에 앱 아이콘이 생성됩니다.</li>
+        </ol>
+        <div class="swiper shortcut-guide-slide-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/safari-step-1.png" alt="사파리 1단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/safari-step-2.png" alt="사파리 2단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/safari-step-3.png" alt="사파리 3단계"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 삼성 -->
+      <section class="shortcut-guide-section" id="guide-samsung">
+        <div class="section-head">
+          <img src="../images/content/guide/ico-browser-samsung.png" width="24" height="24" alt="">
+          <h2 class="tit">삼성(Samsung) 브라우저</h2>
+        </div>
+        <ol class="shortcut-guide-steps">
+          <li>이라온에듀(eraonedu.com) 접속</li>
+          <li>화면 우측 하단에 있는 메뉴(세로 점 3개 ⋮) 아이콘을 선택합니다.</li>
+          <li>메뉴 목록에서 ’현재 페이지 추가(+)’를 선택합니다.</li>
+          <li>위치 선택 창이 나타나면 ’홈 화면’을 선택합니다.</li>
+          <li>마지막으로 추가 버튼을 누르면 완료됩니다.</li>
+        </ol>
+        <div class="swiper shortcut-guide-slide-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/samsung-step-1.png" alt="삼성 1단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/samsung-step-2.png" alt="삼성 2단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/samsung-step-3.png" alt="삼성 3단계"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 네이버 -->
+      <section class="shortcut-guide-section" id="guide-naver">
+        <div class="section-head">
+          <img src="../images/content/guide/ico-browser-naver.png" width="24" height="24" alt="">
+          <h2 class="tit">네이버(NAVER)앱</h2>
+        </div>
+        <ol class="shortcut-guide-steps">
+          <li>검색창 ‘이라온에듀’ 검색 후 접속</li>
+          <li>화면 우측 하단에 있는 메뉴(≡ 두 줄) 또는 더보기(··· 점 세개) 아이콘을 터치합니다.</li>
+          <li>위치 선택 창이 나타나면 ’홈 화면에 추가’를 선택합니다.</li>
+          <li>마지막으로 추가 버튼을 누르면 완료됩니다.</li>
+        </ol>
+        <div class="swiper shortcut-guide-slide-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/naver-step-1.png" alt="네이버 1단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/naver-step-2.png" alt="네이버 2단계"></div></div>
+            <div class="swiper-slide"><div class="phone-mock"><img src="../images/content/guide/naver-step-3.png" alt="네이버 3단계"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 카카오톡 -->
+      <section class="shortcut-guide-section" id="guide-kakao">
+        <div class="section-head">
+          <img src="../images/content/guide/ico-browser-kakao.png" width="24" height="24" alt="">
+          <h2 class="tit">카카오톡(KakaoTalk) 앱</h2>
+        </div>
+        <div class="shortcut-guide-tip st-warn">
+          <span class="ico" aria-hidden="true">💡</span>
+          <div class="txt">
+            <strong class="warn-tit">왜 안 되나요?</strong>
+            <p>카카오톡 화면에서는 직접 홈 화면 추가가 안 됩니다. 아래 순서에 따라 반드시 외부 기본 브라우저로 먼저 전환해 주셔야 합니다.</p>
+          </div>
+        </div>
+        <div class="shortcut-guide-sub">
+          <h3 class="sub-tit">안드로이드 스마트폰 (갤럭시 등)</h3>
+          <ol class="shortcut-guide-steps">
+            <li>카카오톡에서 링크를 눌러 화면을 엽니다.</li>
+            <li>화면 우측 하단에 있는 더보기(⋮)를 터치합니다.</li>
+            <li>메뉴 창에서 ’다른 브라우저로 열기’를 선택합니다.</li>
+            <li>새 브라우저로 전환되면 위 가이드(크롬, 삼성, 사파리)대로 추가합니다.</li>
+          </ol>
+        </div>
+        <div class="shortcut-guide-sub">
+          <h3 class="sub-tit">아이폰 (iOS)</h3>
+          <ol class="shortcut-guide-steps">
+            <li>카카오톡에서 링크를 눌러 화면을 엽니다.</li>
+            <li>화면 우측 하단에 있는 나침반(🧭) 아이콘을 터치합니다.</li>
+            <li>사파리(Safari)로 창이 열리면 위 가이드(사파리)대로 추가합니다.</li>
+          </ol>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <!-- // container -->
+
+
+  <div class="btm-popup-wrap shortcut-add-popup" id="pop-shortcut-add" style="display:none;">
+    <div class="pop-wrap">
+      <div class="popup">
+        <header class="pop-header">
+          <h1 class="pop-tit">바로가기 추가</h1>
+          <div class="right"><button type="button" class="btn-close" aria-label="닫기"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">
+          <div class="shortcut-add-body">
+            <div class="shortcut-add-visual">
+              <img class="shortcut-add-photo" src="../images/common/ico-teacher-img2.png" width="159" height="180" alt="">
+            </div>
+            <div class="shortcut-add-copy">
+              <p class="shortcut-add-headline">흥달쌤을 더 빠르게 만나는 방법!</p>
+              <p class="shortcut-add-desc">홈 화면에 바로가기를 추가해 주세요.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="shortcut-add-footer">
+            <label class="inp-chk chk-md">
+              <input type="checkbox">
+              <span class="ic"></span>
+              <span class="t">이 안내창을 더 이상 보지 않겠습니다.</span>
+            </label>
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-type4 st2 w-size1" onclick="btmPopClose('#pop-shortcut-add');">취소</button>
+            <button type="button" class="btn-type4 st1 w-auto" onclick="handleAddToHomeScreen()">바로가기 추가</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $.get("common/footer.html", function(data) {
+       $(data).appendTo(".wrap");
+   });
+ </script>
+</div>
+<!-- // wrap -->
+
+
+<script>
+  function initShortcutGuideSliders() {
+    $('.shortcut-guide-slide-swiper').each(function () {
+      var $el = $(this);
+      if ($el.data('swiper')) return;
+      new Swiper(this, {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        centeredSlides: false,
+        slidesOffsetAfter: 24
+      });
+    });
+  }
+
+  function getShortcutGuideScrollOffset() {
+    var headerH = $('.header').outerHeight() || 56;
+    var chipsH = $('.shortcut-guide-chips-sticky').outerHeight() || 0;
+    return headerH + chipsH + 8;
+  }
+
+  function updateShortcutGuideChipsSticky() {
+    var $bar = $('.shortcut-guide-chips-sticky');
+    if (!$bar.length) return;
+    var top = $bar.offset().top;
+    var scrollTop = $(window).scrollTop();
+    var headerH = $('.header').outerHeight() || 56;
+    $bar.toggleClass('is-pinned', scrollTop + headerH >= top);
+  }
+
+  function updateShortcutGuideActiveChip() {
+    var offset = getShortcutGuideScrollOffset();
+    var scrollTop = $(window).scrollTop() + offset;
+    var $sections = $('.shortcut-guide-section');
+    var activeId = $sections.first().attr('id');
+
+    $sections.each(function () {
+      if ($(this).offset().top <= scrollTop) {
+        activeId = $(this).attr('id');
+      }
+    });
+
+    $('.shortcut-guide-chips .chip').removeClass('on');
+    $('.shortcut-guide-chips .chip[data-guide="' + activeId + '"]').addClass('on');
+  }
+
+  $(function () {
+    initShortcutGuideSliders();
+    updateShortcutGuideChipsSticky();
+    updateShortcutGuideActiveChip();
+
+    $('.shortcut-guide-chips .chip').on('click', function (e) {
+      var href = $(this).attr('href');
+      if (!href || href.charAt(0) !== '#') return;
+      var $target = $(href);
+      if (!$target.length) return;
+      e.preventDefault();
+      var top = $target.offset().top - getShortcutGuideScrollOffset();
+      $('html, body').animate({ scrollTop: top }, 300);
+    });
+
+    $(window).on('scroll', function () {
+      updateShortcutGuideChipsSticky();
+      updateShortcutGuideActiveChip();
+    });
+  });
+
+  let deferredPrompt = null;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+  });
+
+  function handleAddToHomeScreen() {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      const isIos = /iphone|ipad|ipod/.test(userAgent);
+
+      if (isIos) {
+          alert("아이폰/iPad에서는 브라우저 하단의 [공유] 버튼을 누른 후, [홈 화면에 추가]를 선택해 주세요!");
+          return;
+      }
+
+      if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(() => {
+              deferredPrompt = null;
+          });
+      } else {
+          alert("이미 바로가기가 추가되어 있거나, 현재 브라우저에서 지원하지 않습니다. 브라우저 메뉴에서 '홈 화면에 추가'를 찾아주세요.");
+      }
+  }
+
+  window.addEventListener('appinstalled', () => {
+      deferredPrompt = null;
+  });
+</script>
+</body>
+</html>

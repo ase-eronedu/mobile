@@ -30,6 +30,16 @@
 .main-slider .swiper-menu .stop-play .play{display:none; background-image: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.36712 4.92883C7.74195 5.21737 7.74195 5.78263 7.36712 6.07117L1.1605 10.849C0.686517 11.2139 -2.61462e-08 10.876 0 10.2779L4.17694e-07 0.722137C4.4384e-07 0.123982 0.686517 -0.213908 1.1605 0.150963L7.36712 4.92883Z' fill='white'/%3E%3C/svg%3E%0A");}
 .main-slider .swiper-pagination{ color:#fff;font-size:0.875rem;}
 
+/* 메인 홈 화면 바로가기 배너 */
+.main-shortcut-banner-wrap + *{margin-top:1.875rem !important;}
+.main-shortcut-banner-wrap { padding: 0 1.5rem; margin-top: 1.875rem; box-sizing: border-box; }
+.main-shortcut-banner { display: flex; align-items: center; gap: 0.5rem; min-height: 3.5rem; padding:1rem; box-sizing: border-box; background: #f1eeff; border-radius: 0.625rem; text-decoration: none; }
+.main-shortcut-banner .icon { flex-shrink: 0; width: 2.5rem; height: 2.5rem; line-height: 0; }
+.main-shortcut-banner .icon img { display: block; width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; }
+.main-shortcut-banner .text { display: flex; flex-direction: column; gap: 0.125rem; min-width: 0; }
+.main-shortcut-banner .text .tit { font-size: 1rem; font-weight: 600; line-height: 1.4; color: #111518; letter-spacing: -0.03125em; }
+.main-shortcut-banner .text .desc { font-size: 0.75rem; font-weight: 400; line-height: 1.3; color: #86909c; }
+
 .swiper-menu { position: absolute; bottom: 0.75rem; right: 1.5rem; display: flex; align-items: center; z-index: 10; }
 .swiper-menu a, .swiper-menu button[class*=play-] { margin-left: 0.625rem; min-width: 1.5rem !important; min-height: 1.5rem !important; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.2); border-radius: 100%; }
 .swiper-menu button[class*=play-] .ico-play-start { width: 0.5625rem; height: 0.5rem; background-image: url("data:image/svg+xml,%3Csvg width='19' height='22' viewBox='0 0 19 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 8.93119C19.3333 9.70094 19.3333 11.6254 18 12.3952L3 21.0555C1.66667 21.8253 -6.7299e-08 20.8631 0 19.3235L7.57102e-07 2.00298C8.24402e-07 0.463383 1.66667 -0.498868 3 0.270933L18 8.93119Z' fill='white'/%3E%3C/svg%3E%0A"); }
@@ -51,7 +61,7 @@
 .main-lecture-wrap .main-lecture-list{margin-top:1.25rem;overflow:hidden;padding:0 1.5rem;display:grid;grid-template-columns: repeat(2, 1fr);grid-gap:1.25rem 1rem}
 .main-lecture-wrap .main-lecture-list .lecture .img{display:flex;justify-content:center;align-items:center;}
 .main-lecture-wrap .main-lecture-list .lecture .img img{width:100%;border-radius:0.625rem;}
-.main-lecture-wrap .main-lecture-list .desc{margin-top:1rem;color: #1F2125;}
+.main-lecture-wrap .main-lecture-list .desc{margin-top:0.5rem;color: #1F2125;}
 .main-lecture-wrap .main-lecture-list .desc .info{font-size:0.8125rem;display:flex;align-items:center;gap:0.375rem;}
 .main-lecture-wrap .main-lecture-list .desc .info .left{font-weight:400;font-size:0.8125rem;}
 .main-lecture-wrap .main-lecture-list .desc .info .c-gray,
@@ -528,7 +538,7 @@
 .detail-view .view-wrap .go-lecture .link:after { content: " >"; display: inline; }
 .detail-view .view-wrap .go-lecture .link:after { content: " >"; display: inline; }
 .detail-view .view-wrap img { max-width: 100%; }
-.detail-view .view-wrap .btn-menu{text-align:center;margin:1.25rem auto;}
+.detail-view .view-wrap .btn-menu{margin:1.25rem auto;display:flex;flex-direction: column; justify-content:center;align-items:center;gap:10px;}
 .detail-view .view-wrap .btn-menu:first-child{margin-top:0;}
 .detail-view .view { line-height: 1.6; color: #373F57; font-size: 0.875rem; }
 .detail-view .view.pre-line img { max-width: 100%; }
@@ -1181,3 +1191,43 @@
 .shortcut-add-popup .shortcut-add-footer .btn-wrap .btn-type4 { flex: none; font-size: 16px; font-weight: 600; height: 44px; line-height: 43px; border-radius: 6px; box-sizing: border-box; padding-left: 16px; padding-right: 16px; }
 .shortcut-add-popup .shortcut-add-footer .btn-wrap .btn-type4.w-size1 { width: 100px; }
 .shortcut-add-popup .shortcut-add-footer .btn-wrap .btn-type4.w-auto { flex: 1; width: auto; max-width: 200px; }
+
+/* 홈 화면 바로가기 가이드 */
+.shortcut-guide-wrap {padding-top:1.875rem !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 2.5rem; max-width: 22.5rem; margin: 0 auto; }
+.shortcut-guide-wrap .shortcut-guide-head { padding: 0 1.5rem ; display: flex; flex-direction: column; gap: 0.625rem; }
+.shortcut-guide-wrap .shortcut-guide-page-tit { display: flex; align-items: center; gap: 0.375rem; }
+.shortcut-guide-wrap .shortcut-guide-page-tit .tit { margin: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.8; color: #1f2125; letter-spacing: -0.03125em; }
+.shortcut-guide-wrap .shortcut-guide-page-tit img { flex-shrink: 0; width: 1.875rem; height: 1.875rem; border-radius: 0.375rem; }
+.shortcut-guide-wrap .shortcut-guide-tip { display: flex; gap: 0.25rem; align-items: flex-start; padding: 0.625rem; background: #f3f7ff; border-radius: 0.625rem; font-size: 0.8125rem; line-height: 1.4; color: #1f2125; }
+.shortcut-guide-wrap .shortcut-guide-tip .ico { flex-shrink: 0; line-height: 1.4; }
+.shortcut-guide-wrap .shortcut-guide-tip p { margin: 0; flex: 1; min-width: 0; }
+.shortcut-guide-wrap .shortcut-guide-tip.st-warn { background: #f3f7ff; }
+.shortcut-guide-wrap .shortcut-guide-tip.st-warn .warn-tit { display: block; margin-bottom: 0.25rem; font-size: 0.8125rem; font-weight: 500; color: #f05050; }
+.shortcut-guide-wrap .shortcut-guide-tip.st-warn .txt p { margin: 0; }
+.shortcut-guide-wrap .shortcut-guide-chips-sticky { position: sticky; top: 3.5rem; z-index: 25; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 0.625rem 0; background: #fff; box-sizing: border-box; }
+.shortcut-guide-wrap .shortcut-guide-chips-sticky + .shortcut-guide-section{margin-top:2.5rem;}
+.shortcut-guide-wrap .shortcut-guide-chips-sticky.is-pinned { box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.08); }
+.header.scrolling ~ .container .shortcut-guide-wrap .shortcut-guide-chips-sticky { top: 3.4rem; z-index: 30; }
+.shortcut-guide-wrap .shortcut-guide-chips { display: flex; flex-wrap: nowrap; align-items: center; gap: 0.625rem; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-left: 1.5rem; padding-right: 0; }
+.shortcut-guide-wrap .shortcut-guide-chips::-webkit-scrollbar { display: none; }
+.shortcut-guide-wrap .shortcut-guide-chips::after { content: ''; display: block; flex-shrink: 0; width: 1.5rem; height: 1px; }
+.shortcut-guide-wrap .shortcut-guide-chips .chip { display: inline-flex; flex-shrink: 0; align-items: center; gap: 0.375rem; padding: 0.375rem 0.875rem; background: #f1f2f4; border-radius: 3.75rem; text-decoration: none; font-size: 0.875rem; font-weight: 500; line-height: 1.4; color: #1f2125; white-space: nowrap; }
+.shortcut-guide-wrap .shortcut-guide-chips .chip img { flex-shrink: 0; width: 1rem; height: 1rem; object-fit: contain; }
+/* .shortcut-guide-wrap .shortcut-guide-chips .chip.on { background: #e6e1fe; color: var(--c-primary); font-weight: 600; } */
+.shortcut-guide-wrap .shortcut-guide-section { padding: 0 1.5rem 3.125rem; scroll-margin-top: 7.5rem; }
+.shortcut-guide-wrap .shortcut-guide-section + .shortcut-guide-section { padding-top: 0; }
+.shortcut-guide-wrap .shortcut-guide-section .section-head { display: flex; align-items: center; gap: 0.375rem; margin-bottom: 1rem; }
+.shortcut-guide-wrap .shortcut-guide-section .section-head .tit { margin: 0; font-size: 1rem; font-weight: 700; line-height: 1.4; color: #1f2125; }
+.shortcut-guide-wrap .shortcut-guide-section .section-head img { flex-shrink: 0; width: 1.5rem; height: 1.5rem; object-fit: contain; }
+.shortcut-guide-wrap .shortcut-guide-steps { list-style: none; margin: 0 0 1rem; padding: 0; font-size: 0.875rem; line-height: 1.4; color: #1f2125; counter-reset: guide-step; }
+.shortcut-guide-wrap .shortcut-guide-steps > li { position: relative; margin: 0; padding: 0 0 0.5rem 1.25rem; counter-increment: guide-step; }
+.shortcut-guide-wrap .shortcut-guide-steps > li:last-child { padding-bottom: 0; }
+.shortcut-guide-wrap .shortcut-guide-steps > li::before { content: counter(guide-step); position: absolute; left: 0; top: 0.2em; padding-right:0.0625rem; display: inline-flex; align-items: center; justify-content: center; width: 0.875rem; height: 0.875rem; font-size: 0.5625rem; line-height: 1; font-weight: 500; color: #1f2125; border: 0.0625rem solid #1f2125; border-radius: 50%; box-sizing: border-box; font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+.shortcut-guide-wrap .shortcut-guide-sub { margin-top: 1rem; }
+.shortcut-guide-wrap .shortcut-guide-sub .sub-tit { margin: 0 0 0.25rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4; color: #1f2125; }
+.shortcut-guide-wrap .shortcut-guide-sub + .shortcut-guide-sub { margin-top: 1rem; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper { width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 0 0 0 1.5rem; overflow: hidden; box-sizing: border-box; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper .swiper-wrapper { align-items: flex-start; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper .swiper-slide { width: 15.625rem; flex-shrink: 0; height: auto; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper .phone-mock { width: 15.625rem; margin: 0; flex-shrink: 0; line-height: 0; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper .phone-mock img { display: block; width: 100%; height: auto; vertical-align: top; }
