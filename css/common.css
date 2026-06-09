@@ -376,13 +376,14 @@ input:-webkit-autofill:active { -webkit-box-shadow: 0 0 0px 1000px white inset !
 
 /* title */
 .title-main { font-size: 1.2rem; font-weight: 700; }
-.title-section { display: flex; align-items: flex-start; font-weight: 600; font-size: 1rem; letter-spacing: -0.04em; }
+.title-section { display: flex; align-items: flex-start; flex-wrap:wrap; font-weight: 600; font-size: 1rem; letter-spacing: -0.04em; gap:0.45rem 0}
 .title-section + * { margin-top: 0.625rem; }
 .title-section em { color: #5436EA; font-weight: 600; white-space: nowrap; }
 .title-section b { position: relative; font-weight: 600; }
 .title-section em + b { font-weight: 600; padding-left: 0.5rem; margin-left: 0.4375rem; }
 .title-section em + b:before { content: ""; display: block; width: 0.0625rem; height: 0.9375rem; background: #CCCCCC; position: absolute; top: 0.25rem; left: 0; }
 .title-section + .tit-sb { margin-top: 0.625rem; }
+.title-section .btn-link{transform:translateY(-0.1875rem);margin-left:0.75rem;}
 .title-subject { font-weight: 600; font-size: 1rem; display: flex; align-items: center; font-weight: 600; }
 .title-subject + * { margin-top: 1.25rem; }
 .title-subject + .form-wrap { margin-top: 1.875rem; }
