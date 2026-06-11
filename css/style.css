@@ -198,17 +198,17 @@
 .login-form .btn-wrap .btn-login,
 .login-form .btn-wrap .btn-kakao,
 .login-form .btn-wrap .btn-naver{height:3.4375rem;}
-.login-form .btn-wrap .btn-kakao { background: #FEE500; border-radius: 0.75rem; padding: 0 1.25rem; font-weight: 500; font-size: 1rem;height:3.4375rem;}
+.login-form .btn-wrap .btn-kakao { background: #FEE500; border-radius:0.5rem; padding: 0 1.25rem; font-weight: 500; font-size: 1rem;height:3.4375rem;}
 .login-form .btn-wrap .btn-kakao:before { content: ""; display: block; margin-right: 1.375rem; width: 1.375rem; height: 1.25rem; background: url("data:image/svg+xml,%3Csvg width='22' height='21' viewBox='0 0 22 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1C6.47862 1 2 4.56559 2 8.96252C2 11.7592 3.81163 14.2148 6.54589 15.6372L5.60404 19.5536L10.1163 16.7857C10.7266 16.877 11.3561 16.9298 12 16.9298C17.5214 16.9298 22 13.3642 22 8.96732C22 4.5704 17.5214 1 12 1Z' fill='%233E1918'/%3E%3C/svg%3E%0A") no-repeat 0 0; background-size: auto 100%; }
-.login-form .btn-wrap .btn-naver { background: #03C75A; border-radius: 0.75rem; padding: 0 1.25rem; height:3.4375rem; color: #fff; font-weight: 500; font-size: 1rem; margin-top: 0.875rem !important; }
+.login-form .btn-wrap .btn-naver { background: #03C75A; border-radius: 0.5rem;; padding: 0 1.25rem; height:3.4375rem; color: #fff; font-weight: 500; font-size: 1rem; margin-top: 0.875rem !important; }
 .login-form .btn-wrap .btn-naver:before { content: ""; display: block; width: 1rem; height: 1rem; margin-right: 1.625rem; background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8562 8.48926L4.91901 0H0V15.8678H5.15703V7.37851L11.081 15.8678H16V0H10.8562V8.48926Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat 0 0; background-size: auto 100%; }
 .login-form .btn-wrap .or{position:relative;display:flex;justify-content:center;align-items:center;width:100%;margin-top:0.875rem;}
 .login-form .btn-wrap .or:before{content:'';display:block;position:absolute;top:50%;left:0;width:100%; height: 0.0625rem;background:#F0F0F0;}
 .login-form .btn-wrap .or span{display:inline-flex;justify-content:center;align-items:center;width:6.25rem;font-size:0.75rem; color:#86909C;height:1.125rem;background:#fff;position:relative;}
 .login-form .login-menu {margin-top:1.25rem;width:100%;}
-.login-form .login-menu ul {display:flex;align-items:center;justify-content: space-between;}
+.login-form .login-menu ul {display:flex;align-items:center;justify-content: center;gap:0.875rem;}
 .login-form .login-menu ul li{position:relative;}
-.login-form .login-menu ul li ~ li{margin-left:0.75rem;padding-left:0.8125rem;}
+/* .login-form .login-menu ul li ~ li{margin-left:0.75rem;padding-left:0.8125rem;} */
 .login-form .login-menu ul li button span {color: #86909C;font-size: 0.875rem;border-bottom:0.0625rem solid #86909C;line-height:0.8;}
 .login-form .login-menu .inp-chk .t{ color:#86909C;}
 .login-form select,
