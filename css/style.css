@@ -1242,3 +1242,36 @@
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .swiper-slide { width: 15.625rem; flex-shrink: 0; height: auto; }
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .phone-mock { width: 15.625rem; margin: 0; flex-shrink: 0; line-height: 0; }
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .phone-mock img { display: block; width: 100%; height: auto; vertical-align: top; }
+
+/* 환승 이벤트 인증 */
+.pop-body .transfer-event-wrap{ padding-top:0.625rem;}
+.transfer-event-wrap { display: flex; flex-direction: column; gap: 1.25rem;}
+.transfer-event-wrap .section { display: flex; flex-direction: column; gap: 0.375rem; }
+.transfer-event-wrap .section-tit { margin: 0; font-size: 0.875rem; font-weight: 400; line-height: 1.5; color: #1f2125; }
+.transfer-event-wrap .transfer-event-wrap .section + .section .section-tit { line-height: 1.4; }
+.transfer-event-wrap .event-agree-box,
+.transfer-event-wrap .event-form-box { background: #fff; border: 0.0625rem solid #f0f0f0; border-radius: 0.75rem; padding: 0.875rem; box-sizing: border-box; }
+.transfer-event-wrap .event-agree-box { display: flex; flex-direction: column; }
+.transfer-event-wrap .event-agree-box.is-open { gap: 0.875rem; }
+.transfer-event-wrap .agree-row { display: flex; align-items: center; gap: 0.875rem; }
+.transfer-event-wrap .agree-row .inp-chk { flex: 1; min-width: 0; align-items: center; gap: 0.5rem; }
+.transfer-event-wrap .agree-row .inp-chk .t em{font-style:normal;vertical-align:baseline;}
+.transfer-event-wrap .btn-agree-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 0.125rem; flex-shrink: 0; padding: 0.25rem 0.625rem 0.3125rem; background: #eff3fa; border: 0; border-radius: 5.625rem; font-size: 0.75rem; line-height: normal; color: #1f2125; cursor: pointer; }
+.transfer-event-wrap .btn-agree-toggle::before { content: '+'; font-size: 0.75rem; line-height: 1; }
+.transfer-event-wrap .agree-detail { display: none; }
+.transfer-event-wrap .event-agree-box.is-open .agree-detail { display: block; }
+.transfer-event-wrap .agree-detail p { margin: 0; font-size: 0.8125rem; line-height: 1.4; color: #1f2125; }
+.transfer-event-wrap .event-form-box { display: flex; flex-direction: column; gap: 0.625rem; }
+.transfer-event-wrap .file-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.transfer-event-wrap .form-guide { margin: 0; font-size: 0.8125rem; line-height: 1.4; color: #86909c; }
+.transfer-event-wrap .event-form-box .input-file .trigger { gap: 0.375rem; }
+.transfer-event-wrap .event-form-box .input-file .trigger .input { height: 2.625rem; padding: 0 1rem; border: 0.0625rem solid #ddd; border-radius: 0.5rem; box-sizing: border-box; }
+.transfer-event-wrap .event-form-box .input-file .trigger [class*=btn-type] { height: 2.625rem; padding: 0 0.875rem; font-size: 0.8125rem; font-weight: 500; line-height: 1; border: 0.0625rem solid #ddd; border-radius: 0.5rem; color: #333; background: #fff; flex-shrink: 0; }
+.transfer-event-wrap .event-form-box .file-list { margin-top: 0.5rem; gap: 0.5rem; }
+.transfer-event-wrap .btn-wrap{margin-top:0;}
+.transfer-event-wrap .btn-transfer-submit { width: 12.5rem; height: 3.375rem; padding: 0 1rem; background: var(--c-primary); border: 0; border-radius: 0.5rem; font-size: 1.125rem; font-weight: 700; line-height: 1; color: #fff; cursor: pointer; }
+.transfer-event-wrap .transfer-event-guide { margin-left: -1.5rem; margin-right: -1.5rem; margin-bottom:-1.25rem; padding: 1.25rem 1.5rem 1.875rem; background: #f3f3f3; box-sizing: border-box; }
+.transfer-event-wrap .transfer-event-guide .guide-tit { margin: 0 0 0.375rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4; color: #1f2125; }
+.transfer-event-wrap .transfer-event-guide .guide-list { margin: 0; padding: 0; list-style: none; counter-reset: transfer-guide; display: flex; flex-direction: column; gap: 0.125rem; }
+.transfer-event-wrap .transfer-event-guide .guide-list li { display: flex; align-items: flex-start; counter-increment: transfer-guide; font-size: 0.8125rem; line-height: 1.4; color: #1f2125; }
+.transfer-event-wrap .transfer-event-guide .guide-list li::before { content: counter(transfer-guide) '.'; flex-shrink: 0; width: 0.9375rem; }

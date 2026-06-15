@@ -13,7 +13,7 @@ body.hidden{overflow:hidden;}
 
 .c-point { color: var(--c-primary) !important; }
 .c-red { color: #F05050 !important; }
-.pre-line { white-space: pre-line; }
+.pre-line{white-space: pre-line;}
 .txt-error { color: #F05050; font-size: 0.8125rem; margin-top: 0.3125rem; }
 .f-wrap{display:flex;align-items:center;gap:0.5rem;}
 

@@ -48,7 +48,7 @@
             관리자 드림
             
             <img src="../images/temp/temp-img-ex.jpg" alt="">
-            <div class="btn-menu"><a href="javascript:void(0);" class="btn-type8 st1">이벤트 관련 버튼(중앙 정렬)</a><a href="javascript:void(0);" class="btn-type8 st1">이벤트 관련 버튼(중앙 정렬)</a></div>
+            <div class="btn-menu"><a href="javascript:void(0);" class="btn-type8 st1" onclick="btmPopOpen('#pop-transfer-event');">환승 이벤트 인증하기</a><a href="javascript:void(0);" class="btn-type8 st1">이벤트 관련 버튼(중앙 정렬)</a></div>
           </div>
           <div class="menus">
             <div class="row">
@@ -80,5 +80,115 @@
 </div>
 <!-- // wrap -->
 
+
+  <!-- layer-popup -->
+  <div class="btm-popup-wrap" id="pop-transfer-event">
+    <div class="pop-wrap">
+      <div class="popup">
+        <button type="button" class="close" onclick="popClose('#pop-lecture-refund');"></button>
+        <header class="pop-header">
+          <h1 class="pop-tit">환승 이벤트 인증하기</h1>
+          <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+        </header>
+        <div class="pop-body">  
+          <div class="transfer-event-wrap">
+            <div class="section">
+              <p class="section-tit">이벤트 참여에 따른 사전 동의사항</p>
+              <div class="event-agree-box" id="eventAgreeBox">
+                <div class="agree-row">
+                  <label class="inp-chk">
+                    <input type="checkbox" id="transferAgreeChk">
+                    <span class="ic"></span>
+                    <span class="t"><em class="c-point">(필수)</em> 개인정보 수집 이용 동의</span>
+                  </label>
+                  <button type="button" class="btn-agree-toggle"><span class="txt">전체보기</span></button>
+                </div>
+                <div class="agree-detail">
+                  <p class="pre-line">1. 개인정보 수집 이용 목적
+  - 이벤트 신청 접수에 따른 본인 확인 절차 진행 및 문의사항 응대 
+  - 이벤트 참여에 따른 경품 지급 
+
+  2. 개인정보 수집 항목
+  - 신청인의 이름, 아이디, 휴대폰번호, 타사 수강 증명 서류 (수강 화면 캡쳐 등의 이미지) 
+
+  3. 개인정보 이용기간 및 보유기간
+  - 본 수집, 활용목적 달성 후 바로 파기 
+
+  4. 개인정보 제공 동의 거부 권리 및 동의 거부에 따른 불이익
+  - 귀하는 개인 정보 제공 동의를 거부할 권리가 있으며 동의 거부에 따른 불이익은 없으나, 위 제공사항은 이벤트 참여를 위해 반드시 필요한 사항으로  거부하실 경우 이벤트 신청이 불가능함을 알려드립니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <p class="section-tit">환승 이벤트 인증</p>
+              <div class="event-form-box">
+                <div class="input">
+                  <div class="inp"><input type="tel" id="transferPhone" placeholder="휴대폰 번호"></div>
+                </div>
+                <div class="file-field">
+                  <p class="form-guide">✻ 타사 수강내역 또는 강의 구매내역을 캡쳐한 이미지(사진 내 이름이 일치해야함)</p>
+                  <div id="file-wrap"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="btn-wrap">
+              <button type="button" class="btn-transfer-submit" onclick="transferEventSubmit();">환승 이벤트 인증하기</button>
+            </div>
+
+            <div class="transfer-event-guide">
+              <p class="guide-tit">이용안내</p>
+              <ol class="guide-list">
+                <li>본 이벤트는 상시 이벤트이나 예고 없이 종료될 수도 있으니 일정 참고 부탁 드립니다.</li>
+                <li>한 계정당 1회만 참여 가능하며 발급된 쿠폰은 14일 이내 사용하셔야 합니다.</li>
+                <li>인증 승인까지 최대 3일 소요될 수 있으며 금요일 오후 4시 이후 신청 건은 차주에 승인 될 예정입니다.</li>
+                <li>타사 수강 인증 시 0원 결제, 무료로 제공받은 강의는 이벤트 참여에서 제외됩니다.</li>
+                <li>타사 수강 인증 시 정확한 이름, 강의 수강 내역, 결제 내역을 캡쳐 해주셔야 인증 완료됩니다.</li>
+                <li>결제 내역 인증 시, 신청하는 계정의 이름과 수강자의 이름이 동일하여야 하며 강좌명, 결제 금액이 보여야 합니다.</li>
+                <li>등록된 인증 정보는 이벤트 인증 목적 외에 다른 용도로 절대 사용되지 않습니다.</li>
+              </ol>
+            </div>            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- // layer-popup -->
+
+
+  <script>
+    window.isLoggedIn = true;
+  
+    fileAdd('#file-wrap', 10);
+  
+    $('#eventAgreeBox .btn-agree-toggle').on('click', function(){
+      var $box = $('#eventAgreeBox');
+      var $txt = $(this).find('.txt');
+      $box.toggleClass('is-open');
+      $txt.text($box.hasClass('is-open') ? '닫기' : '전체보기');
+    });
+  
+    $('#transferPhone').on('focus', function(){
+      if(!window.isLoggedIn){
+        alertOpen('로그인해 주세요.', ['확인']);
+        $(this).blur();
+      }
+    });
+  
+    function transferEventSubmit(){
+      if(!window.isLoggedIn){
+        alertOpen('로그인해 주세요.', ['확인']);
+        return;
+      }
+      if(!$('#transferAgreeChk').is(':checked')){
+        alertOpen('개인정보 수집 이용을 확인하시고<br>동의란에 체크해 주세요.', ['확인']);
+        return;
+      }
+      alertOpen('<b>접수 처리되었습니다.</b><br>(인증 승인까지 최대 3일이 소요될 수 있습니다.)', ['확인'], function(){
+        popClose('#pop-transfer-event');
+      });
+    }
+  </script>
 </body>
 </html>
