@@ -825,7 +825,7 @@
 .frame-player .player-menu-wrap .menu-detail-wrap .menu-detail .data-list li a .tit { font-size: 1rem; }
 .frame-player .player-menu-wrap .menu-detail-wrap .menu-detail .form-wrap { padding: 0 0; }
 .frame-player .player-menu-wrap .menu-detail-wrap .menu-detail#qna { padding-bottom: 3.75rem; }
-.frame-player .player-menu-wrap .menu-detail-wrap .menu-detail .btn-wrap.btm-fixed { position: fixed; bottom: 0; left: 50%; width: 100%; max-width: 1024px; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+.frame-player .player-menu-wrap .menu-detail-wrap .menu-detail .btn-wrap.btm-fixed { position: fixed; bottom: 0; left: 50%; width: 100%; max-width: 768px; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
 .frame-player .player-menu-wrap .review-list-wrap{margin-top:20px;}
 .frame-player .player-menu-wrap .data-list li a .info{flex-direction: column;margin-top:0.4375rem;}
 .frame-player .player-menu-wrap .data-list li a .info .root{width:100%;flex:initial;margin:0;}
@@ -1215,7 +1215,7 @@
 .shortcut-guide-wrap .shortcut-guide-tip.st-warn { background: #f3f7ff; }
 .shortcut-guide-wrap .shortcut-guide-tip.st-warn .warn-tit { display: block; margin-bottom: 0.25rem; font-size: 0.8125rem; font-weight: 500; color: #f05050; }
 .shortcut-guide-wrap .shortcut-guide-tip.st-warn .txt p { margin: 0; }
-.shortcut-guide-wrap .shortcut-guide-chips-sticky { position: sticky; top: 3.5rem; z-index: 25; width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 0.625rem 0; background: #fff; box-sizing: border-box; }
+.shortcut-guide-wrap .shortcut-guide-chips-sticky { position: sticky; top: 3.5rem; z-index: 25; width: min(100vw, 48rem); margin-left: calc(50% - min(50vw, 24rem)); margin-right: calc(50% - min(50vw, 24rem)); padding: 0.625rem 0; background: #fff; box-sizing: border-box; }
 .shortcut-guide-wrap .shortcut-guide-chips-sticky + .shortcut-guide-section{margin-top:2.5rem;}
 .shortcut-guide-wrap .shortcut-guide-chips-sticky.is-pinned { box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.08); }
 .header.scrolling ~ .container .shortcut-guide-wrap .shortcut-guide-chips-sticky { top: 3.4rem; z-index: 30; }
@@ -1237,7 +1237,7 @@
 .shortcut-guide-wrap .shortcut-guide-sub { margin-top: 1rem; }
 .shortcut-guide-wrap .shortcut-guide-sub .sub-tit { margin: 0 0 0.25rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4; color: #1f2125; }
 .shortcut-guide-wrap .shortcut-guide-sub + .shortcut-guide-sub { margin-top: 1rem; }
-.shortcut-guide-wrap .shortcut-guide-slide-swiper { width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 0 0 0 1.5rem; overflow: hidden; box-sizing: border-box; }
+.shortcut-guide-wrap .shortcut-guide-slide-swiper { width: min(100vw, 48rem); margin-left: calc(50% - min(50vw, 24rem)); margin-right: calc(50% - min(50vw, 24rem)); padding: 0 0 0 1.5rem; overflow: hidden; box-sizing: border-box; }
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .swiper-wrapper { align-items: flex-start; }
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .swiper-slide { width: 15.625rem; flex-shrink: 0; height: auto; }
 .shortcut-guide-wrap .shortcut-guide-slide-swiper .phone-mock { width: 15.625rem; margin: 0; flex-shrink: 0; line-height: 0; }

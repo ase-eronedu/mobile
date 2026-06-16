@@ -465,12 +465,13 @@ function fileAdd(wrap, maxCount){
   numbering();
 
   function createWithList(){
+    let multipleAttr = maxCount > 1 ? ' multiple' : '';
     let inputHtml = `<div class="input-file">
         <div class="trigger">
           <div class="input">
-              <input type="text" class="path" readonly>
+              <input type="text" class="path" placeholder="파일선택" readonly>
             </div>
-          <input type="file" class="real">
+          <input type="file" class="real"${multipleAttr}>
           <button type="button" class="btn-type4 st3">첨부파일</button>
         </div>
       </div>
@@ -481,17 +482,20 @@ function fileAdd(wrap, maxCount){
     let $path = $wrap.find('.path');
     let $list = $wrap.find('.file-list');
 
-    $real.on('change', function(){
-      let v = $(this).val();
-      if(!v) return;
-      if($list.children().length >= maxCount){
-        this.value = '';
-        return;
-      }
-      let name = v.split('fakepath\\')[1] || v;
+    function appendFileItem(name){
       let $item = $('<li class="file-item"><button type="button" class="btn-remove" aria-label="삭제"></button><span class="name"></span></li>');
       $item.find('.name').text(name);
       $list.append($item);
+    }
+
+    $real.on('change', function(){
+      let files = this.files;
+      if(!files || !files.length) return;
+
+      for(let i = 0; i < files.length; i++){
+        if($list.children().length >= maxCount) break;
+        appendFileItem(files[i].name);
+      }
 
       $path.val('');
       this.value = '';
