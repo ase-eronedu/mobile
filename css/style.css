@@ -656,6 +656,7 @@
 .program-down-wrap ul li .util .ico-ppt { background-position: -260px 0 !important; }
 .program-down-wrap ul li .util .ico-ko-viewer { background-position: -340px 0 !important; }
 .program-down-wrap ul li .util .ico-kollus-player { background-position: -420px 0 !important; }
+.program-down-wrap ul li .util .icon .ico-oracle{background:url('../images/common/ico-oracle.svg') no-repeat 0 0 !important;background-size:auto 100% !important;}
 
 .my-history-wrap { margin-top: 1.875rem; }
 .history-list dt { display: flex; align-items: center; gap: 0.25rem; flex-wrap: wrap; padding: 0.625rem 0 0.125rem; font-size: 0.875rem; line-height: 1.5; color: #1F2125; }
@@ -1275,3 +1276,18 @@
 .transfer-event-wrap .transfer-event-guide .guide-list { margin: 0; padding: 0; list-style: none; counter-reset: transfer-guide; display: flex; flex-direction: column; gap: 0.125rem; }
 .transfer-event-wrap .transfer-event-guide .guide-list li { display: flex; align-items: flex-start; counter-increment: transfer-guide; font-size: 0.8125rem; line-height: 1.4; color: #1f2125; }
 .transfer-event-wrap .transfer-event-guide .guide-list li::before { content: counter(transfer-guide) '.'; flex-shrink: 0; width: 0.9375rem; }
+
+/* 7Days 논스톱 특강 */
+.special-lecture-wrap{padding-top:0.3125rem;padding-bottom:1.875rem;}
+.special-lecture-wrap .section + .section{margin-top:1.25rem;}
+.special-lecture-wrap .section-tit{font-size:0.875rem;color:#1F2125;line-height:1.4;margin-bottom:0.375rem;}
+.special-lecture-wrap .link-box,
+.special-lecture-wrap .file-box{border:0.0625rem solid #F0F0F0;border-radius:0.75rem;background:#fff;}
+.special-lecture-wrap .link-box{padding:0.875rem 1.25rem;}
+.special-lecture-wrap .youtube-link{display:flex;align-items:center;gap:0.5rem;text-decoration:none;color:#1F2125;font-size:0.875rem;line-height:1.5;min-width:0;}
+.special-lecture-wrap .youtube-link span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.special-lecture-wrap .ico-youtube-sm{flex-shrink:0;width:1.4375rem;height:1rem;background:url('../images/common/ico-youtube-sm.svg') no-repeat center;background-size:contain;}
+.special-lecture-wrap .file-box{padding:1.25rem;display:flex;gap:0.5rem;flex-wrap: wrap;}
+.special-lecture-wrap .file-down-btn{display:inline-flex;align-items:center;gap:0.375rem;height:2.875rem;padding:0 1.25rem;border-radius:0.5rem;background:#F8F9FA;text-decoration:none;font-size:0.875rem;color:#373F57;letter-spacing:-0.0313rem;line-height:1.25rem;}
+.special-lecture-wrap .file-down-btn span{flex:10;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-wrap:break-word;line-height:1.3em;height:1.3em;}
+.special-lecture-wrap .file-down-btn .ico-down{flex-shrink:0;}
