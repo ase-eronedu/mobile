@@ -509,6 +509,8 @@
 .data-list li { border-bottom: 0.0625rem solid #F0F0F0; }
 .data-list li a { display: block; padding: 0.875rem 0; }
 .data-list li a .tags { margin-bottom: 0.625rem;display:flex;align-items:center;gap:0.375rem;}
+.data-list li a .title {display:flex;align-items: center; gap:0.625rem;}
+.data-list li a .title .tit{flex:1;}
 .data-list li a .tit { display: block; color: #373F57; font-weight: 600; font-size: 16px; }
 .data-list li a .tit:not(.no-ellipsis) {  overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-wrap: break-word; line-height: 1.2em; height: 1.2em;}
 .data-list li .ico-lock{vertical-align: middle;position:relative;top:-0.125rem;margin-right:0.25rem;}

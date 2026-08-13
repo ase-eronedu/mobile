@@ -484,6 +484,16 @@ body.hidden .btm-popup-wrap{  touch-action: none; -webkit-overflow-scrolling: no
 .btm-popup-wrap .pop-wrap .pop-footer .btn-wrap .btn-type4{font-weight:700;}
 .btm-popup-wrap.full .pop-wrap{height:calc(100% - 3.125rem);}
 .btm-popup-wrap.half .pop-wrap{height:65%;}
+
+/* 공지 팝업 */
+.btm-popup-wrap.st-notice .pop-wrap { max-height: none; background: transparent; border-radius: 0; overflow: visible; }
+.btm-popup-wrap.st-notice .pop-wrap .popup { max-height: none; background: #fff; border-radius: 1.25rem 1.25rem 0 0; overflow: hidden; }
+.btm-popup-wrap.st-notice .pop-notice-banner { position: relative; width: 100%; aspect-ratio: 900 / 750; overflow: hidden; border-radius: 1.25rem 1.25rem 0 0; line-height: 0; }
+.btm-popup-wrap.st-notice .pop-notice-banner img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 1.25rem 1.25rem 0 0; }
+.btm-popup-wrap.st-notice .pop-notice-footer { display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 3.75rem; padding: 0 1.5rem; background: #fff; box-sizing: border-box; }
+.btm-popup-wrap.st-notice .pop-notice-footer .inp-chk { flex: 1; min-width: 0; align-items: center; }
+.btm-popup-wrap.st-notice .btn-close-txt { flex-shrink: 0; padding: 0.5rem 1.25rem; background: #edeef0; border: 0; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600; line-height: 1.5; color: #1f2125; cursor: pointer; }
+
 /* btm-popup 노치 */
 .btm-popup-wrap .pop-wrap .pop-body:last-child:after,
 .btm-popup-wrap .pop-wrap .pop-footer:after{content:'';display:block;height:calc(0rem + env(safe-area-inset-bottom));}
