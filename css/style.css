@@ -477,6 +477,17 @@
 .payment-wrap .detail-box .col .full { width: 100%; }
 .payment-wrap .detail-box .col select { width: 100%; }
 .payment-wrap .detail-box .payment-method li ~ li { margin-top: 1.25rem; }
+.payment-wrap .detail-box .product-info{margin-top:1.25rem;}
+.payment-wrap .detail-box .product-info table{width:100%;color:#373F57;font-size:0.875rem;letter-spacing:-0.0313rem;}
+.payment-wrap .detail-box .product-info table th,
+.payment-wrap .detail-box .product-info table td{height:2.75rem;padding:0.3125rem 0.625rem;border-top:0.0625rem solid #EAEAEA;background:#fff;text-align:center;vertical-align:middle;}
+.payment-wrap .detail-box .product-info table th{font-weight:600;text-align:left;}
+.payment-wrap .detail-box .product-info table td{font-weight:400;text-align:left;}
+.payment-wrap .detail-box .product-info table tr:last-child th,
+.payment-wrap .detail-box .product-info table tr:last-child td{border-bottom-color:#000;}
+.payment-wrap .detail-box.st-line{padding-top:1.25rem;margin-top:0.625rem; border-top:1px solid #000;border-bottom:1px solid #000;}
+.payment-wrap .detail-box.st-line + .tab-type1{margin-top:1.875rem;margin-bottom:1.875rem;}
+/* .payment-wrap .detail-box.st-line + .tab-type1 ul{padding-left:0;} */
 
 .line-plus{position:relative;margin:1.375rem 0; }
 .line-plus:before{content:'';display:block;width:100%;height:0.0625rem;border-top: 0.0625rem solid rgba(134, 144, 156, 0.3);}
@@ -569,11 +580,13 @@
 .product-detail-wrap .desc-list li ~ li { margin-top: 0.1875rem; }
 .product-detail-wrap .desc-list li:before { content: ""; display: block; position: absolute; top: 8px; left: 0; width: 0.3125rem; height: 0.0625rem; background: #1F2125; }
 .product-detail-wrap .tag-wrap { margin-top: 0.625rem; }
-.product-detail-wrap .product-detail .title-major + * { margin-top: 1.25rem; }
+/* .product-detail-wrap .product-detail .title-major + * { margin-top: 1.25rem; } */
 .product-detail-wrap .product-detail .img img { max-width: 100%; }
 .product-detail-wrap .line-bar + .tab-type1 { margin-top: 0.625rem; }
 .product-detail-wrap .product-detail .text-policy.pre-line { font-size: 0.875rem; }
 .product-detail-wrap .title-section + * { margin-top: 1.25rem; }
+.product-detail-wrap .text-book-detail{color:#373F57;font-size:0.875rem;line-height:1.4;word-break:break-word;}
+.product-detail-wrap .text-book-detail p{margin:0;}
 
 .toggle-menu-wrap .wrap-header{display:flex;align-items:center;justify-content: space-between;margin-bottom:0.625rem;}
 .toggle-menu-wrap .wrap-header .toggle-menu{margin:1px 0 0 !important;}
