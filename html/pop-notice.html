@@ -47,11 +47,35 @@
 <!-- // wrap -->
 
 
+<!-- layer-popup -->
+<section class="layer-popup st-notice" id="pop-notice2">
+  <div class="dim"></div>
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-notice-banner">
+        <!-- <img src="../images/temp/temp-notice.jpg" alt="공지 이미지" style="width:600px;"> -->
+        <img src="../images/temp/pop-chuseok.jpg" alt="추석연휴 배송안내" style="width:400px;">
+      </div>
+      <div class="pop-notice-footer">
+        <label class="inp-chk">
+          <input type="checkbox">
+          <i class="ic"></i>
+          <span class="t">오늘 하루 그만보기</span>
+        </label>
+        <button type="button" class="btn-close-txt" onclick="popClose('#pop-notice2');">닫기</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- // layer-popup -->  
+
+
+
 
 <script>
 
   btmPopOpen('#pop-notice');
-
+  popOpen('#pop-notice2');
 </script>
 </body>
 </html>
