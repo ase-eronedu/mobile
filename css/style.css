@@ -588,6 +588,25 @@
 .product-detail-wrap .title-section + * { margin-top: 1.25rem; }
 .product-detail-wrap .text-book-detail{color:#373F57;font-size:0.875rem;line-height:1.4;word-break:break-word;}
 .product-detail-wrap .text-book-detail p{margin:0;}
+/* 수강신청 커리큘럼 그룹 */
+.product-detail-wrap .curriculum-group + .curriculum-group{margin-top:1.25rem;}
+.product-detail-wrap .curriculum-group .wrap-header{align-items:flex-start;gap:0.625rem;margin-bottom:0;padding-bottom:0.625rem;}
+.product-detail-wrap .curriculum-group .wrap-header .group-tit{flex:1;min-width:0;font-size:0.875rem;font-weight:600;line-height:1.4;color:#5436EA;word-break:keep-all;}
+.product-detail-wrap .curriculum-group .wrap-header .toggle-menu{flex-shrink:0;margin-bottom:0;}
+.product-detail-wrap .curriculum-group .toggle-menu .btn-tog{font-weight:600;color:#1F2125;line-height:1.5;white-space:nowrap;}
+.product-detail-wrap .curriculum-group .toggle-menu .btn-tog:before{width:1.125rem;height:1.125rem;}
+.product-detail-wrap .curriculum-group .toggle-menu .total{line-height:1.5;white-space:nowrap;}
+.product-detail-wrap .curriculum-group .toggle-menu .time{display:none;}
+.product-detail-wrap .curriculum-group .toggle-list > li > .btn{gap:0.625rem;height:2.625rem;min-height:2.625rem;padding:0 0.875rem;background:#F8F9FA;color:#1F2125;}
+.product-detail-wrap .curriculum-group .toggle-list > li > .btn .tit{font-weight:500;line-height:1.5;}
+.product-detail-wrap .curriculum-group .toggle-list > li > .btn .tit:before{width:1rem;height:1rem;flex-shrink:0;}
+.product-detail-wrap .curriculum-group .toggle-list > li > .btn .right{margin-left:0;font-size:0.875rem;color:#1F2125;white-space:nowrap;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li{gap:0.625rem;height:2.625rem;min-height:2.625rem;padding:0 0.875rem;background:#fff;border-bottom-color:#EFEFEF;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li .txt{color:#1F2125;line-height:1.5;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li .right{padding-left:0;gap:0.625rem;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li .btn-download{width:1.125rem;height:1.125rem;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li .right .btn-download + .time{margin-left:0;}
+.product-detail-wrap .curriculum-group .toggle-list > li ul li .right .time{font-weight:400;color:#86909C;}
 
 .toggle-menu-wrap .wrap-header{display:flex;align-items:center;justify-content: space-between;margin-bottom:0.625rem;}
 .toggle-menu-wrap .wrap-header .toggle-menu{margin:1px 0 0 !important;}
