@@ -293,9 +293,44 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
+</div>
+
+<!-- 쿠폰 발급 완료 팝업 -->
+<div class="btm-popup-wrap" id="pop-coupon-issue">
+  <div class="pop-wrap">
+    <div class="popup">
+      <div class="pop-header">
+        <strong class="pop-tit">🎁 First 얼리버드 특별 할인 쿠폰 발급 완료!</strong>
+        <div class="right"><button type="button" class="btn-close"><i class="ico-close"></i></button></div>
+      </div>
+      <div class="pop-body">
+          <div class="coupon-issued">
+            <div class="coupon-img">
+              <img src="../images/common/bg-coupon-early.svg" alt="" width="100" height="60">
+              <div class="coupon-txt">
+                <b>10%</b>
+                <span>COUPON</span>
+              </div>
+            </div>
+            <p class="coupon-name"><em>10%</em> 할인쿠폰</p>
+          </div>
+          <div class="coupon-guide">
+            <p class="tit">10% 할인 쿠폰이 자동 발급되었습니다.</p>
+            <p class="txt">[쿠폰선택] 버튼을 눌러 할인을 적용한 후 결제를 진행해 주세요!<br>(※ 환승 이벤트 참여 수강생은 환승 이벤트 신청 및 승인 후 발급받은<br>20% 환승 쿠폰을 선택해 주세요. 다른 쿠폰과 중복 사용은 불가합니다.)</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- // 쿠폰 발급 완료 팝업 -->
+
+
 
   <script>
+
+    btmPopOpen('#pop-coupon-issue');
+
     function toggleDeliveryInfo() {
       var $checkboxes = $('.product-list.st3-2 input[type="checkbox"]');
       var anyChecked = $checkboxes.is(':checked');
